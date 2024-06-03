@@ -15,8 +15,6 @@ This course prepares candidates for the Microsoft Certified: Windows Server Hybr
 ## Prerequisites
 
 - Completion of AZ-800 or equivalent knowledge.
-- Basic understanding of networking principles.
-- Experience with Windows Server and Azure services.
 
 ## Course Modules
 
