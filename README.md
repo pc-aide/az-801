@@ -40,28 +40,8 @@ This course prepares candidates for the Microsoft Certified: Windows Server Hybr
 - Securing a hybrid environment.
 - Advanced monitoring with Azure Monitor.
 
-## Assessment
+## Exam
 
-- Multiple choice quizzes after each module.
-- Practical lab assignments.
-- Final exam to test theoretical and practical understanding.
-
-## Resources
-
-- Official Microsoft learning paths.
-- Supplementary materials and practice tests provided in this course.
-
-## Instructor Details
-
-- Name: [Instructor's Name]
-- Email: [Instructor's Email]
-- Office Hours: [Specify times or method for arranging appointments]
-
-## Enrollment
-
-- Start Date: [Course Start Date]
-- Duration: [Course Duration, e.g., 6 weeks]
-- Effort: [Expected hours per week]
 - Price: $165 USD
 
 ## License
@@ -75,8 +55,4 @@ If you find this resource helpful and would like to support its continued develo
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee--yellow?style=social&logo=buy-me-a-coffee)](Your_Buy_Me_A_Coffee_Link)
 
 Feel free to reach out with any questions or for further clarification on enrollment processes!
-
-## Disclaimer
-
-This course content is not endorsed by Microsoft and is intended to be used as a supplementary resource for preparing for the AZ-801 exam.
 
