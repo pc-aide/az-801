@@ -62,7 +62,7 @@ This course prepares candidates for the Microsoft Certified: Windows Server Hybr
 - Start Date: [Course Start Date]
 - Duration: [Course Duration, e.g., 6 weeks]
 - Effort: [Expected hours per week]
-- Price: [Course Fee]
+- Price: $165 USD
 
 ## License
 
