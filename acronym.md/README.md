@@ -5,4 +5,4 @@
 ## List
 |n|acronym|desc.|e.g.|
 |-|-------|-----|----|
-|1|
+|1|MDM|Mobile Device Management|
