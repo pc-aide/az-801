@@ -7,3 +7,4 @@
 |-|----|-----|---|
 |1|OAuth 2.0|
 |2|OpenID|
+|3|Microsoft Entra Connect|
