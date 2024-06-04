@@ -5,4 +5,4 @@
 ## List
 |n|name|desc.|O/P|
 |-|----|-----|---|
-|1|oauth 2.0|
+|1|OAuth 2.0|
