@@ -5,6 +5,7 @@
 ## List
 |n|name|desc.|O/P|
 |-|-------|-----|----|
+|1|CEF|Common Event format<br/><br/>for security alerts|
 |1|FGPPs|Fine-Grained Password Policies|
 |2|IAM|Identity Access Management|
 |3|gMSAs|group Managed Service Accounts|
