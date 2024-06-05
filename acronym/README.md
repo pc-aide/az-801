@@ -15,4 +15,5 @@
 |7|PHS|Password Hash Synchronization|
 |8|PTA|Pass-Through Authentication|
 |9|SAML|Security Assertion Markup Language|
-|10|SSPR|Self-Service Password Reset|
+|10|SCOM|System Center Operations Manager|
+|11|SSPR|Self-Service Password Reset|
