@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 1</h2>
+        <p>You have a server named Server1 that runs Windows Server.</p>
+        <p>You need to ensure that only specific applications can modify the data in protected folders on Server1.</p>
+        <p>Solution: From Virus & threat protection, you configure Controlled folder access.</p>
+        <p>Does this meet the goal?</p>
+
+        <div class="question-row">
+            <label><input type="radio" name="question1" value="Yes"> A. Yes</label>
+        </div>
+        <div class="question-row">
+            <label><input type="radio" name="question1" value="No"> B. No</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question1">Solution</button>
+
+        <div id="solutionInfo_question1" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware.</p>
+            <p><strong>Reference:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/customize-controlled-folders?view=o365-worldwide" target="_blank">Customize Controlled Folders</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034" target="_blank">Allow an App to Access Controlled Folders</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer1.js"></script>
+</body>
+</html>
