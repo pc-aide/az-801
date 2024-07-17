@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 5</h2>
+
+        <h3>The Default Domain Policy Group Policy Object (GPO) is shown in the GPO exhibit. (Click the GPO tab.)</h3>
+        <img src="img1.png" alt="GPO exhibit">
+
+        <h3>The members of a group named Service Accounts are shown in the Group exhibit. (Click the Group tab.)</h3>
+        <img src="img2.png" alt="Group exhibit">
+
+        <h3>An organizational unit (OU) named ServiceAccounts is shown in the OU exhibit. (Click the OU tab.)</h3>
+        <img src="img3.png" alt="OU exhibit">
+
+        <h3>You create a Password Settings Object (PSO) as shown in the PSO exhibit. (Click the PSO tab.)</h3>
+        <img src="img4.png" alt="PSO exhibit">
+
+        <p>For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p>
+
+        <div class="question-row">
+            <label>The password of ServiceAccount1 must be at least 16 characters long:</label>
+            <label><input type="radio" name="question5-1" value="Yes"> Yes</label>
+            <label><input type="radio" name="question5-1" value="No"> No</label>
+        </div>
+        <div class="question-row">
+            <label>The password of ServiceAccount2 must be at least 16 characters long:</label>
+            <label><input type="radio" name="question5-2" value="Yes"> Yes</label>
+            <label><input type="radio" name="question5-2" value="No"> No</label>
+        </div>
+        <div class="question-row">
+            <label>Accounts that have the Service Accounts Policy applied can change their password to P@$$word1:</label>
+            <label><input type="radio" name="question5-3" value="Yes"> Yes</label>
+            <label><input type="radio" name="question5-3" value="No"> No</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question5">Solution</button>
+
+        <div id="solutionInfo_question5" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Yes - because the fine-grained password policy applies to the ServiceAccounts group, of which ServiceAccount1 is a member. Fine-Grained Password Policies override Default Domain Policy GPO password settings.</p>
+            <p>No - because ServiceAccount2 is not a member of the ServiceAccounts security group, it receives the Default Domain Policy GPO password settings.</p>
+            <p>No - because the minimum password length for this group is at least 16 characters.</p>
+            <p><strong>Reference:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-#fine_grained_pswd_policy_mgmt" target="_blank">Fine-Grained Password Policy Management</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="answer5.js"></script>
+</body>
+</html>
