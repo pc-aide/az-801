@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 2</h2>
+        <p>You have a server named Server1 that runs Windows Server.</p>
+        <p>You need to ensure that only specific applications can modify the data in protected folders on Server1.</p>
+        <p>Solution: From Virus & threat protection, you configure Tamper Protection</p>
+        <p>Does this meet the goal?</p>
+
+        <div class="question-row">
+            <label><input type="radio" name="question2" value="A. Yes"> A. Yes</label>
+        </div>
+        <div class="question-row">
+            <label><input type="radio" name="question2" value="B. No"> B. No</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question2">Solution</button>
+
+        <div id="solutionInfo_question2" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>From Virus & threat protection, you configure Controlled folder access.</p>
+            <p>Tamper Protection in Windows Security helps prevent malicious apps from changing important Microsoft Defender Antivirus settings, including real-time protection and cloud-delivered protection.</p>
+            <p><strong>Reference:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/customize-controlled-folders?view=o365-worldwide" target="_blank">Controlled folder access</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer2.js"></script>
+</body>
+</html>

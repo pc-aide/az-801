@@ -38,20 +38,14 @@ The AZ-801 exam is designed for Windows Server administrators who configure and 
 - **Duration**: 150 minutes
 - **Questions**: 40-60 questions
 - **Passing Score**: 700 out of 1000
-- **Languages**: English, Japanese, Chinese (Simplified), Korean, French, German, Portuguese (Brazil), Spanish
-
-## Tips for Success
-
-- **Understand the Exam Objectives**: Thoroughly review the skills measured and focus on the areas where you need the most improvement.
-- **Hands-on Practice**: Set up a lab environment to practice configuring and managing Windows Server in hybrid scenarios.
-- **Use Multiple Study Resources**: Combine reading materials, online courses, and practice tests to reinforce your knowledge.
-- **Join Study Groups**: Participate in online forums and study groups to share knowledge and learn from others.
-
-Good luck with your exam preparation!
 
 ## Contact
 
 For any questions or additional resources, feel free to contact me at [your-email@example.com].
+
+## Examples
+
+1. [Question 4 with Drag & Drop](question4.html)
 
 ## Demo
 

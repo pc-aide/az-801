@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 4</h2>
+        <p>You have an on-premises Active Directory Domain Services (AD DS) domain that syncs with an Azure Active Directory (Azure AD) tenant. The AD DS domain contains a domain controller named DC1. DC1 does NOT have internet access.</p>
+        <p>You need to configure password security for on-premises users. The solution must meet the following requirements:</p>
+        <ul>
+            <li>Prevent the users from using known weak passwords.</li>
+            <li>Prevent the users from using the company name in passwords.</li>
+        </ul>
+        <p>Drag the appropriate configurations to the correct targets. Each configuration may be used once, more than once, or not at all.</p>
+
+        <div class="container">
+            <div class="actions">
+                <p>Configurations:</p>
+                <div class="draggable" id="item4-1" draggable="true" data-action="Configure AAD Identity Protection">Configure AAD Identity Protection</div>
+                <div class="draggable" id="item4-2" draggable="true" data-action="Configure AAD Password Protection">Configure AAD Password Protection</div>
+                <div class="draggable" id="item4-3" draggable="true" data-action="Install the AAD Pass-through Authentication Agent">Install the AAD Pass-through Authentication Agent</div>
+                <div class="draggable" id="item4-4" draggable="true" data-action="Install the AAD Password Protection DC agent">Install the AAD Password Protection DC agent</div>
+                <div class="draggable" id="item4-5" draggable="true" data-action="Install the AAD Password Protection proxy service">Install the AAD Password Protection proxy service</div>
+            </div>
+            <div class="answers">
+                <p>Drop Zones:</p>
+                <div>
+                    <label for="dropZone4-1">On DC:</label>
+                    <div class="dropzone" id="dropZone4-1"></div>
+                </div>
+                <div>
+                    <label for="dropZone4-2">On a member server:</label>
+                    <div class="dropzone" id="dropZone4-2"></div>
+                </div>
+                <div>
+                    <label for="dropZone4-3">In Azure:</label>
+                    <div class="dropzone" id="dropZone4-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question4">Solution</button>
+
+        <div id="solutionInfo_question4" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>To enhance password security for on-premises users syncing with Azure AD, you can configure AAD Password Protection, install appropriate agents on DC and member servers, and configure settings in Azure.</p>
+            
+            <div id="correctAnswers_question4" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <ul>
+                    <li>On DC: Install the AAD Password Protection DC agent</li>
+                    <li>On a member server: Install the AAD Password Protection proxy service</li>
+                    <li>In Azure: Configure AAD Password Protection</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-password-ban-bad-on-premises-deploy" target="_blank">Configure custom password protection</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-configure-custom-password-protection" target="_blank">Tutorial: Configure custom password protection</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer4.js"></script>
+</body>
+</html>
