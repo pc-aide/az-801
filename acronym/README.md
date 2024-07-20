@@ -17,3 +17,4 @@
 |9|SAML|Security Assertion Markup Language|
 |10|SCOM|System Center Operations Manager|
 |11|SSPR|Self-Service Password Reset|
+|12|TGT|Ticket Granting Ticket<br/><br/> Ensures that the lifetime of Kerberos TGT for the members of the Domain Admins group is limited to one hour|
