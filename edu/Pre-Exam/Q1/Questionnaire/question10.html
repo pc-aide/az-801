@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 10</h2>
+        <p>You have a Microsoft Sentinel deployment and 100 Azure Arc-enabled on-premises servers. All the Azure Arc-enabled resources are in the same resource group.</p>
+        <p>You need to onboard the servers to Microsoft Sentinel. The solution must minimize administrative effort.</p>
+        <p>What should you use to onboard the servers to Microsoft Sentinel?</p>
+        <div class="radio-group">
+            <input type="radio" id="answer10A" name="answer10" value="A">
+            <label for="answer10A">A. Azure Automation</label><br>
+            <input type="radio" id="answer10B" name="answer10" value="B">
+            <label for="answer10B">B. Azure Policy</label><br>
+            <input type="radio" id="answer10C" name="answer10" value="C">
+            <label for="answer10C">C. Azure virtual machine extensions</label><br>
+            <input type="radio" id="answer10D" name="answer10" value="D">
+            <label for="answer10D">D. Microsoft Defender for Cloud</label><br>
+        </div>
+        <button class="solutionButton" data-answer-name="question10">Solution</button>
+
+        <div id="solutionInfo_question10" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>You can use Azure Policy to audit settings in the operating system of an Azure Arc-enabled server. If a setting is not compliant, you can also trigger a remediation task (deployIfNotExists). Azure Policy allows you to extend policy-based governance across different cloud providers and even to your local data centers. It enforces organization standards and assesses compliance at scale for all your resources anywhere.</p>
+            
+            <div id="correctAnswers_question10" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>B. Azure Policy</p>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-policies-mma" target="_blank">Azure Arc Policies</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/architecture/hybrid/azure-arc-hybrid-config" target="_blank">Azure Arc Hybrid Config</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer10.js"></script>
+</body>
+</html>

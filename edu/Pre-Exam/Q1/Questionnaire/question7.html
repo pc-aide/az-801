@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 7</h2>
+        <p>You have an Azure virtual machine named VM1 that runs Windows Server.</p>
+        <p>You plan to deploy a new line-of-business (LOB) application to VM1.</p>
+        <p>You need to ensure that the application can create child processes.</p>
+        <p>What should you configure on VM1?</p>
+        <div class="radio-group">
+            <input type="radio" id="answer7A" name="answer7" value="A">
+            <label for="answer7A">A. Microsoft Defender Credential Guard</label><br>
+            <input type="radio" id="answer7B" name="answer7" value="B">
+            <label for="answer7B">B. Microsoft Defender Application Control</label><br>
+            <input type="radio" id="answer7C" name="answer7" value="C">
+            <label for="answer7C">C. Microsoft Defender SmartScreen</label><br>
+            <input type="radio" id="answer7D" name="answer7" value="D">
+            <label for="answer7D">D. Exploit protection</label><br>
+        </div>
+        <button class="solutionButton" data-answer-name="question7">Solution</button>
+
+        <div id="solutionInfo_question7" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>To ensure that a line-of-business (LOB) application can create child processes on a Windows Server VM, you should configure Exploit Protection. Exploit Protection is a feature that helps protect your applications and the system from exploit attempts.</p>
+            
+            <!-- Add the image after the explanation text -->
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q1/img/img7_1.png" alt="Explanation Image" style="max-width: 100%; height: auto;">
+
+            <div id="correctAnswers_question7" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>D. Exploit protection</p>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/customize-exploit-protection?view=o365-worldwide" target="_blank">Customize Exploit Protection</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer7.js"></script>
+</body>
+</html>

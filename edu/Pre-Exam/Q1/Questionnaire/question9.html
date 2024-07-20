@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 9</h2>
+        <p>You have 100 Azure virtual machines that run Windows Server.</p>
+        <p>The virtual machines are onboarded to Microsoft Defender for Cloud.</p>
+        <p>You need to shut down a virtual machine automatically if Microsoft Defender for Cloud generates the "Antimalware disabled in the virtual machine" alert for the virtual machine.</p>
+        <p>What should you use in Microsoft Defender for Cloud?</p>
+        <div class="radio-group">
+            <input type="radio" id="answer9A" name="answer9" value="A">
+            <label for="answer9A">A. a logic app</label><br>
+            <input type="radio" id="answer9B" name="answer9" value="B">
+            <label for="answer9B">B. a workbook</label><br>
+            <input type="radio" id="answer9C" name="answer9" value="C">
+            <label for="answer9C">C. a security policy</label><br>
+            <input type="radio" id="answer9D" name="answer9" value="D">
+            <label for="answer9D">D. adaptive network hardening</label><br>
+        </div>
+        <button class="solutionButton" data-answer-name="question9">Solution</button>
+
+        <div id="solutionInfo_question9" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Trigger automated response - provides the option to trigger a logic app as a response to this security alert.</p>
+            
+            <!-- Add the image after the explanation text if needed -->
+            <div id="correctAnswers_question9" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>A. a logic app</p>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/azure/defender-for-cloud/managing-and-responding-alerts" target="_blank">Managing and responding to alerts</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer9.js"></script>
+</body>
+</html>

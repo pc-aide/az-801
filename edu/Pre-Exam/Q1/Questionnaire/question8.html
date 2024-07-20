@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 8</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) domain named contoso.com. The domain contains the organizational units (OUs) shown in the following table.</p>
+
+        <!-- Organizational Units Table -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Organizational Unit</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Domain Controllers</td>
+                    <td>All the domain controllers in the domain</td>
+                </tr>
+                <tr>
+                    <td>Domain Servers</td>
+                    <td>All the servers that run Windows Server in the domain</td>
+                </tr>
+                <tr>
+                    <td>Domain Client Computers</td>
+                    <td>All the client computers that run Windows 10 in the domain</td>
+                </tr>
+                <tr>
+                    <td>Domain Users</td>
+                    <td>All the users in the domain</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>In the domain, you create the Group Policy Objects (GPOs) shown in the following table.</p>
+
+        <!-- Group Policy Objects Table -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Group Policy Object</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GPO1</td>
+                    <td>Require authentication by using Kerberos V5 for inbound connections</td>
+                </tr>
+                <tr>
+                    <td>GPO2</td>
+                    <td>Request authentication by using Kerberos V5 for inbound connections</td>
+                </tr>
+                <tr>
+                    <td>GPO3</td>
+                    <td>Require authentication by using X.509 certificates for inbound connections</td>
+                </tr>
+                <tr>
+                    <td>GPO4</td>
+                    <td>Request authentication by using X.509 certificates for inbound connections</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>You need to implement IPsec authentication to ensure that only authenticated computer accounts can connect to the members in the domain. The solution must minimize administrative effort.</p>
+
+        <!-- Answer Options -->
+        <div class="answer-area">
+            <label for="domainControllers">Domain Controllers:</label>
+            <select id="domainControllers">
+                <option value="GPO1">GPO1</option>
+                <option value="GPO2">GPO2</option>
+                <option value="GPO3">GPO3</option>
+                <option value="GPO4">GPO4</option>
+            </select>
+        </div>
+
+        <div class="answer-area">
+            <label for="domainServers">Domain Servers:</label>
+            <select id="domainServers">
+                <option value="GPO1">GPO1</option>
+                <option value="GPO2">GPO2</option>
+                <option value="GPO3">GPO3</option>
+                <option value="GPO4">GPO4</option>
+            </select>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question8">Solution</button>
+
+        <div id="solutionInfo_question8" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Require Kerberos V5 for both (minimize effort). Computer and User (using Kerberos V5). Selecting this option tells the computer to use and require authentication of both the computer and the currently logged-on user by using their domain credentials.</p>
+            
+            <p><strong>Correct Answer:</strong></p>
+            <p>Domain Controllers: GPO1</p>
+            <p>Domain Servers: GPO1</p>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/configure-authentication-methods" target="_blank">Configure Authentication Methods</a></li>
+            </ul>
+        </div>
+    </div> 
+    <script src="answer8.js"></script>
+</body>
+</html>

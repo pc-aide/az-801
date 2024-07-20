@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 6</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) domain.</p>
+        <p>You need to implement a solution that meets the following requirements:</p>
+        <ul>
+            <li>Ensures that the members of the Domain Admins group are allowed to sign in only to domain controllers.</li>
+            <li>Ensures that the lifetime of Kerberos Ticket Granting Ticket (TGT) for the members of the Domain Admins group is limited to one hour.</li>
+        </ul>
+        <p>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+        <div class="container">
+            <div class="actions">
+                <p>Actions:</p>
+                <div class="draggable" id="item6-1" draggable="true" data-action="Create a Dynamic Access Control central access policy">Create a Dynamic Access Control central access policy</div>
+                <div class="draggable" id="item6-2" draggable="true" data-action="Configure the Kerberos Policy settings for the Default Domain Policy Group Policy Object (GPO)">Configure the Kerberos Policy settings for the Default Domain Policy Group Policy Object (GPO)</div>
+                <div class="draggable" id="item6-3" draggable="true" data-action="Create a Dynamic Access Control claim type">Create a Dynamic Access Control claim type</div>
+                <div class="draggable" id="item6-4" draggable="true" data-action="Create an authentication policy">Create an authentication policy</div>
+                <div class="draggable" id="item6-5" draggable="true" data-action="Assign the authentication policy silo to user and computer accounts">Assign the authentication policy silo to user and computer accounts</div>
+                <div class="draggable" id="item6-6" draggable="true" data-action="Create an authentication policy silo">Create an authentication policy silo</div>
+            </div>
+            <div class="answers">
+                <p>Drop Zones:</p>
+                <div>
+                    <label for="dropZone6-1">Step 1:</label>
+                    <div class="dropzone" id="dropZone6-1"></div>
+                </div>
+                <div>
+                    <label for="dropZone6-2">Step 2:</label>
+                    <div class="dropzone" id="dropZone6-2"></div>
+                </div>
+                <div>
+                    <label for="dropZone6-3">Step 3:</label>
+                    <div class="dropzone" id="dropZone6-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question6">Solution</button>
+
+        <div id="solutionInfo_question6" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>You need the authentication policy first to be able to assign it during the creation of the silo. At least one authentication policy must be created before an authentication policy silo can be created.</p>
+            
+            <div id="correctAnswers_question6" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <ul>
+                    <li>Step 1: Create an authentication policy</li>
+                    <li>Step 2: Create an authentication policy silo</li>
+                    <li>Step 3: Assign the authentication policy silo to user and computer accounts</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts" target="_blank">How to Configure Protected Accounts</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts#BKMK_CreateAuthNPolicySilos" target="_blank">Create Authentication Policy Silos</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos" target="_blank">Authentication Policies and Authentication Policy Silos</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts#to-create-an-authentication-policy-silo-by-using-active-directory-administrative-cente" target="_blank">Create an Authentication Policy Silo by Using Active Directory Administrative Center</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="answer6.js"></script>
+</body>
+</html>
