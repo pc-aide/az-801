@@ -14,3 +14,4 @@
 |7|Microsoft Entra Connect||<img src="https://i.imgur.com/seBK5wB.png">|
 |8|Microsoft Entra Connect Sync||<img src="https://i.imgur.com/90r7xYP.png">|
 |9|SIEM|
+|10|TGT|Ticket Granting Ticket<br/><br/> Ensures that the lifetime of Kerberos TGT for the members of the Domain Admins group is limited to one hour|
