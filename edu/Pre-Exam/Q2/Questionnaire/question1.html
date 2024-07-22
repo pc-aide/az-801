@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 1</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) domain. The domain contains servers that run Windows Server as shown in the following table.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>IP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Server1</td>
+                    <td>172.16.10.10</td>
+                </tr>
+                <tr>
+                    <td>Server2</td>
+                    <td>172.16.20.50</td>
+                </tr>
+                <tr>
+                    <td>Server3</td>
+                    <td>172.16.30.80</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Server1 has the connection security rules shown in the following table:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Endpoint 1</th>
+                    <th>Endpoint 2</th>
+                    <th>Authentication mode</th>
+                    <th>Authentication method</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rule11</td>
+                    <td>172.16.10.0/24</td>
+                    <td>172.16.20.50</td>
+                    <td>Require inbound & outbound</td>
+                    <td>Computer (NTLMv2)</td>
+                </tr>
+                <tr>
+                    <td>Rule12</td>
+                    <td>172.16.10.10</td>
+                    <td>172.16.0.0/16</td>
+                    <td>Request inbound & outbound</td>
+                    <td>Computer (Kerberos V5)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Server2 has the connection security rules shown in the following table:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Endpoint 1</th>
+                    <th>Endpoint 2</th>
+                    <th>Authentication mode</th>
+                    <th>Authentication method</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rule31</td>
+                    <td>Any</td>
+                    <td>Any</td>
+                    <td>Request inbound & outbound</td>
+                    <td>Computer (Kerberos V5)</td>
+                </tr>
+                <tr>
+                    <td>Rule32</td>
+                    <td>172.16.30.80</td>
+                    <td>172.16.10.10</td>
+                    <td>Require inbound & outbound</td>
+                    <td>Computer (NTLMv2)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p>
+        <div class="radio-group">
+            <p>Server1 can communicate with Server2 successfully:</p>
+            <input type="radio" id="comm1Yes" name="comm1" value="yes">
+            <label for="comm1Yes">Yes</label><br>
+            <input type="radio" id="comm1No" name="comm1" value="no">
+            <label for="comm1No">No</label>
+        </div>
+        <div class="radio-group">
+            <p>Server2 can communicate with Server3 successfully:</p>
+            <input type="radio" id="comm2Yes" name="comm2" value="yes">
+            <label for="comm2Yes">Yes</label><br>
+            <input type="radio" id="comm2No" name="comm2" value="no">
+            <label for="comm2No">No</label>
+        </div>
+        <div class="radio-group">
+            <p>Server3 can communicate with Server2 successfully:</p>
+            <input type="radio" id="comm3Yes" name="comm3" value="yes">
+            <label for="comm3Yes">Yes</label><br>
+            <input type="radio" id="comm3No" name="comm3" value="no">
+            <label for="comm3No">No</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question1">Solution</button>
+
+        <div id="solutionInfo_question1" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>1. Yes - combine Rule12 and Rule 31.<br>
+            Request - Authenticate whenever possible but authentication is not required.<br>
+            2. Yes - Rule 31, (assume there are no connection security rules on Server3).<br>
+            3. Yes - Rule 31, (assume there are no connection security rules on Server3).</p>
+
+            <div id="correctAnswers_question1" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>Server1 can communicate with Server2 successfully: Yes<br>
+                Server2 can communicate with Server3 successfully: Yes<br>
+                Server3 can communicate with Server2 successfully: Yes</p>
+            </div>
+
+            <div id="references_question1" class="references" style="display: none;">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/change-rules-from-request-to-require-mode" target="_blank">Change Rules from Request to Require Mode</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer1.js"></script>
+</body>
+</html>
