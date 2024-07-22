@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 16</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 16</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) domain. The domain contains two servers named Server1 and Server2 that run Windows Server.</p>
+        <p>You need to ensure that you can use the Computer Management console to manage Server2. The solution must use the principle of least privilege.</p>
+        <p>Which two Windows Defender Firewall with Advanced Security rules should you enable on Server2?</p>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="answer16A" name="answer16" value="A">
+            <label for="answer16A">A. the COM+ Network Access (DCOM-In) rule</label><br>
+            <input type="checkbox" id="answer16B" name="answer16" value="B">
+            <label for="answer16B">B. all the rules in the Remote Event Log Management group</label><br>
+            <input type="checkbox" id="answer16C" name="answer16" value="C">
+            <label for="answer16C">C. the Windows Management Instrumentation (WMI-In) rule</label><br>
+            <input type="checkbox" id="answer16D" name="answer16" value="D">
+            <label for="answer16D">D. the COM+ Remote Administration (DCOM-In) rule</label><br>
+            <input type="checkbox" id="answer16E" name="answer16" value="E">
+            <label for="answer16E">E. the Windows Management Instrumentation (DCOM-In) rule</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question16">Solution</button>
+
+        <div id="solutionInfo_question16" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>To use the Computer Management console to manage Server2, ensure that the following firewall rules are enabled:</p>
+            <ul>
+                <li>COM+ Network Access (DCOM-In)</li>
+                <li>All rules in the Remote Event Log Management group</li>
+            </ul>
+            <p>These rules allow for remote management and event log access with the principle of least privilege.</p>
+
+            <div id="correctAnswers_question16" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <p>A. the COM+ Network Access (DCOM-In) rule</p>
+                <p>B. all the rules in the Remote Event Log Management group</p>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/administration/server-manager/configure-remote-management-in-server-manager" target="_blank">Configure Remote Management in Server Manager</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/windows-server/administration/server-manager/configure-remote-management-in-server-manager#to-configure-mmc-or-other-tool-remote-management-over-dcom" target="_blank">Configure MMC or Other Tool Remote Management over DCOM</a></li>
+                <li><a href="https://social.technet.microsoft.com/Forums/en-US/35a04f4e-a784-450d-965d-09b0ecec6f5d/unable-to-connect-to-remote-log-event-viewer-firewall-off-user-member-of-log-reader-group?forum=winserverManagement" target="_blank">Unable to Connect to Remote Log Event Viewer</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer16.js"></script>
+</body>
+</html>

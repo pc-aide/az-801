@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 14</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 14</h2>
+        <p>You have 10 servers that run Windows Server in a workgroup.</p>
+        <p>You need to configure the servers to encrypt all the network traffic between the servers. The solution must be as secure as possible.</p>
+        <p>Which authentication method should you configure in a connection security rule?</p>
+
+        <div class="radio-group">
+            <input type="radio" id="answer14A" name="answer14" value="A">
+            <label for="answer14A">A. NTLMv2</label><br>
+            <input type="radio" id="answer14B" name="answer14" value="B">
+            <label for="answer14B">B. pre-shared key</label><br>
+            <input type="radio" id="answer14C" name="answer14" value="C">
+            <label for="answer14C">C. Kerberos V5</label><br>
+            <input type="radio" id="answer14D" name="answer14" value="D">
+            <label for="answer14D">D. computer certificate</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question14">Solution</button>
+
+        <div id="solutionInfo_question14" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>NTLMv2 is an authentication protocol that is used for authentication between client and server, but it does not provide encryption. Additionally, NTLMv2 is susceptible to various attacks and has known vulnerabilities.</p>
+            <p>Pre-shared key authentication involves sharing a secret key between two devices. While this method provides some level of authentication and encryption, it has some disadvantages such as the difficulty of managing and distributing keys in large environments.</p>
+            <p>Kerberos is an authentication protocol that provides mutual authentication between client and server. While it provides some level of security, it is vulnerable to several attacks such as brute-force attacks and pass-the-ticket attacks.</p>
+            <p>Certificate forms part of PKI (public key infrastructure) and is used for authentication and encryption purposes. Also, since they are workgroup-based servers, NTLM and Kerberos cannot be suitable answers because these protocols are domain-based. Lastly, a pre-shared key is used to authenticate 2 VPN Gateways.</p>
+            
+            <div id="correctAnswers_question14" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>D. computer certificate</p>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-authentication-request-rule" target="_blank">Create an authentication request rule</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer14.js"></script>
+</body>
+</html>

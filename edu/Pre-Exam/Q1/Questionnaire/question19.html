@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 19</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 19</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) domain. The domain contains a server named Server1 that runs Windows Server.</p>
+        <p>You run <code>Get-BitLockerVolume -MountPoint C,D | fl *</code>, which generates the following output.</p>
+
+        <pre>
+<code>
+ComputerName: SERVER1
+MountPoint: C:
+EncryptionMethod: None
+AutoUnlockEnabled:
+AutoUnlockKeyStored:
+MetadataVersion: 0
+VolumeStatus: FullyDecrypted
+ProtectionStatus: Off
+LockStatus: Unlocked
+EncryptionPercentage: 0  :0
+WipePercentage
+VolumeType: OperatingSystem
+Capacity: 126.5107
+KeyProtector: {}
+
+ComputerName: SERVER1
+MountPoint: D:
+EncryptionMethod: Aes128
+AutoUnlockEnabled: False
+AutoUnlockKeyStored:
+MetadataVersion: 2
+VolumeStatus: FullyEncrypted
+ProtectionStatus: On
+LockStatus: Unlocked
+EncryptionPercentage: 100
+WipePercentage: 0
+VolumeType: Data
+CapacityGB: 126.5107
+KeyProtector: {Password, RecoveryPassword}
+</code>
+        </pre>
+
+        <p>You need to ensure that volume D will be unlocked automatically when Server1 restarts. How should you complete the command? To answer, select the appropriate options in the answer area.</p>
+
+        <div class="dropdown-group">
+            <label for="actionSelect">Choose the action:</label>
+            <select id="actionSelect">
+                <option value="Add-BitlockerKeyProtector">Add-BitlockerKeyProtector</option>
+                <option value="Clear-BitlockerAutoUnlock">Clear-BitlockerAutoUnlock</option>
+                <option value="Enable-BitlockerAutoUnlock">Enable-BitlockerAutoUnlock</option>
+            </select>
+        </div>
+
+        <p>-MountPoint D: -ADAccountOrGroupProtector Contoso\Server1$</p>
+
+        <div class="dropdown-group">
+            <label for="parameterSelect">Choose the parameter:</label>
+            <select id="parameterSelect">
+                <option value="-Service">-Service</option>
+                <option value="TPMandPinAndStartupKeyProtector">TPMandPinAndStartupKeyProtector</option>
+                <option value="TPMandPinProtector">TPMandPinProtector</option>
+            </select>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question19">Solution</button>
+
+        <div id="solutionInfo_question19" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>From the exhibit we see for volume D that AutoUnlockEnabled is False, and AutoUnlockKeyStored is empty. The Add-BitLockerKeyProtector cmdlet adds a protector for the volume key of the volume protected with BitLocker Drive Encryption. The -Service parameter indicates that the system account for this computer unlocks the encrypted volume.</p>
+
+            <div id="correctAnswers_question19" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>Action: Add-BitlockerKeyProtector</p>
+                <p>Parameter: -Service</p>
+            </div>
+
+            <div id="reference_question19" style="display: none;">
+                <p><strong>References:</strong></p>
+                <p><a href="https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker" target="_blank">BitLocker Drive Encryption Tools</a></p>
+                <p><a href="https://docs.microsoft.com/en-us/powershell/module/bitlocker/add-bitlockerkeyprotector" target="_blank">Add-BitLockerKeyProtector Cmdlet</a></p>
+                <p><a href="https://learn.microsoft.com/en-us/powershell/module/bitlocker/add-bitlockerkeyprotector?view=windowsserver2022-ps" target="_blank">Add-BitLockerKeyProtector Cmdlet (Windows Server 2022)</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer19.js"></script>
+</body>
+</html>

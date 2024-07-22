@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 11</h2>
+        <p>You have an on-premises Active Directory Domain Services (AD DS) domain that syncs with an Azure Active Directory (Azure AD) tenant by using password hash synchronization.</p>
+        <p>You have a Microsoft 365 subscription.</p>
+        <p>All devices are hybrid Azure AD-joined.</p>
+        <p>Users report that they must enter their password manually when accessing Microsoft 365 applications.</p>
+        <p>You need to reduce the number of times the users are prompted for their password when they access Microsoft 365 and Azure services. What should you do?</p>
+        <div class="radio-group">
+            <input type="radio" id="answer11A" name="answer11" value="A">
+            <label for="answer11A">A. In Azure AD, configure a Conditional Access policy for the Microsoft Office 365 applications.</label><br>
+            <input type="radio" id="answer11B" name="answer11" value="B">
+            <label for="answer11B">B. In the DNS zone of the AD DS domain, create an autodiscover record.</label><br>
+            <input type="radio" id="answer11C" name="answer11" value="C">
+            <label for="answer11C">C. From Azure AD Connect, enable single sign-on (SSO).</label><br>
+            <input type="radio" id="answer11D" name="answer11" value="D">
+            <label for="answer11D">D. From Azure AD Connect, configure pass-through authentication.</label><br>
+        </div>
+        <button class="solutionButton" data-answer-name="question11">Solution</button>
+
+        <div id="solutionInfo_question11" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>For Windows 10, Windows Server 2016 and later versions, it’s recommended to use SSO via primary refresh token (PRT). For Windows 7 and Windows 8.1, it’s recommended to use Seamless SSO. Seamless SSO needs the user's device to be domain-joined, but it isn't used on Windows 10 Microsoft Entra joined devices or Microsoft Entra hybrid joined devices. SSO on Microsoft Entra joined, Microsoft Entra hybrid joined, and Microsoft Entra registered devices works based on the Primary Refresh Token (PRT). Azure Active Directory Seamless single sign-on (Azure AD Seamless SSO) automatically signs users in when they are on their corporate devices connected to your corporate network. When enabled, users don't need to type in their passwords to sign in to Azure AD, and usually, even type in their usernames. This feature provides your users easy access to your cloud-based applications without needing any additional on-premises components.</p>
+            
+            <div id="correctAnswers_question11" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>C. From Azure AD Connect, enable single sign-on (SSO)</p>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sso-quick-start" target="_blank">Azure AD Connect: Quickstart for Single Sign-On</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-sso#sso-via-primary-refresh-token-vs-seamless-sso" target="_blank">SSO via Primary Refresh Token vs Seamless SSO</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sso" target="_blank">How to configure Seamless Single Sign-On</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer11.js"></script>
+</body>
+</html>

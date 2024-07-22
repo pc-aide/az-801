@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 18</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 18</h2>
+        <p>You have an Azure virtual machine named VM1.</p>
+        <p>You enable Microsoft Defender SmartScreen on VM1.</p>
+        <p>You need to ensure that the SmartScreen messages displayed to users are logged. What should you do?</p>
+
+        <div class="radio-group">
+            <input type="radio" id="answer18A" name="answer18" value="A">
+            <label for="answer18A">A. From a command prompt, run WinRM quickconfig.</label><br>
+            <input type="radio" id="answer18B" name="answer18" value="B">
+            <label for="answer18B">B. From the local Group Policy, modify the Advanced Audit Policy Configuration settings.</label><br>
+            <input type="radio" id="answer18C" name="answer18" value="C">
+            <label for="answer18C">C. From Event Viewer, enable the Debug log.</label><br>
+            <input type="radio" id="answer18D" name="answer18" value="D">
+            <label for="answer18D">D. From the Windows Security app, configure the Virus & threat protection settings.</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question18">Solution</button>
+
+        <div id="solutionInfo_question18" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Microsoft Defender SmartScreen events appear in the Microsoft-Windows-SmartScreen/Debug log, in the Event Viewer. Windows event log for SmartScreen is disabled by default, users can use Event Viewer UI to enable the log or use the command line to enable it: <code>wevtutil sl Microsoft-Windows-SmartScreen/Debug /e:true</code></p>
+
+            <div id="correctAnswers_question18" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>C. From Event Viewer, enable the Debug log.</p>
+            </div>
+
+            <div id="reference_question18" style="display: none;">
+                <p><strong>References:</strong></p>
+                <p><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview" target="_blank">Microsoft Defender SmartScreen Overview</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer18.js"></script>
+</body>
+</html>

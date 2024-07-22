@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 15</h2>
+        <p>You have an Azure virtual machine named VM1 that runs Windows Server.</p>
+        <p>You need to encrypt the contents of the disks on VM1 by using Azure Disk Encryption.</p>
+        <p>What is a prerequisite for implementing Azure Disk Encryption?</p>
+
+        <div class="radio-group">
+            <input type="radio" id="answer15A" name="answer15" value="A">
+            <label for="answer15A">A. Customer Lockbox for Microsoft Azure</label><br>
+            <input type="radio" id="answer15B" name="answer15" value="B">
+            <label for="answer15B">B. an Azure key vault</label><br>
+            <input type="radio" id="answer15C" name="answer15" value="C">
+            <label for="answer15C">C. a BitLocker recovery key</label><br>
+            <input type="radio" id="answer15D" name="answer15" value="D">
+            <label for="answer15D">D. data-link layer encryption in Azure</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question15">Solution</button>
+
+        <div id="solutionInfo_question15" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Azure Disk Encryption helps protect and safeguard your data to meet your organizational security and compliance commitments. It uses the BitLocker feature of Windows to provide volume encryption for the OS and data disks of Azure virtual machines (VMs), and is integrated with Azure Key Vault to help you control and manage the disk encryption keys and secrets.</p>
+            
+            <div id="correctAnswers_question15" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>B. an Azure key vault</p>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-overview" target="_blank">Azure Disk Encryption Overview</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer15.js"></script>
+</body>
+</html>

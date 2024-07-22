@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 12</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 12</h2>
+        <p>You have an Azure subscription that has Microsoft Defender for Cloud enabled.</p>
+        <p>You have 50 Azure virtual machines that run Windows Server.</p>
+        <p>You need to ensure that any security exploits detected on the virtual machines are forwarded to Defender for Cloud. Which extension should you enable on the virtual machines?</p>
+        <div class="radio-group">
+            <input type="radio" id="answer12A" name="answer12" value="A">
+            <label for="answer12A">A. Vulnerability assessment for machines</label><br>
+            <input type="radio" id="answer12B" name="answer12" value="B">
+            <label for="answer12B">B. Microsoft Dependency agent</label><br>
+            <input type="radio" id="answer12C" name="answer12" value="C">
+            <label for="answer12C">C. Log Analytics agent for Azure VMs</label><br>
+            <input type="radio" id="answer12D" name="answer12" value="D">
+            <label for="answer12D">D. Guest Configuration agent</label><br>
+        </div>
+        <button class="solutionButton" data-answer-name="question12">Solution</button>
+
+        <div id="solutionInfo_question12" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>When a machine is found that doesn't have a vulnerability assessment solution deployed, Defender for Cloud generates the security recommendation: Machines should have a vulnerability assessment solution. Use this recommendation to deploy the vulnerability assessment solution to your Azure virtual machines and your Azure Arc-enabled hybrid machines. Defender for Cloud's integrated vulnerability assessment solution works seamlessly with Azure Arc. When you've deployed Azure Arc, your machines will appear in Defender for Cloud and no Log Analytics agent is required.</p>
+            
+            <div id="correctAnswers_question12" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>A. Vulnerability assessment for machines</p>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm" target="_blank">Deploy vulnerability assessment solution</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/enable-vulnerability-assessment-agentless" target="_blank">Enable agentless vulnerability assessment</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer12.js"></script>
+</body>
+</html>

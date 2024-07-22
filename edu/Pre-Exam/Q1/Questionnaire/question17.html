@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 17</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 17</h2>
+        <p>You have a server that runs Windows Server. The server is configured to encrypt all incoming traffic by using a connection security rule.</p>
+        <p>You need to ensure that Server1 can respond to the unencrypted tracert commands initiated from computers on the same network.</p>
+        <p>What should you do from Windows Defender Firewall with Advanced Security?</p>
+
+        <div class="radio-group">
+            <input type="radio" id="answer17A" name="answer17" value="A">
+            <label for="answer17A">A. From the IPsec Settings, configure IPsec defaults.</label><br>
+            <input type="radio" id="answer17B" name="answer17" value="B">
+            <label for="answer17B">B. Create a new custom outbound rule that allows ICMPv4 protocol connections for all profiles.</label><br>
+            <input type="radio" id="answer17C" name="answer17" value="C">
+            <label for="answer17C">C. Change the Firewall state of the Private profile to Off.</label><br>
+            <input type="radio" id="answer17D" name="answer17" value="D">
+            <label for="answer17D">D. From the IPsec Settings, configure IPsec exemptions.</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question17">Solution</button>
+
+        <div id="solutionInfo_question17" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>IPSec exemptions change Exempt ICMP from IPSec to Yes. Use this setting to prevent ICMP (Ping and Tracert) messages from being authenticated, encrypted, or both. Keeping ICMP messages unprotected allows you to perform basic network troubleshooting when IPSec cannot be successfully negotiated.</p>
+
+            <div id="correctAnswers_question17" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>D. From the IPsec Settings, configure IPsec exemptions.</p>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer17.js"></script>
+</body>
+</html>
