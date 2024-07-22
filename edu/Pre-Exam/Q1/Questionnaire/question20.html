@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 20</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 20</h2>
+        <p>Your network contains an on-premises Active Directory Domain Services (AD DS) domain named contoso.com. The domain contains the accounts shown in the following table.</p>
+        
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Account type</th>
+                <th>OU</th>
+            </tr>
+            <tr>
+                <td>Admin1</td>
+                <td>User</td>
+                <td>OU1</td>
+            </tr>
+            <tr>
+                <td>Admin2</td>
+                <td>User</td>
+                <td>OU2</td>
+            </tr>
+            <tr>
+                <td>Server1</td>
+                <td>Computer</td>
+                <td>OU3</td>
+            </tr>
+            <tr>
+                <td>Server2</td>
+                <td>Computer</td>
+                <td>OU4</td>
+            </tr>
+        </table>
+
+        <p>The domain is configured to store BitLocker recovery keys in Active Directory. Admin1 and Admin2 perform the following configurations:</p>
+        <ol>
+            <li>Admin1 turns on BitLocker Drive Encryption (BitLocker) for volume C on Server1.</li>
+            <li>Admin1 moves Server1 to OU1.</li>
+            <li>Admin2 turns on BitLocker for removable volume E on Server2.</li>
+            <li>Admin2 moves removable volume E from Server2 to Server1 and unlocks the volume.</li>
+        </ol>
+        <p>On which Active Directory object can you view each BitLocker recovery key? To answer, select the appropriate options in the answer area.</p>
+
+        <div class="dropdown-group">
+            <label for="bitlockerVolumeC">The Bitlocker recovery key for volume C:</label>
+            <select id="bitlockerVolumeC">
+                <option value="Admin1">Admin1</option>
+                <option value="contoso.com">contoso.com</option>
+                <option value="OU1">OU1</option>
+                <option value="OU3">OU3</option>
+                <option value="Server1">Server1</option>
+                <option value="TPM devices">TPM devices</option>
+            </select>
+        </div>
+
+        <div class="dropdown-group">
+            <label for="bitlockerVolumeE">The Bitlocker recovery key for volume E:</label>
+            <select id="bitlockerVolumeE">
+                <option value="Admin2">Admin2</option>
+                <option value="contoso.com">contoso.com</option>
+                <option value="OU4">OU4</option>
+                <option value="Server1">Server1</option>
+                <option value="Server2">Server2</option>
+                <option value="TPM devices">TPM devices</option>
+            </select>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question20">Solution</button>
+
+        <div id="solutionInfo_question20" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Box 1: Server1. You can configure Group Policies in your domain so that when encrypting any drive with BitLocker, the computer will save the recovery key in its computer object account in AD (like storing a local computer administrator password generated using LAPS).</p>
+            <p>Box 2: Server2. The disk from the source computer which you create the recovery key is where you can view it.</p>
+            <div id="correctAnswers_question20" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <p>The Bitlocker recovery key for volume C: Server1</p>
+                <p>The Bitlocker recovery key for volume E: Server2</p>
+            </div>
+            <div id="references_question20" class="references">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="http://woshub.com/store-bitlocker-recovery-keys-active-directory/" target="_blank">http://woshub.com/store-bitlocker-recovery-keys-active-directory/</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies?source=recommendations#active-directory-domain-services-considerations" target="_blank">https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies?source=recommendations#active-directory-domain-services-considerations</a></li>
+                    <li><a href="https://theitbros.com/config-active-directory-store-bitlocker-recovery-keys/" target="_blank">https://theitbros.com/config-active-directory-store-bitlocker-recovery-keys/</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer20.js"></script>
+</body>
+</html>
