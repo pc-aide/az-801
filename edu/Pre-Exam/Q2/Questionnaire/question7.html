@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 7</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) forest. The forest functional level is Windows Server 2012 R2. The forest contains the domains shown in the following table.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>OS of all domain controllers</th>
+                    <th>Domain functional level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>contoso.com</td>
+                    <td>Windows Server 2016</td>
+                    <td>Windows Server 2012 R2</td>
+                </tr>
+                <tr>
+                    <td>east.contoso.com</td>
+                    <td>Windows Server 2019</td>
+                    <td>Windows Server 2016</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>You create a user named Admin1.</p>
+        <p>You need to ensure that Admin1 can add a new domain controller that runs Windows Server 2022 to the east.contoso.com domain. The solution must follow the principle of least privilege.</p>
+        <p>To which groups should you add Admin1?</p>
+        
+        <div class="answers">
+            <div>
+                <input type="radio" id="q7-a" name="q7" value="A"><label for="q7-a">A. EAST\Domain Admins only</label>
+            </div>
+            <div>
+                <input type="radio" id="q7-b" name="q7" value="B"><label for="q7-b">B. CONTOSO\Enterprise Admins only</label>
+            </div>
+            <div>
+                <input type="radio" id="q7-c" name="q7" value="C"><label for="q7-c">C. CONTOSO\Schema Admins and EAST\Domain Admins</label>
+            </div>
+            <div>
+                <input type="radio" id="q7-d" name="q7" value="D"><label for="q7-d">D. CONTOSO\Enterprise Admins and CONTOSO\Schema Admins</label>
+            </div>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question7">Solution</button>
+
+        <div id="solutionInfo_question7" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Before you can replace your old computer with a new computer that is running a new version of Windows Server, you need to first prepare the Active Directory schema by running adprep. The adprep console utility will upgrade the Active Directory schema to add new object types required by the new operating system.</p>
+            <p>If you forget to run adprep, U-Move will display a warning message to remind you. Windows Server 2012-2022: Windows will automatically run adprep during the promotion of the new domain controller. As shown in this link, there are no forest-wide updates, domain-wide updates, or schema updates required to install a 2022 DC in a domain that already has a 2019 DC. Therefore, Domain Admins in the target domain should suffice.</p>
+            
+            <div id="correctAnswers_question7" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>A. EAST\Domain Admins only</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://u-tools.com/help/UpgradeRunAdprep.asp" target="_blank">Adprep Utility Guide</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/adprep/changes-made-by-adprep" target="_blank">Changes Made by Adprep</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer7.js"></script>
+</body>
+</html>

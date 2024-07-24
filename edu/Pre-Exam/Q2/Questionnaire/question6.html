@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 6</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) domain. The domain contains three servers named Server1, Server2, and Server3 that run Windows Server. All the servers are on the same network and have network connectivity.</p>
+        <p>On Server1, Windows Defender Firewall has a connection security rule that has the following settings:</p>
+        <ul>
+            <li>Rule Type: Server-to-server</li>
+            <li>Endpoint 1: Any IP address</li>
+            <li>Endpoint 2: Any IP address</li>
+            <li>Requirements: Require authentication for inbound connections and request authentication for outbound connections</li>
+            <li>Authentication Method: Computer (Kerberos V5)</li>
+            <li>Profile: Domain, Private, Public</li>
+            <li>Name: Rule1</li>
+        </ul>
+        <p>Server2 has no connection security rules.</p>
+        <p>On Server3, Windows Defender Firewall has a connection security rule that has the following settings:</p>
+        <ul>
+            <li>Rule Type: Server-to-server</li>
+            <li>Endpoint 1: Any IP address</li>
+            <li>Endpoint 2: Any IP address</li>
+            <li>Requirements: Request authentication for inbound and outbound connections</li>
+            <li>Authentication Method: Computer (Kerberos V5)</li>
+            <li>Profile: Domain, Private, Public</li>
+            <li>Name: Rule1</li>
+        </ul>
+        <p>For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p>
+        
+        <div class="answers">
+            <div>
+                <label for="q6-1">When Server1 establishes a network connection with Server2, the connection is encrypted:</label>
+                <input type="radio" id="q6-1-yes" name="q6-1" value="Yes"><label for="q6-1-yes">Yes</label>
+                <input type="radio" id="q6-1-no" name="q6-1" value="No"><label for="q6-1-no">No</label>
+            </div>
+            <div>
+                <label for="q6-2">Server2 can establish a network connection with Server3:</label>
+                <input type="radio" id="q6-2-yes" name="q6-2" value="Yes"><label for="q6-2-yes">Yes</label>
+                <input type="radio" id="q6-2-no" name="q6-2" value="No"><label for="q6-2-no">No</label>
+            </div>
+            <div>
+                <label for="q6-3">When Server3 establishes a network connection with Server1, the connection is encrypted:</label>
+                <input type="radio" id="q6-3-yes" name="q6-3" value="Yes"><label for="q6-3-yes">Yes</label>
+                <input type="radio" id="q6-3-no" name="q6-3" value="No"><label for="q6-3-no">No</label>
+            </div>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question6">Solution</button>
+
+        <div id="solutionInfo_question6" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>To your second point, Server3 REQUESTS Kerberos v5 and Server2 cannot provide it. A connection can still happen on a REQUEST, but not on a REQUIRE. Only Server1 REQUIRES authentication.</p>
+            
+            <div id="correctAnswers_question6" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <ul>
+                    <li>When Server1 establishes a network connection with Server2, the connection is encrypted: No</li>
+                    <li>Server2 can establish a network connection with Server3: Yes</li>
+                    <li>When Server3 establishes a network connection with Server1, the connection is encrypted: Yes</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://it.cornell.edu/managed-servers/secure-windows-traffic-ipsec#:~:text=Create%20a%20Connection%20Security%20Rule,Custom%2C%20and%20then%20click%20Next." target="_blank">Create server-to-server connection security rules</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer6.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 2</h2>
+        <p>You have an Azure subscription that contains a user named User1 and the resources shown in the following table.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>vnet1</td>
+                    <td>virtual network</td>
+                </tr>
+                <tr>
+                    <td>appSvr1</td>
+                    <td>virtual machine that is connected to vnet1 & runs a legacy app</td>
+                </tr>
+                <tr>
+                    <td>gw1</td>
+                    <td>virtual network gateway on vnet1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>User1 has a computer named Computer1 that runs Windows 11. User1 works from home and establishes a Point-to-Site (P2S) connection to GW1 to access AppSvr1.</p>
+        <p>You deploy the resources shown in the following table.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>vnet2</td>
+                    <td>virtual network that is peered with vnet1</td>
+                </tr>
+                <tr>
+                    <td>appSvr2</td>
+                    <td>virtual machine that is connected to vnet2</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>User1 cannot access AppSvr2. You need to ensure that User1 can access AppSvr2. What should you do?</p>
+        <div class="radio-group">
+            <input type="radio" id="optionA" name="solution" value="A">
+            <label for="optionA">A. On Computer1, download and reinstall the VPN client.</label><br>
+            <input type="radio" id="optionB" name="solution" value="B">
+            <label for="optionB">B. Create a route table and associate the table with GatewaySubnet on VNet1.</label><br>
+            <input type="radio" id="optionC" name="solution" value="C">
+            <label for="optionC">C. On Computer1, modify the Windows Defender Firewall settings.</label><br>
+            <input type="radio" id="optionD" name="solution" value="D">
+            <label for="optionD">D. Add a service endpoint to VNet2.</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question2">Solution</button>
+
+        <div id="solutionInfo_question2" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Clients using Windows can access directly peered VNets, but the VPN client must be downloaded again if any changes are made to VNet peering or the network topology.
+               Multiple peered VNets
+               In this example, the Point-to-Site VPN gateway connection is for VNet1. VNet1 is peered with VNet2. VNet 2 is peered with VNet3. VNet1 is peered with VNet4. There is no direct peering between VNet1 and VNet3. VNet1 has “Allow gateway transit” and VNet2 and VNet4 have “Use remote gateways” enabled.</p>
+
+            <div id="correctAnswers_question2" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>A. On Computer1, download and reinstall the VPN client.</p>
+            </div>
+
+            <div id="references_question2" class="references" style="display: none;">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-point-to-site-routing" target="_blank">Point-to-Site VPN Gateway</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview" target="_blank">Virtual Network Peering Overview</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer2.js"></script>
+</body>
+</html>

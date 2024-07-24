@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 4</h2>
+        <p>You have a server named Server1 that runs Windows Server.</p>
+        <p>You need to ensure that only specific applications can modify the data in protected folders on Server1.</p>
+        <p>Solution: From App & browser control, you configure Reputation-based protection.</p>
+        <p>Does this meet the goal?</p>
+        
+        <div class="radio-group">
+            <input type="radio" id="q4a" name="solution" value="A">
+            <label for="q4a">A. Yes</label><br>
+            <input type="radio" id="q4b" name="solution" value="B">
+            <label for="q4b">B. No</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question4">Solution</button>
+
+        <div id="solutionInfo_question4" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong> From Virus & threat protection, you configure Controlled folder access. Answer is No</p>
+            
+            <div id="correctAnswers_question4" style="display: none;">
+                <p><strong>Correct Answer:</strong> B</p>
+            </div>
+            
+            <div id="references_question4" class="references" style="display: none;">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/customize-controlled-folders?view=o365-worldwide#allow-specific-apps-to-make-changes-to-controlled-folders" target="_blank">Allow Specific Apps to Make Changes to Controlled Folders</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer4.js"></script>
+</body>
+</html>

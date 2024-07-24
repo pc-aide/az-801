@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 3</h2>
+        <p>You have a generation 1 Azure virtual machine named VM1 that runs Windows Server and is joined to an Active Directory domain.</p>
+        <p>You plan to enable BitLocker Drive Encryption (Bit-Locker) on volume C of VM1.</p>
+        <p>You need to ensure that the BitLocker recovery key for VM1 is stored in Active Directory.</p>
+        <p>Which two Group Policy settings should you configure first? To answer, select the settings in the answer area.</p>
+        
+        <div class="checkbox-group">
+            <input type="checkbox" id="option1" name="policy" value="1">
+            <label for="option1">Allow network unlock at startup</label><br>
+            <input type="checkbox" id="option2" name="policy" value="2">
+            <label for="option2">Allow Secure Boot for integrity validation</label><br>
+            <input type="checkbox" id="option3" name="policy" value="3">
+            <label for="option3">Require additional authentication at startup</label><br>
+            <input type="checkbox" id="option4" name="policy" value="4">
+            <label for="option4">Require additional authentication at startup (Windows Server 2008 and Windows Vista)</label><br>
+            <input type="checkbox" id="option5" name="policy" value="5">
+            <label for="option5">Disallow standard users from changing the PIN or password</label><br>
+            <input type="checkbox" id="option6" name="policy" value="6">
+            <label for="option6">Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN</label><br>
+            <input type="checkbox" id="option7" name="policy" value="7">
+            <label for="option7">Enable use of BitLocker authentication requiring preboot keyboard input on slates</label><br>
+            <input type="checkbox" id="option8" name="policy" value="8">
+            <label for="option8">Allow enhanced PINs for startup</label><br>
+            <input type="checkbox" id="option9" name="policy" value="9">
+            <label for="option9">Configure minimum PIN length for startup</label><br>
+            <input type="checkbox" id="option10" name="policy" value="10">
+            <label for="option10">Configure use of hardware-based encryption for operating system drives</label><br>
+            <input type="checkbox" id="option11" name="policy" value="11">
+            <label for="option11">Enforce drive encryption type on operating system drives</label><br>
+            <input type="checkbox" id="option12" name="policy" value="12">
+            <label for="option12">Configure use of passwords for operating system drives</label><br>
+            <input type="checkbox" id="option13" name="policy" value="13">
+            <label for="option13">Choose how BitLocker protected operating system drives can be recovered</label><br>
+            <input type="checkbox" id="option14" name="policy" value="14">
+            <label for="option14">Configure TPM platform validation profile for BIOS-based firmware configurations</label><br>
+            <input type="checkbox" id="option15" name="policy" value="15">
+            <label for="option15">Configure TPM platform validation profile (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</label><br>
+            <input type="checkbox" id="option16" name="policy" value="16">
+            <label for="option16">Configure TPM platform validation profile for native UEFI firmware configurations</label><br>
+            <input type="checkbox" id="option17" name="policy" value="17">
+            <label for="option17">Configure pre-boot recovery message and URL</label><br>
+            <input type="checkbox" id="option18" name="policy" value="18">
+            <label for="option18">Reset platform validation data after BitLocker recovery</label><br>
+            <input type="checkbox" id="option19" name="policy" value="19">
+            <label for="option19">Use enhanced Boot Configuration Data validation profile</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question3">Solution</button>
+
+        <div id="solutionInfo_question3" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>To ensure that the BitLocker recovery key for VM1 is stored in Active Directory, you should configure the following Group Policy settings:</p>
+            <p>1. Enforce drive encryption type on operating system drives: This policy setting allows you to enforce the type of encryption used by BitLocker on the operating system drives.</p>
+            <p>2. Choose how BitLocker protected operating system drives can be recovered: This policy setting allows you to specify how BitLocker-protected operating system drives can be recovered, including saving recovery information in Active Directory.</p>
+
+            <div id="correctAnswers_question3" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>Enforce drive encryption type on operating system drives, Choose how BitLocker protected operating system drives can be recovered</p>
+            </div>
+
+            <div id="references_question3" class="references" style="display: none;">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-overview" target="_blank">Disk Encryption Overview</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings#choose-how-bitlocker-protected-operating-system-drives-can-be-recovered" target="_blank">BitLocker Group Policy Settings</a></li>
+                    <li><a href="https://woshub.com/store-bitlocker-recovery-keys-active-directory/" target="_blank">Store BitLocker Recovery Keys in Active Directory</a></li>
+                    <li><a href="https://askme4tech.com/how-enable-bitlocker-group-policy#:~:text=How%20to%20configure%20the%20GPO%201%20Open%20the,BitLocker%20is%20the%20Require%20additional%20authentication%20at%20startup." target="_blank">How to Enable BitLocker Group Policy</a></li>
+                    <li><a href="https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.VolumeEncryption::OSEncryptionType_Name" target="_blank">Enforce Drive Encryption Type</a></li>
+                    <li><a href="https://admx.help/?Category=MDOP&Policy=Microsoft.Policies.BitLockerManagement::RDVRecoveryUsagePolicy" target="_blank">BitLocker Management</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer3.js"></script>
+</body>
+</html>

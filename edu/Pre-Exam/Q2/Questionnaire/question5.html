@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 5</h2>
+        <p>You have an Azure subscription that contains an Azure key vault named Vault1.</p>
+        <p>You plan to deploy a virtual machine named VM1 that will run Windows Server.</p>
+        <p>You need to enable encryption at host for VM1. The solution must use customer-managed keys.</p>
+        <p>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+        <div class="container">
+            <div class="actions">
+                <p>Actions:</p>
+                <div class="draggable" id="item5-1" draggable="true" data-action="Create VM1 & associate the disks on the virtual machine with the disk encryption set">Create VM1 & associate the disks on the virtual machine with the disk encryption set</div>
+                <div class="draggable" id="item5-2" draggable="true" data-action="Enable a system-assigned managed identity on VM1">Enable a system-assigned managed identity on VM1</div>
+                <div class="draggable" id="item5-3" draggable="true" data-action="Create a disk encryption set & generate RSA keys">Create a disk encryption set & generate RSA keys</div>
+                <div class="draggable" id="item5-4" draggable="true" data-action="Assign the Virtual Machine Contributor role to the system-assigned managed identity of VM1">Assign the Virtual Machine Contributor role to the system-assigned managed identity of VM1</div>
+                <div class="draggable" id="item5-5" draggable="true" data-action="Grant Vault1 the Managed identity permission for the disk encryption set">Grant Vault1 the Managed identity permission for the disk encryption set</div>
+            </div>
+            <div class="answers">
+                <p>Drop Zones:</p>
+                <div>
+                    <label for="dropZone5-1">Step 1:</label>
+                    <div class="dropzone" id="dropZone5-1"></div>
+                </div>
+                <div>
+                    <label for="dropZone5-2">Step 2:</label>
+                    <div class="dropzone" id="dropZone5-2"></div>
+                </div>
+                <div>
+                    <label for="dropZone5-3">Step 3:</label>
+                    <div class="dropzone" id="dropZone5-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question5">Solution</button>
+
+        <div id="solutionInfo_question5" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>To enable encryption at host for VM1 using customer-managed keys, you need to follow these steps:</p>
+            <ul>
+                <li>Create a disk encryption set & generate RSA keys</li>
+                <li>Grant Vault1 the Managed identity permission for the disk encryption set</li>
+                <li>Create VM1 & associate the disks on the virtual machine with the disk encryption set</li>
+            </ul>
+
+            <div id="correctAnswers_question5" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <ul>
+                    <li>Create a disk encryption set & generate RSA keys</li>
+                    <li>Grant Vault1 the Managed identity permission for the disk encryption set</li>
+                    <li>Create VM1 & associate the disks on the virtual machine with the disk encryption set</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal?tabs=azure-powershell" target="_blank">Enable encryption at host for Azure virtual machines</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer5.js"></script>
+</body>
+</html>
