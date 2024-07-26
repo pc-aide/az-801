@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 13</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 13</h2>
+
+        <p>You have a failover cluster named Cluster1 that has the following configurations:</p>
+        <ul>
+            <li>Number of nodes: 6</li>
+            <li>Quorum: Dynamic quorum</li>
+            <li>Witness: File share, Dynamic witness</li>
+        </ul>
+        <p>What is the maximum number of nodes that can fail simultaneously while maintaining quorum?</p>
+
+        <div class="answers">
+            <label>
+                <input type="radio" name="q13" value="A"> A. 1
+            </label>
+            <label>
+                <input type="radio" name="q13" value="B"> B. 2
+            </label>
+            <label>
+                <input type="radio" name="q13" value="C"> C. 3
+            </label>
+            <label>
+                <input type="radio" name="q13" value="D"> D. 4
+            </label>
+            <label>
+                <input type="radio" name="q13" value="E"> E. 5
+            </label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question13">Solution</button>
+
+        <div id="solutionInfo_question13" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Note this question is asking about nodes failing 'simultaneously', not nodes failing one after the other.</p>
+            <p>With six nodes and one witness, there are seven votes. To maintain quorum, there needs to be four votes available (four votes is the majority of seven). This means that a minimum of three nodes plus the witness need to remain online for the cluster to function. Therefore, the maximum number of simultaneous failures is three.</p>
+
+            <p><strong>Reference:</strong></p>
+            <p><a href="https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/understand-quorum">Understanding Quorum</a></p>
+
+            <div id="correctAnswers_question13" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>C. 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer13.js"></script>
+</body>
+</html>

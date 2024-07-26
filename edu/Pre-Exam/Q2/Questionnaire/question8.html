@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 8</h2>
+        <p>You have an Azure subscription named Sub1 that contains a resource group named RG1. RG1 contains the resources shown in the following table.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>VM1</td>
+                    <td>Virtual machine</td>
+                    <td>Runs Windows Server 2022</td>
+                </tr>
+                <tr>
+                    <td>NIC1</td>
+                    <td>Network interface</td>
+                    <td>Network interface of VM1</td>
+                </tr>
+                <tr>
+                    <td>PIP1</td>
+                    <td>Public IP address</td>
+                    <td>Public IP address assigned to NIC1</td>
+                </tr>
+                <tr>
+                    <td>Disk1</td>
+                    <td>Disk</td>
+                    <td>Managed disk attached to VM1</td>
+                </tr>
+                <tr>
+                    <td>Vnet1</td>
+                    <td>Virtual network</td>
+                    <td>Virtual network that contains a subnet named Subnet1 to which NIC1 is attached</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>Sub1 has Microsoft Defender for Servers enabled. You are assigned the Contributor role for Sub1.</p>
+        <p>You need to implement just-in-time (JIT) VM access for VM1.</p>
+        <p>What should you do first?</p>
+        
+        <div class="answers">
+            <div>
+                <input type="radio" id="q8-a" name="q8" value="A"><label for="q8-a">A. Create a network security group (NSG).</label>
+            </div>
+            <div>
+                <input type="radio" id="q8-b" name="q8" value="B"><label for="q8-b">B. Enable enhanced security in Microsoft Defender for Cloud.</label>
+            </div>
+            <div>
+                <input type="radio" id="q8-c" name="q8" value="C"><label for="q8-c">C. Request the Owner role for Sub1.</label>
+            </div>
+            <div>
+                <input type="radio" id="q8-d" name="q8" value="D"><label for="q8-d">D. Create an application security group.</label>
+            </div>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question8">Solution</button>
+
+        <div id="solutionInfo_question8" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>"JIT requires an NSG to be configured or a Firewall configuration (or both)". There's no mention of Azure Firewall in the question, so an NSG would be required.</p>
+            <p>Owner: Has full access to all resources, including the right to delegate access to others.</p>
+            <p>Contributor: You can create and manage all types of Azure resources, but you cannot grant access to others.</p>
+            
+            <div id="correctAnswers_question8" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>A. Create a network security group (NSG).</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage" target="_blank">Just-in-Time VM Access Usage</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-protect-resources" target="_blank">Protect Resources with Microsoft Defender for Cloud</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer8.js"></script>
+</body>
+</html>

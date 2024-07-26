@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 12</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 12</h2>
+
+        <p>You have a failover cluster named Cluster1 that hosts an application named App1.</p>
+        <p>The General tab in App1 Properties is shown in the General exhibit.</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q10_1.png" alt="General Tab in App1 Properties" style="max-width: 100%; height: auto;">
+
+        <p>The Failover tab in App1 Properties is shown in the Failover exhibit.</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q10_2.png" alt="Failover Tab in App1 Properties" style="max-width: 100%; height: auto;">
+
+        <p>You need to ensure that when you start Server1, App1 continues to run on Server2.</p>
+        <p>Solution: From the General settings, you move Server2 up. Does this meet the goal?</p>
+
+        <div class="answers">
+            <label>
+                <input type="radio" name="q12" value="A"> Yes
+            </label>
+            <label>
+                <input type="radio" name="q12" value="B"> No
+            </label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question12">Solution</button>
+
+        <div id="solutionInfo_question12" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>To actually change the priority, you need to tick the box. Simply moving the server up without ticking the box does not change the priority, and the order will revert. If you move the server up and tick the box, then the change is effective. The Prevent failback setting would ensure that the application does not fail back to Server1 if Server1 becomes available again.</p>
+
+            <p><strong>Reference:</strong></p>
+            <p><a href="https://www.microsoft.com/en-us/videoplayer/embed/RE4MHJL?postJsllMsg=true">Microsoft Video on Failover Clustering</a></p>
+            <p><a href="https://www.youtube.com/watch?v=Y0H7QsSmQW8&t=13s">YouTube Video on Failover Clustering</a></p>
+            <p><a href="https://techcommunity.microsoft.com/t5/failover-clustering/preferred-owners-in-a-cluster/ba-p/371290">Tech Community - Preferred Owners in a Cluster</a></p>
+
+            <div id="correctAnswers_question12" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>Yes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer12.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 14</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 14</h2>
+
+        <p>You have a failover cluster named FC1 that contains two nodes named Server1 and Server2. FC1 is configured to use a file share witness.</p>
+        <p>You plan to configure FC1 to use a cloud witness.</p>
+        <p>You need to configure Azure Storage accounts for the cloud witness.</p>
+        <p>Which storage account type and authorization method should you configure? To answer, select the appropriate options in the answer area.</p>
+
+        <form id="question14Form">
+            <label for="storageType">Storage account type:</label>
+            <select id="storageType" name="storageType">
+                <option value="Premium block blobs">Premium block blobs</option>
+                <option value="Premium file shares">Premium file shares</option>
+                <option value="Premium page blobs">Premium page blobs</option>
+                <option value="Standard">Standard</option>
+            </select>
+
+            <label for="authMethod">Authentication method:</label>
+            <select id="authMethod" name="authMethod">
+                <option value="Access key">Access key</option>
+                <option value="SAS">SAS</option>
+                <option value="System-assigned managed identity in AAD">System-assigned managed identity in AAD</option>
+                <option value="User-assigned managed identity in AAD">User-assigned managed identity in AAD</option>
+            </select>
+        </form>
+
+        <button class="solutionButton" data-answer-name="question14">Solution</button>
+
+        <div id="solutionInfo_question14" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>You can't use premium storage on a cluster witness - and also access keys are required. Use Standard storage. Azure Premium Storage is not supported.</p>
+
+            <p><strong>Reference:</strong></p>
+            <p><a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/deploy-cloud-witness">Deploy Cloud Witness</a></p>
+            <p><a href="https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/hadr-cluster-quorum-configure-how-to?view=azuresql&tabs=powershell">Configure Cluster Quorum</a></p>
+
+            <div id="correctAnswers_question14" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>Storage account type: Standard</li>
+                    <li>Authentication method: Access key</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer14.js"></script>
+</body>
+</html>

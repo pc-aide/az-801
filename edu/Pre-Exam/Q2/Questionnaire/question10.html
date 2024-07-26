@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 10</h2>
+
+        <p>You have a failover cluster named Cluster1 that hosts an application named App1.</p>
+        <p>The General tab in App1 Properties is shown in the General exhibit.</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q10_1.png" alt="General Tab in App1 Properties" style="max-width: 100%; height: auto;">
+
+        <p>The Failover tab in App1 Properties is shown in the Failover exhibit.</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q10_2.png" alt="Failover Tab in App1 Properties" style="max-width: 100%; height: auto;">
+
+        <p>You need to ensure that when you start Server1, App1 continues to run on Server2.</p>
+        <p>Solution: From the Failover settings, you select Prevent failback. Does this meet the goal?</p>
+
+        <div class="answers">
+            <label>
+                <input type="radio" name="q10" value="A"> Yes
+            </label>
+            <label>
+                <input type="radio" name="q10" value="B"> No
+            </label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question10">Solution</button>
+
+        <div id="solutionInfo_question10" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>The Prevent failback setting will prevent the cluster from failing back to Server1, ensuring that App1 continues to run on Server2.</p>
+
+            <div id="correctAnswers_question10" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>Yes</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://techcommunity.microsoft.com/t5/failover-clustering/preferred-owners-in-a-cluster/ba-p/371290" target="_blank">Preferred Owners in a Cluster</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer10.js"></script>
+</body>
+</html>

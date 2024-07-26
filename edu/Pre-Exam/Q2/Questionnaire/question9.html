@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 9</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) domain named contoso.com. The domain contains an organizational unit (OU) named OU1. OU1 contains servers that run sensitive workloads.</p>
+        <p>You plan to add connection security rules that meet the following requirements:</p>
+        <ul>
+            <li>The servers in OU1 must only accept connections from domain-joined devices.</li>
+            <li>The servers in OU1 must only be able to communicate with domain-joined devices.</li>
+        </ul>
+        <p>You create a Group Policy Object (GPO) named GPO1 and link GPO1 to contoso.com.</p>
+        <p>You need to configure a connection security rule in GPO1 by using Windows Defender Firewall with Advanced Security.</p>
+        <p>How should you configure the rule? To answer, select the appropriate options in the answer area.</p>
+
+        <div class="answers">
+            <div>
+                <label for="ruleType">Rule type:</label>
+                <select id="ruleType" name="q9">
+                    <option value="Isolation">Isolation</option>
+                    <option value="Authentication exemption">Authentication exemption</option>
+                    <option value="Tunnel">Tunnel</option>
+                </select>
+            </div>
+            <div>
+                <label for="requirements">Requirements:</label>
+                <select id="requirements" name="q9">
+                    <option value="Request authentication for inbound & outbound connections">Request authentication for inbound & outbound connections</option>
+                    <option value="Require authentication for inbound & outbound connections">Require authentication for inbound & outbound connections</option>
+                    <option value="Require authentication for inbound connections & request authentication for outbound connections">Require authentication for inbound connections & request authentication for outbound connections</option>
+                </select>
+            </div>
+            <div>
+                <label for="authenticationMethod">Authentication Method:</label>
+                <select id="authenticationMethod" name="q9">
+                    <option value="Computer (kerberos V5)">Computer (kerberos V5)</option>
+                    <option value="Computer certificate">Computer certificate</option>
+                    <option value="Preshared key">Preshared key</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question9">Solution</button>
+
+        <div id="correctAnswers_question9" style="display: none;">
+            <p><strong>Correct Configuration:</strong></p>
+            <ul>
+                <li>Rule type: Isolation</li>
+                <li>Requirements: Require authentication for inbound & outbound connections</li>
+                <li>Authentication Method: Computer (kerberos V5)</li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="../Scripts/constants.js"></script>
+    <script src="../Scripts/answer9.js"></script>
+</body>
+</html>

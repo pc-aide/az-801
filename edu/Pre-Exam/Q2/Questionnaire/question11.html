@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 11</h2>
+
+        <p>You have a failover cluster named Cluster1 that hosts an application named App1.</p>
+        <p>The General tab in App1 Properties is shown in the General exhibit.</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q10_1.png" alt="General Tab in App1 Properties" style="max-width: 100%; height: auto;">
+
+        <p>The Failover tab in App1 Properties is shown in the Failover exhibit.</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q10_2.png" alt="Failover Tab in App1 Properties" style="max-width: 100%; height: auto;">
+
+        <p>You need to ensure that when you start Server1, App1 continues to run on Server2.</p>
+        <p>Solution: You increase Maximum failures in the specified period for the App1 cluster role. Does this meet the goal?</p>
+
+        <div class="answers">
+            <label>
+                <input type="radio" name="q11" value="A"> Yes
+            </label>
+            <label>
+                <input type="radio" name="q11" value="B"> No
+            </label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question11">Solution</button>
+
+        <div id="solutionInfo_question11" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>The Maximum failures setting is used to determine when the cluster considers a node as offline. It does not affect whether a cluster will fail back when a node comes online. This setting does not ensure that App1 continues to run on Server2 if Server1 is started.</p>
+
+            <div id="correctAnswers_question11" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>No</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer11.js"></script>
+</body>
+</html>
