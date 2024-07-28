@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 18</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 18</h2>
+        <p>You have a failover cluster named Cluster1 that contains three nodes.</p>
+        <p>You plan to add two file server cluster roles named File1 and File2 to Cluster1. File1 will use the File Server for general use role. File2 will use the Scale-Out File Server for application data role.</p>
+        <p>What is the maximum number of nodes for File1 and File2 that can concurrently serve client connections? To answer, select the appropriate options in the answer area.</p>
+
+        <div class="answers">
+            <label for="file1Nodes">File1:</label>
+            <select id="file1Nodes">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <label for="file2Nodes">File2:</label>
+            <select id="file2Nodes">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question18">Solution</button>
+
+        <div id="solutionInfo_question18" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Scale-Out FS - All file shares are simultaneously online on all nodes.<br>
+            FS for General purpose - The shares associated with the clustered file server, is online on one node at a time.</p>
+            <p>File1 works in Active-Passive mode since it's configured with general use role.<br>
+            File2 works in Active-Active mode since it's configured with Scale-out role.</p>
+
+            <div id="correctAnswers_question18" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>File1: 1</li>
+                    <li>File2: 3</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/sofs-overview" target="_blank">Scale-Out File Server Overview</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer18.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 16</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 16</h2>
+        <p>You need to create a Hyper-V hyper-converged cluster that stores virtual machines by using Storage Spaces Direct.</p>
+        <p>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+        <div class="container">
+            <div class="actions">
+                <p>Actions:</p>
+                <div class="draggable" id="item16-1" draggable="true" data-action="Create a failover cluster">Create a failover cluster</div>
+                <div class="draggable" id="item16-2" draggable="true" data-action="Create a DFS namespace">Create a DFS namespace</div>
+                <div class="draggable" id="item16-3" draggable="true" data-action="Enable Storage Spaces Direct">Enable Storage Spaces Direct</div>
+                <div class="draggable" id="item16-4" draggable="true" data-action="Create a volume">Create a volume</div>
+                <div class="draggable" id="item16-5" draggable="true" data-action="Add a Scale-Out File Server for application role">Add a Scale-Out File Server for application role</div>
+                <div class="draggable" id="item16-6" draggable="true" data-action="Create a file share">Create a file share</div>
+            </div>
+            <div class="answers">
+                <p>Drop Zones:</p>
+                <div>
+                    <label for="dropZone16-1">Step 1:</label>
+                    <div class="dropzone" id="dropZone16-1"></div>
+                </div>
+                <div>
+                    <label for="dropZone16-2">Step 2:</label>
+                    <div class="dropzone" id="dropZone16-2"></div>
+                </div>
+                <div>
+                    <label for="dropZone16-3">Step 3:</label>
+                    <div class="dropzone" id="dropZone16-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question16">Solution</button>
+
+        <div id="solutionInfo_question16" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Storage Spaces Direct is an option for using failover clusters for storage services. So the cluster has to be there before S2D can be activated. Once that's done, the shared volume can be defined.</p>
+
+            <div id="correctAnswers_question16" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <ul>
+                    <li>Create a failover cluster</li>
+                    <li>Enable Storage Spaces Direct</li>
+                    <li>Create a volume</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/system-center/vmm/s2d-hyper-converged?view=sc-vmm-2019" target="_blank">System Center VMM S2D Hyper-Converged</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/deploy-storage-spaces-direct" target="_blank">Deploy Storage Spaces Direct</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/system-center/vmm/s2d-hyper-converged?view=sc-vmm-2022&tabs=HyperVhosts" target="_blank">S2D Hyper-Converged Overview</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer16.js"></script>
+</body>
+</html>

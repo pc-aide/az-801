@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 19</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 19</h2>
+        <p>You have a failover cluster named Cluster1 that contains the nodes shown in the following table.</p>
+
+        <table>
+            <tr><th>Name</th><th>Server role</th></tr>
+            <tr><td>Node1</td><td>File Server</td></tr>
+            <tr><td>Node2</td><td>File Server</td></tr>
+            <tr><td>Node3</td><td>File Server</td></tr>
+        </table>
+
+        <p>A File Server for general use cluster role named HAFS is configured as shown in the <a href="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q19_2.jpg" target="_blank">General exhibit</a>.</p>
+        <p>The Advanced Policies settings for HAFS are configured as shown in the <a href="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q19_3.jpg" target="_blank">Advanced Policies exhibit</a>.</p>
+
+        <p>For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p>
+
+        <div class="answers">
+            <label>1. If you select Move, & then Best Possible Node, HAFS will move to Node3:</label><br>
+            <input type="radio" id="q19a1_yes" name="q19a1" value="Yes">
+            <label for="q19a1_yes">Yes</label>
+            <input type="radio" id="q19a1_no" name="q19a1" value="No">
+            <label for="q19a1_no">No</label><br>
+
+            <label>2. If you stop & start Cluster, HAFS will come online on Node1:</label><br>
+            <input type="radio" id="q19a2_yes" name="q19a2" value="Yes">
+            <label for="q19a2_yes">Yes</label>
+            <input type="radio" id="q19a2_no" name="q19a2" value="No">
+            <label for="q19a2_no">No</label><br>
+
+            <label>3. If you select Move, Select Node, & then Node2, HAFS will move to Node2:</label><br>
+            <input type="radio" id="q19a3_yes" name="q19a3" value="Yes">
+            <label for="q19a3_yes">Yes</label>
+            <input type="radio" id="q19a3_no" name="q19a3" value="No">
+            <label for="q19a3_no">No</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question19">Solution</button>
+
+        <div id="solutionInfo_question19" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Box 1: Yes - HAFS will move from Node1 to Node3 if we test failover for the cluster.</p>
+            <p>Note: Test failover to validate cluster functionality:</p>
+            <ul>
+                <li>Connect to one of the SQL Server cluster nodes by using RDP.</li>
+                <li>Open Failover Cluster Manager. Select Roles. Notice which node owns the SQL Server FCI role.</li>
+                <li>Right-click the SQL Server FCI role.</li>
+                <li>Select Move, and then select Best Possible Node.</li>
+                <li>Failover Cluster Manager shows the role, and its resources go offline. The resources then move and come back online in the other node.</li>
+            </ul>
+            <p>Box 2: Yes - Node1 is the preferred owner.</p>
+            <p>Box 3: No - Node2 is not a possible owner of the cluster.</p>
+
+            <div id="correctAnswers_question19" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <ul>
+                    <li>1. Yes</li>
+                    <li>2. Yes</li>
+                    <li>3. No</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-vnn-azure-load-balancer-configure" target="_blank">Azure SQL - Failover Cluster Instance</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-vnn-azure-load-balancer-configure?view=azuresql&tabs=ilb" target="_blank">Azure SQL - Virtual Machines</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server?view=sql-server-ver16&viewFallbackFrom=sql-server-2014" target="_blank">SQL Server - Failover Clusters</a></li>
+                <li><a href="https://forsenergy.com/en-us/cluadmin/html/8e1c1455-2f8b-400d-a6f8-378c8d7f4f7a.htm" target="_blank">Windows Server - Failover Clustering</a></li>
+                <li><a href="https://learn.microsoft.com/en-US/troubleshoot/windows-server/high-availability/groups-fail-logic-three-more-cluster-node-members#scenario-3" target="_blank">Groups Fail Logic</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer19.js"></script>
+</body>
+</html>

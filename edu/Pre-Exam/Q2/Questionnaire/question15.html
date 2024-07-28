@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 15</h2>
+        <p>Your company uses Storage Spaces Direct.</p>
+        <p>You need to view the available storage in a Storage Space Direct storage pool.</p>
+        <p>What should you use?</p>
+
+        <div class="answers">
+            <label><input type="radio" name="q15" value="A"> A. System Configuration</label><br>
+            <label><input type="radio" name="q15" value="B"> B. File Server Resource Manager (FSRM)</label><br>
+            <label><input type="radio" name="q15" value="C"> C. the Get-StorageFileServer cmdlet</label><br>
+            <label><input type="radio" name="q15" value="D"> D. Failover Cluster Manager</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question15">Solution</button>
+
+        <div id="solutionInfo_question15" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>If Failover Cluster Manager, select the Storage Space Direct storage pool. The information displayed in the main window includes the free space and used space.</p>
+
+            <div id="correctAnswers_question15" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>D. Failover Cluster Manager</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/azure-stack/hci/concepts/storage-spaces-direct-overview" target="_blank">Storage Spaces Direct Overview</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer15.js"></script>
+</body>
+</html>

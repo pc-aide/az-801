@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 17</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 17</h2>
+        <p>You have a Storage Spaces Direct configuration that has persistent memory and contains the data volumes shown in the following table.</p>
+        <p>On which volumes can you use direct access (DAX)?</p>
+
+        <div class="answers">
+            <label><input type="radio" name="question17" value="A"> A. Volume3 only</label><br>
+            <label><input type="radio" name="question17" value="B"> B. Volume4 only</label><br>
+            <label><input type="radio" name="question17" value="C"> C. Volume1 and Volume3 only</label><br>
+            <label><input type="radio" name="question17" value="D"> D. Volume2 and Volume4 only</label><br>
+            <label><input type="radio" name="question17" value="E"> E. Volume3 and Volume4 only</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question17">Solution</button>
+
+        <div id="solutionInfo_question17" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>DAX can only be used on one volume and the volume has to be NTFS. You could configure DAX on Volume1 (although that would require reformatting the volume) or Volume3. However, 'Volume1 only' isn't an answer option so Volume3 is the correct answer. 'Volume1 and Volume3' is incorrect because of the single volume limitation.</p>
+
+            <div id="correctAnswers_question17" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>A. Volume3 only</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/persistent-memory-direct-access" target="_blank">Persistent Memory Direct Access</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer17.js"></script>
+</body>
+</html>

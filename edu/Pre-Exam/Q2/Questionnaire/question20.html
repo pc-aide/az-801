@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 20</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 20</h2>
+        <p>You have two Azure virtual machines that run Windows Server.</p>
+        <p>You plan to create a failover cluster that will host the virtual machines.</p>
+        <p>You need to configure an Azure Storage account that will be used by the cluster as a cloud witness. The solution must maximize resiliency.</p>
+        <p>Which type of redundancy should you configure for the storage account?</p>
+
+        <div class="answers">
+            <label><input type="radio" name="q20" value="A"> A. Geo-zone-redundant storage (GZRS)</label><br>
+            <label><input type="radio" name="q20" value="B"> B. Locally-redundant storage (LRS)</label><br>
+            <label><input type="radio" name="q20" value="C"> C. Zone-redundant storage (ZRS)</label><br>
+            <label><input type="radio" name="q20" value="D"> D. Geo-redundant storage (GRS)</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question20">Solution</button>
+
+        <div id="solutionInfo_question20" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>For Replication, you can select Locally-redundant storage (LRS) or Zone-redundant storage (ZRS) as applicable. ZRS offers more redundancy.</p>
+            <p>Failover Clustering uses the blob file as the arbitration point, which requires consistency guarantees when reading the data. Therefore, you must select Locally-redundant storage for Replication type when the Cloud Witness is for a cluster that resides on premises, or it's a cluster in Azure which isn't deployed across different availability zones in the same region. When the cluster nodes are in the same region but different availability zones, use Zone-redundant storage as Replication type.</p>
+
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q20_1.png" alt="Image 1" style="width: 600px;">
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q2/img/q20_2.png" alt="Image 2" style="width: 600px;">
+
+            <div id="correctAnswers_question20" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <ul>
+                    <li>C. Zone-redundant storage (ZRS)</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/deploy-cloud-witness" target="_blank">Deploy Cloud Witness</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer20.js"></script>
+</body>
+</html>
