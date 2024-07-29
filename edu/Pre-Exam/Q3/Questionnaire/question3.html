@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 3</h2>
+        <p>You have a failover cluster named Cluster1 that hosts an application named App1.</p>
+        <p>The General tab in App1 Properties is shown in the General exhibit.</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q3_1.png" alt="General tab in App1 Properties">
+        <p>The Failover tab in App1 Properties is shown in the Failover exhibit.</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q3_2.png" alt="Failover tab in App1 Properties">
+        <p>Server1 shuts down unexpectedly.</p>
+        <p>You need to ensure that when you start Server1, App1 continues to run on Server2.</p>
+        <p>Solution: You pause the Server1 node in Cluster1 and then start Server1. Does this meet the goal?</p>
+        
+        <div class="radio-group">
+            <input type="radio" id="q3a" name="solution" value="A">
+            <label for="q3a">A. Yes</label><br>
+            <input type="radio" id="q3b" name="solution" value="B">
+            <label for="q3b">B. No</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question3">Solution</button>
+
+        <div id="solutionInfo_question3" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong> If Server1 is paused and Server2 fails or requires a restart, Server1 will not be able to assume the roles until it is resumed. You cannot pause before shutdown because the server shut down unexpectedly. Always pause and drain clustered servers before taking them offline for maintenance.</p>
+            
+            <div id="correctAnswers_question3" style="display: none;">
+                <p><strong>Correct Answer:</strong> B</p>
+            </div>
+            
+            <div id="references_question3" class="references" style="display: none;">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/azure-stack/hci/manage/maintain-servers" target="_blank">Manage and Maintain Servers</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer3.js"></script>
+</body>
+</html>

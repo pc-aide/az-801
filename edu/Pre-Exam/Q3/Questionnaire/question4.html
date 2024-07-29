@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 4</h2>
+        <p>You have a failover cluster named Cluster1 that hosts an application named App1.</p>
+        <p>The General tab in App1 Properties is shown in the General exhibit.</p>
+        <p>The Failover tab in App1 Properties is shown in the Failover exhibit.</p>
+        <p>Server1 shuts down unexpectedly. You need to ensure that when you start Server1, App1 continues to run on Server2.</p>
+        <p>Solution: From the General settings, you increase the priority of Server2 in the Preferred Owners list. Does this meet the goal?</p>
+        
+        <div class="radio-group">
+            <input type="radio" id="q4a" name="solution" value="A">
+            <label for="q4a">A. Yes</label><br>
+            <input type="radio" id="q4b" name="solution" value="B">
+            <label for="q4b">B. No</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question4">Solution</button>
+
+        <div id="solutionInfo_question4" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong> Even if the priority of server 2 is increased, this will have no effect because there are no servers marked as preferred owner. The correct answer is B --> NO. If unticked would have worked with these settings “immediately fallback” and node 1 mentioned on top it would have been running on node 1. But it runs on node 2 as the preferred owner list works only when ticked.</p>
+            
+            <div id="correctAnswers_question4" style="display: none;">
+                <p><strong>Correct Answer:</strong> B</p>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer4.js"></script>
+</body>
+</html>

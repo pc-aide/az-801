@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 5</h2>
+        <p>Your company uses Storage Spaces Direct.</p>
+        <p>You need to view the available storage in a Storage Space Direct storage pool.</p>
+        <p>What should you use?</p>
+        
+        <div class="radio-group">
+            <input type="radio" id="q5a" name="solution" value="A">
+            <label for="q5a">A. System Configuration</label><br>
+            <input type="radio" id="q5b" name="solution" value="B">
+            <label for="q5b">B. Resource Monitor</label><br>
+            <input type="radio" id="q5c" name="solution" value="C">
+            <label for="q5c">C. the Get-StorageFileServer cmdlet</label><br>
+            <input type="radio" id="q5d" name="solution" value="D">
+            <label for="q5d">D. Windows Admin Center</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question5">Solution</button>
+
+        <div id="solutionInfo_question5" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong> Open the Windows Admin Center web interface in your browser.<br>
+            Connect to the server running the Storage Spaces Direct cluster.<br>
+            In the left navigation pane, click on "Storage Spaces Direct" under the "Storage" section.<br>
+            Click on the "Pools" tab to see a list of the storage pools in the cluster.<br>
+            Select the storage pool you want to view and click on the "Usage" tab.<br>
+            The "Usage" tab will show you a breakdown of the available storage in the pool, including the total capacity, the amount of storage in use, and the amount of free space.</p>
+            
+            <div id="correctAnswers_question5" style="display: none;">
+                <p><strong>Correct Answer:</strong> D</p>
+            </div>
+            
+            <div id="references_question5" class="references" style="display: none;">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/azure-stack/hci/concepts/storage-spaces-direct-overview#manage-and-monitor" target="_blank">Manage and Monitor Storage Spaces Direct</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer5.js"></script>
+</body>
+</html>
