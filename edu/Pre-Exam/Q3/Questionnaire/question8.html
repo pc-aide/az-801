@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 8</h2>
+        <p>You have a Windows Server failover cluster named Cluster1 that has a cloud witness and the nodes shown in the following table.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Windows Server role</th>
+                    <th>Assigned vote</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Node1</td>
+                    <td>File Server, DFS Namespace Server</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Node2</td>
+                    <td>DFS Namespace Server</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Node3</td>
+                    <td>File Server, DFS Namespace Server</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Node4</td>
+                    <td>File Server</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Cluster1 has the roles shown in the following table.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Cluster role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FS1</td>
+                    <td>File Server for general use</td>
+                </tr>
+                <tr>
+                    <td>DFS1</td>
+                    <td>DFS Namespace Server</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Cluster1 has the following configuration.</p>
+        <pre>
+        PS C:\> Get-ClusterFaultDomain
+
+        Name  Type ParentName ChildrenNames    Location
+        ----- ---- -------    -------------    ---------
+        Site1 Site            {Node1, Node2}
+        Site2 Site            {Node3, Node4}
+        Node1 Node Site1
+        Node2 Node Site1
+        Node3 Node Site2
+        Node4 Node Site2
+        </pre>
+        <p>For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p>
+        <div class="radio-group">
+            <p>If FS1 runs on Node3, & Node3 fails, FS1 will fail over to Node4 automatically:</p>
+            <input type="radio" id="failover1Yes" name="failover1" value="yes">
+            <label for="failover1Yes">Yes</label><br>
+            <input type="radio" id="failover1No" name="failover1" value="no">
+            <label for="failover1No">No</label>
+        </div>
+        <div class="radio-group">
+            <p>If DFS1 runs on Node2, & Node2 fails, DFS1 will fail over to Node3 automatically:</p>
+            <input type="radio" id="failover2Yes" name="failover2" value="yes">
+            <label for="failover2Yes">Yes</label><br>
+            <input type="radio" id="failover2No" name="failover2" value="no">
+            <label for="failover2No">No</label>
+        </div>
+        <div class="radio-group">
+            <p>If Site2 fails, DFS1 will remain available:</p>
+            <input type="radio" id="siteFailYes" name="siteFail" value="yes">
+            <label for="siteFailYes">Yes</label><br>
+            <input type="radio" id="siteFailNo" name="siteFail" value="no">
+            <label for="siteFailNo">No</label>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question8">Solution</button>
+
+        <div id="solutionInfo_question8" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>1. No - because the server doesn't have an assigned vote, the failover will not happen automatically to that server.<br>
+            2. Yes - DF1 runs in Node2 (Site1), and when a failover happens, Node1 will take over.<br>
+            3. Yes - Both servers in Site1 have the DFS namespace service.</p>
+
+            <div id="correctAnswers_question8" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>If FS1 runs on Node3, & Node3 fails, FS1 will fail over to Node4 automatically: No<br>
+                If DFS1 runs on Node2, & Node2 fails, DFS1 will fail over to Node3 automatically: Yes<br>
+                If Site2 fails, DFS1 will remain available: Yes</p>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer8.js"></script>
+</body>
+</html>

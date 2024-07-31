@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 6</h2>
+        <p>Your network contains an Active Directory Domain Services (AD DS) forest.</p>
+        <p>You need to deploy a Storage Spaces Direct converged infrastructure. The solution must meet the following requirements:</p>
+        <ul>
+            <li>Use an Ethernet fabric.</li>
+            <li>Eliminate the need for Data Center Bridging (DCB).</li>
+        </ul>
+        <p>Which Remote Direct Memory Access (RDMA) networking technology should you implement?</p>
+        
+        <div class="radio-group">
+            <input type="radio" id="q6a" name="solution" value="A">
+            <label for="q6a">A. InfiniBand</label><br>
+            <input type="radio" id="q6b" name="solution" value="B">
+            <label for="q6b">B. RoCEv2</label><br>
+            <input type="radio" id="q6c" name="solution" value="C">
+            <label for="q6c">C. iWARP</label><br>
+            <input type="radio" id="q6d" name="solution" value="D">
+            <label for="q6d">D. RoCEv1</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question6">Solution</button>
+
+        <div id="solutionInfo_question6" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong> iWARP is a networking technology that meets the specified requirements by using an Ethernet fabric without requiring Data Center Bridging (DCB).</p>
+            
+            <div id="correctAnswers_question6" style="display: none;">
+                <p><strong>Correct Answer:</strong> C</p>
+            </div>
+            
+            <div id="references_question6" class="references" style="display: none;">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/azure-stack/hci/manage/validate-qos" target="_blank">Validate Quality of Service (QoS) for Storage Spaces Direct</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer6.js"></script>
+</body>
+</html>
