@@ -15,12 +15,12 @@
 
     <p>Actions:</p>
 
-    <!-- List of draggable items -->
-    <div class="draggable" id="step1" data-question="question01" data-action="Add a WAC gateway" draggable="true">Add a WAC gateway</div>
-    <div class="draggable" id="step2" data-question="question01" data-action="Add Cluster1 to WAC" draggable="true">Add Cluster1 to WAC</div>
-    <div class="draggable" id="step3" data-question="question01" data-action="Add a group managed service account (gMSA)" draggable="true">Add a group managed service account (gMSA)</div>
-    <div class="draggable" id="step4" data-question="question01" data-action="Enable CredSSP" draggable="true">Enable CredSSP</div>
-    <div class="draggable" id="step5" data-question="question01" data-action="Add the Cluster-Aware Updating role" draggable="true">Add the Cluster-Aware Updating role</div>
+    <!-- List of draggable items with unique IDs -->
+    <div class="draggable" id="step01_1" data-question="question01" data-action="Add a WAC gateway" draggable="true">Add a WAC gateway</div>
+    <div class="draggable" id="step01_2" data-question="question01" data-action="Add Cluster1 to WAC" draggable="true">Add Cluster1 to WAC</div>
+    <div class="draggable" id="step01_3" data-question="question01" data-action="Add a group managed service account (gMSA)" draggable="true">Add a group managed service account (gMSA)</div>
+    <div class="draggable" id="step01_4" data-question="question01" data-action="Enable CredSSP" draggable="true">Enable CredSSP</div>
+    <div class="draggable" id="step01_5" data-question="question01" data-action="Add the Cluster-Aware Updating role" draggable="true">Add the Cluster-Aware Updating role</div>
 
     <!-- Drop zones with labels outside -->
     <div class="dropzone-container">
@@ -39,10 +39,12 @@
     <!-- Solution button and info -->
     <button class="solutionButton" data-answer-name="question01">Solution</button>
     <div id="solutionInfo_question01" class="solutionInfo" style="display:none;">
-        <p id="correctAnswers_question01" style="display:none;">Correct Answers:</p>
-        <p>Add Cluster1 to WAC : Step 1</p>
-        <p>Enable CredSSP : Step 2</p>
-        <p>Add the Cluster-Aware Updating role : Step 3</p>
+        <p id="correctAnswers_question01" style="display:none;">
+            Correct Answers:<br>
+            Add Cluster1 to WAC : Step 1<br>
+            Enable CredSSP : Step 2<br>
+            Add the Cluster-Aware Updating role : Step 3
+        </p>
     </div>
 
     <!-- Explanation section -->

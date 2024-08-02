@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 13</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Scripts/answer13.js" defer></script>
+</head>
+<body>
+    <h2>Question 13</h2>
+    <p>You have two Azure virtual machines named VM1 and VM2. VM1 is backed up to an Azure Recovery Services vault daily and retains backups for 30 days.</p>
+    <p>You need to restore an individual file named C:\Data\Important.docx from VM1 to VM2. The solution must minimize administrative effort.</p>
+    <p>Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+    <p>Actions:</p>
+
+    <!-- List of draggable items with unique IDs -->
+    <div class="draggable" id="step13_1" data-question="question13" data-action="Unmount the disks" draggable="true">Unmount the disks</div>
+    <div class="draggable" id="step13_2" data-question="question13" data-action="Download the file recovery script for VM1" draggable="true">Download the file recovery script for VM1</div>
+    <div class="draggable" id="step13_3" data-question="question13" data-action="Copy the file by using Azure Storage Explorer" draggable="true">Copy the file by using Azure Storage Explorer</div>
+    <div class="draggable" id="step13_4" data-question="question13" data-action="Copy the file by using File Explorer" draggable="true">Copy the file by using File Explorer</div>
+    <div class="draggable" id="step13_5" data-question="question13" data-action="Restore the file by using Windows Server Backup" draggable="true">Restore the file by using Windows Server Backup</div>
+    <div class="draggable" id="step13_6" data-question="question13" data-action="Run the file script on VM2" draggable="true">Run the file script on VM2</div>
+
+    <!-- Drop zones with labels -->
+    <div class="dropzone-container">
+        <p>Step 1</p>
+        <div class="dropzone" id="dropZone13-1" data-question="question13"></div>
+    </div>
+    <div class="dropzone-container">
+        <p>Step 2</p>
+        <div class="dropzone" id="dropZone13-2" data-question="question13"></div>
+    </div>
+    <div class="dropzone-container">
+        <p>Step 3</p>
+        <div class="dropzone" id="dropZone13-3" data-question="question13"></div>
+    </div>
+    <div class="dropzone-container">
+        <p>Step 4</p>
+        <div class="dropzone" id="dropZone13-4" data-question="question13"></div>
+    </div>
+
+    <!-- Solution button and info -->
+    <button class="solutionButton" data-answer-name="question13">Solution</button>
+    <div id="solutionInfo_question13" class="solutionInfo" style="display:none;">
+        <p id="correctAnswers_question13" style="display:none;">
+            Correct Answers:<br>
+            Download the file recovery script for VM1 : Step 1<br>
+            Run the file script on VM2 : Step 2<br>
+            Copy the file by using File Explorer : Step 3<br>
+            Unmount the disks : Step 4
+        </p>
+    </div>
+
+    <!-- Explanation section -->
+    <h3>Explanation</h3>
+    <p>Step 1: Generate and download script to browse and recover files</p>
+    <p>Step 2: Running the script and identifying volumes</p>
+    <p>Step 3: Closing the connection</p>
+    <p>After identifying the files and copying them to a local storage location, remove (or unmount) the additional drives. To unmount the drives, on the File Recovery menu in the Azure portal, select Unmount Disks.</p>
+    <div class="image-container">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q13_0.png" alt="Explanation Image 1">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q13_1.png" alt="Explanation Image 2">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q13_2.png" alt="Explanation Image 3">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q13_3.png" alt="Explanation Image 4">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q13_4.png" alt="Explanation Image 5">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q13_5.png" alt="Explanation Image 6">
+    </div>
+
+    <!-- Reference section -->
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm" target="_blank">Restore files from an Azure VM</a></li>
+    </ul>
+</body>
+</html>
