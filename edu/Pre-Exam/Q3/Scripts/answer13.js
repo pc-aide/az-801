@@ -76,6 +76,15 @@ function attachSolutionButtonListeners_question13(button) {
                     correctAnswersElement.style.display = 'block';
                 }
             }
+            // Show the explanation and references after the solution is revealed
+            const explanationSection = solutionInfoElement.querySelector('h3 + p');
+            if (explanationSection) {
+                explanationSection.style.display = 'block';
+            }
+            const referenceSection = solutionInfoElement.querySelector('ul');
+            if (referenceSection) {
+                referenceSection.style.display = 'block';
+            }
             solutionInfoElement.style.display = 'block';
         }
 

@@ -38,15 +38,20 @@ function attachSolutionButtonListeners_question12(button) {
                 solutionInfoElement.classList.remove('highlight');
                 const correctAnswersElement = document.getElementById('correctAnswers_question12');
                 if (correctAnswersElement) {
-                    correctAnswersElement.innerHTML = `
-                        Correct Answers:<br>
-                        The Azure Site Recovery Mobility Service : to AppSrv1 & AppSrv2<br>
-                        An Azure Site Recovery configuration server : to Server1
-                    `;
                     correctAnswersElement.style.display = 'block';
                 }
             }
             solutionInfoElement.style.display = 'block';
+        }
+
+        // Afficher l'explication et les références
+        const explanationElement = document.getElementById('explanation_question12');
+        if (explanationElement) {
+            explanationElement.style.display = 'block';
+        }
+        const referencesElement = document.getElementById('references_question12');
+        if (referencesElement) {
+            referencesElement.style.display = 'block';
         }
 
         showFinalScore();

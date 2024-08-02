@@ -83,6 +83,16 @@ function attachSolutionButtonListeners_question01(button) {
             solutionInfoElement.style.display = 'block';
         }
 
+        // Show explanation and references
+        const explanationElement = document.getElementById('explanation_question01');
+        if (explanationElement) {
+            explanationElement.style.display = 'block';
+        }
+        const referencesElement = document.getElementById('references_question01');
+        if (referencesElement) {
+            referencesElement.style.display = 'block';
+        }
+
         showFinalScore();
     });
 }
@@ -91,6 +101,6 @@ function showFinalScore() {
     const finalScoreElement = document.getElementById('finalScore');
     if (finalScoreElement) {
         const percentage = (score / totalQuestions) * 100;
-        finalScoreElement.textContent = `Final Score: ${score}/${totalQuestions} (${percentage.toFixed(2)}%)`;
+        finalScoreElement.innerHTML = `Your final score is ${percentage.toFixed(2)}%`;
     }
 }
