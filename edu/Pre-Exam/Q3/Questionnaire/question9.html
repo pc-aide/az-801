@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 9</h2>
+        <p>You have a Hyper-V failover cluster named Cluster1 at a main datacenter. Cluster1 contains two nodes that have the Hyper-V server role installed. Cluster1 hosts 10 highly available virtual machines. You have a cluster named Cluster2 in a disaster recovery site. Cluster2 contains two nodes that have the Hyper-V server role installed.</p>
+        <p>You plan to use Hyper-V Replica to replicate the virtual machines from Cluster1 to Cluster2.</p>
+        <p>What should you do? To answer, select the appropriate options in the answer area.</p>
+
+        <div class="dropdown-group">
+            <p>Cluster role to create on Cluster2:</p>
+            <select id="clusterRole">
+                <option value="">Select...</option>
+                <option value="Distributed Transaction Coordinator (DTC)">Distributed Transaction Coordinator (DTC)</option>
+                <option value="Generic Script">Generic Script</option>
+                <option value="Hyper-V Replica Broker">Hyper-V Replica Broker</option>
+                <option value="Virtual machine">Virtual machine</option>
+            </select>
+        </div>
+
+        <div class="dropdown-group">
+            <p>Replication target name to specify:</p>
+            <select id="replicationTarget">
+                <option value="">Select...</option>
+                <option value="Cluster 2">Cluster 2</option>
+                <option value="The name of a node on Cluster2">The name of a node on Cluster2</option>
+                <option value="The name of each virtual machine">The name of each virtual machine</option>
+                <option value="The name of the Hyper-V Replica Broker">The name of the Hyper-V Replica Broker</option>
+            </select>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question9">Solution</button>
+
+        <div id="solutionInfo_question9" class="solutionInfo" style="display: none;">
+            <div id="correctAnswers_question9" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>Cluster role to create on Cluster2: Hyper-V Replica Broker<br>
+                Replication target name to specify: The name of the Hyper-V Replica Broker</p>
+            </div>
+
+            <div id="explanation_question9">
+                <p><strong>Explanation:</strong></p>
+                <p>For the virtual machines to failover correctly between clusters using Hyper-V Replica, you must create a Hyper-V Replica Broker role in the cluster. This role manages the replication of virtual machines and ensures they are appropriately tracked and managed. The target name should also be the Hyper-V Replica Broker's name, as it coordinates the failover process.</p>
+            </div>
+
+            <div id="ref_question9">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://techcommunity.microsoft.com/t5/virtualization/why-is-the-quot-hyper-v-replica-broker-quot-required/ba-p/381971#:~:text=Hyper%2DV%20Replica%20requires%20the,required%20to%20configure%20this%20role." target="_blank">Why is the "Hyper-V Replica Broker" Required?</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica" target="_blank">Set Up Hyper-V Replica</a></li>
+                    <li><a href="https://araihan.wordpress.com/2015/02/06/how-to-configure-hyper-v-replica-step-by-step/" target="_blank">How to Configure Hyper-V Replica Step-by-Step</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer9.js"></script>
+</body>
+</html>

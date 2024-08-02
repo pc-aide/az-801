@@ -1,13 +1,19 @@
-// Function to enable drag-and-drop functionality
-function enableDragAndDrop() {
-    document.querySelectorAll('.draggable').forEach(draggable => {
+document.addEventListener('DOMContentLoaded', function() {
+    enableDragAndDrop_question01();
+    document.querySelectorAll('.solutionButton[data-answer-name="question01"]').forEach(button => {
+        attachSolutionButtonListeners_question01(button);
+    });
+});
+
+function enableDragAndDrop_question01() {
+    document.querySelectorAll('.draggable[data-question="question01"]').forEach(draggable => {
         draggable.addEventListener('dragstart', (e) => {
             e.dataTransfer.setData('text/plain', e.target.id);
             e.dataTransfer.effectAllowed = 'move';
         });
     });
 
-    document.querySelectorAll('.dropzone').forEach(dropzone => {
+    document.querySelectorAll('.dropzone[data-question="question01"]').forEach(dropzone => {
         dropzone.addEventListener('dragover', (e) => {
             e.preventDefault();
             e.dataTransfer.dropEffect = 'move';
@@ -32,23 +38,22 @@ function enableDragAndDrop() {
     });
 }
 
-function attachSolutionButtonListeners_question1(button) {
+function attachSolutionButtonListeners_question01(button) {
     button.addEventListener('click', function() {
-        // Reset styles for drop zones
-        document.querySelectorAll('.dropzone').forEach(zone => {
+        document.querySelectorAll('.dropzone[data-question="question01"]').forEach(zone => {
             zone.classList.remove('incorrect', 'highlight');
         });
 
-        // Check answers
         const correctAnswers = [
-            "Add Cluster1 to WAC",
-            "Enable CredSSP",
-            "Add the Cluster-Aware Updating role"
+            "Add Cluster1 to WAC : Step 1",
+            "Enable CredSSP : Step 2",
+            "Add the Cluster-Aware Updating role : Step 3"
         ];
 
         correctAnswers.forEach((answer, index) => {
-            const dropZone = document.getElementById(`dropZone1-${index + 1}`);
-            if (dropZone && dropZone.textContent.trim() === answer) {
+            const [correctAction, correctLabel] = answer.split(" : ");
+            const dropZone = document.getElementById(`dropZone01-${index + 1}`);
+            if (dropZone && dropZone.textContent.trim() === correctAction) {
                 dropZone.classList.add('highlight');
             } else {
                 dropZone.classList.add('incorrect');
@@ -56,21 +61,21 @@ function attachSolutionButtonListeners_question1(button) {
             }
         });
 
-        // Display solution info
-        const solutionInfoElement = document.getElementById('solutionInfo_question1');
+        const solutionInfoElement = document.getElementById('solutionInfo_question01');
         if (solutionInfoElement) {
-            const allCorrect = correctAnswers.every((answer, index) => 
-                document.getElementById(`dropZone1-${index + 1}`).textContent.trim() === answer
-            );
+            const allCorrect = correctAnswers.every((answer, index) => {
+                const [correctAction, correctLabel] = answer.split(" : ");
+                return document.getElementById(`dropZone01-${index + 1}`).textContent.trim() === correctAction;
+            });
 
             if (allCorrect) {
                 solutionInfoElement.classList.add('highlight');
                 solutionInfoElement.classList.remove('incorrect');
-                score++; // Increment score if all answers are correct
+                score++;
             } else {
                 solutionInfoElement.classList.add('incorrect');
                 solutionInfoElement.classList.remove('highlight');
-                const correctAnswersElement = document.getElementById('correctAnswers_question1');
+                const correctAnswersElement = document.getElementById('correctAnswers_question01');
                 if (correctAnswersElement) {
                     correctAnswersElement.style.display = 'block';
                 }
@@ -81,13 +86,6 @@ function attachSolutionButtonListeners_question1(button) {
         showFinalScore();
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    enableDragAndDrop();
-    document.querySelectorAll('.solutionButton').forEach(button => {
-        attachSolutionButtonListeners_question1(button);
-    });
-});
 
 function showFinalScore() {
     const finalScoreElement = document.getElementById('finalScore');

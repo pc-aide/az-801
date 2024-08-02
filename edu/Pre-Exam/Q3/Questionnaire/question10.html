@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 10</h2>
+        <p>You have two servers named Server1 and Server2 that run Windows Server. Both servers have the Hyper-V server role installed. Server1 hosts three virtual machines named VM1, VM2, and VM3. The virtual machines replicate to Server2.</p>
+        <p>Server1 experiences a hardware failure. You need to bring VM1, VM2, and VM3 back online as soon as possible.</p>
+        <p>From the Hyper-V Manager console on Server2, what should you run for each virtual machine?</p>
+
+        <div class="radio-group">
+            <input type="radio" id="optionA" name="action" value="Start">
+            <label for="optionA">A. Start</label><br>
+
+            <input type="radio" id="optionB" name="action" value="Move">
+            <label for="optionB">B. Move</label><br>
+
+            <input type="radio" id="optionC" name="action" value="Unplanned Failover">
+            <label for="optionC">C. Unplanned Failover</label><br>
+
+            <input type="radio" id="optionD" name="action" value="Planned Failover">
+            <label for="optionD">D. Planned Failover</label><br>
+        </div>
+
+        <button class="solutionButton" data-answer-name="question10">Solution</button>
+
+        <div id="solutionInfo_question10" class="solutionInfo" style="display: none;">
+            <div id="correctAnswers_question10" style="display: none;">
+                <p><strong>Correct Answer:</strong></p>
+                <p>C. Unplanned Failover</p>
+            </div>
+
+            <div id="explanation_question10">
+                <p><strong>Explanation:</strong></p>
+                <p>Unplanned Failover is an operation initiated on the replica VM when the primary VM/site is hit by a disaster. During Unplanned Failover, a check is done using Remote WMI to see if the primary VM is running. This is to protect against accidental administrator actions on the replica VM. This check prevents a ‘split-brain’ scenario where both the production and the replica VMs are running.</p>
+            </div>
+
+            <div id="ref_question10">
+                <p><strong>References:</strong></p>
+                <ul>
+                    <li><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica" target="_blank">Set Up Hyper-V Replica</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer10.js"></script>
+</body>
+</html>

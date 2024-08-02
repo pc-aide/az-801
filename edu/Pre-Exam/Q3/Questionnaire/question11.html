@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 11</h2>
+        <p>You have a Hyper-V failover cluster named Cluster1 that uses a cloud witness. Cluster1 hosts a virtual machine named VM1 that runs Windows Server.</p>
+        <p>You need to fail over VM1 automatically to a different node when a service named Service1 on VM1 fails.</p>
+        <p>What should you do on Cluster1 and VM1? To answer, select the appropriate options in the answer area.</p>
+
+        <h3>Cluster1:</h3>
+        <select id="clusterAction">
+            <option value="Modify the settings of the VM1 cluster role">Modify the settings of the VM1 cluster role</option>
+            <option value="Configure monitoring of the VM1 cluster role">Configure monitoring of the VM1 cluster role</option>
+            <option value="Change the startup priority of the VM1 cluster role">Change the startup priority of the VM1 cluster role</option>
+        </select>
+
+        <h3>VM1:</h3>
+        <select id="vmAction">
+            <option value="Configure the Startup Type of Service1">Configure the Startup Type of Service1</option>
+            <option value="Configure the Recovery settings of Service1">Configure the Recovery settings of Service1</option>
+            <option value="Configure the Startup & Recovery settings">Configure the Startup & Recovery settings</option>
+            <option value="Install & configure the Azure Monitor agent">Install & configure the Azure Monitor agent</option>
+        </select>
+
+        <button class="solutionButton" data-answer-name="question11">Solution</button>
+
+        <div id="solutionInfo_question11" class="solutionInfo" style="display: none;">
+            <div id="correctAnswers_question11">
+                <p><strong>Correct Answers:</strong></p>
+                <p>Cluster1: Configure monitoring of the VM1 cluster role</p>
+                <p>VM1: Configure the Recovery settings of Service1</p>
+            </div>
+
+            <div id="explanation_question11">
+                <p><strong>Explanation:</strong></p>
+                <p>To automatically fail over VM1 to a different node when Service1 fails, you need to configure the cluster to monitor the VM1 role and also configure the service's recovery settings. This ensures that the cluster will take appropriate action based on the service failure on VM1.</p>
+                <p><strong>Images:</strong></p>
+                <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/img11_1.png" alt="Image 1">
+                <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q11_2.png" alt="Image 2">
+                <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q11_3.png" alt="Image 3">
+                <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q11_4.png" alt="Image 4">
+                <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q11_5.png" alt="Image 5">
+                <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q11_6.png" alt="Image 6">
+            </div>
+
+            <div id="ref_question11">
+                <p><strong>Reference:</strong></p>
+                <ul>
+                    <li><a href="https://techcommunity.microsoft.com/t5/failover-clustering/how-to-configure-vm-monitoring-in-windows-server-2012/ba-p/371745" target="_blank">How to Configure VM Monitoring in Windows Server 2012</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/answer11.js"></script>
+</body>
+</html>

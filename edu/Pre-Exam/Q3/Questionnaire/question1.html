@@ -3,73 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 1</title>
+    <title>Question 01</title>
     <link rel="stylesheet" href="style.css">
+    <script src="../Scripts/answer1.js" defer></script>
 </head>
 <body>
-    <div>
-        <h2>Question 1</h2>
-        <p>Your network contains an Active Directory Domain Services (AD DS) domain. The domain contains a failover cluster named Cluster1.</p>
-        <p>You need to configure Cluster-Aware Updating (CAU) on the cluster by using Windows Admin Center (WAC).</p>
-        <p>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+    <h2>Question 01</h2>
+    <p>You have two Azure virtual machines named VM1 and VM2. VM1 is backed up to an Azure Recovery Services vault daily and retains backups for 30 days.</p>
+    <p>You need to restore an individual file named C:\Data\Important.docx from VM1 to VM2. The solution must minimize administrative effort.</p>
+    <p>Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
 
-        <div class="container">
-            <div class="actions">
-                <p>Actions:</p>
-                <div class="draggable" id="item1-1" draggable="true" data-action="Add a WAC gateway">Add a WAC gateway</div>
-                <div class="draggable" id="item1-2" draggable="true" data-action="Add Cluster1 to WAC">Add Cluster1 to WAC</div>
-                <div class="draggable" id="item1-3" draggable="true" data-action="Add a group managed service account (gMSA)">Add a group managed service account (gMSA)</div>
-                <div class="draggable" id="item1-4" draggable="true" data-action="Enable CredSSP">Enable CredSSP</div>
-                <div class="draggable" id="item1-5" draggable="true" data-action="Add the Cluster-Aware Updating role">Add the Cluster-Aware Updating role</div>
-            </div>
-            <div class="answers">
-                <p>Drop Zones:</p>
-                <div>
-                    <label for="dropZone1-1">Step 1:</label>
-                    <div class="dropzone" id="dropZone1-1"></div>
-                </div>
-                <div>
-                    <label for="dropZone1-2">Step 2:</label>
-                    <div class="dropzone" id="dropZone1-2"></div>
-                </div>
-                <div>
-                    <label for="dropZone1-3">Step 3:</label>
-                    <div class="dropzone" id="dropZone1-3"></div>
-                </div>
-            </div>
-        </div>
+    <p>Actions:</p>
 
-        <button class="solutionButton" data-answer-name="question1">Solution</button>
+    <!-- List of draggable items -->
+    <div class="draggable" id="step1" data-question="question01" data-action="Add a WAC gateway" draggable="true">Add a WAC gateway</div>
+    <div class="draggable" id="step2" data-question="question01" data-action="Add Cluster1 to WAC" draggable="true">Add Cluster1 to WAC</div>
+    <div class="draggable" id="step3" data-question="question01" data-action="Add a group managed service account (gMSA)" draggable="true">Add a group managed service account (gMSA)</div>
+    <div class="draggable" id="step4" data-question="question01" data-action="Enable CredSSP" draggable="true">Enable CredSSP</div>
+    <div class="draggable" id="step5" data-question="question01" data-action="Add the Cluster-Aware Updating role" draggable="true">Add the Cluster-Aware Updating role</div>
 
-        <div id="solutionInfo_question1" class="solutionInfo" style="display: none;">
-            <p><strong>Explanation:</strong></p>
-            <p>To configure Cluster-Aware Updating (CAU) on the cluster using Windows Admin Center (WAC), follow these steps:</p>
-            <ul>
-                <li>Add Cluster1 to WAC</li>
-                <li>Enable CredSSP</li>
-                <li>Add the Cluster-Aware Updating role</li>
-            </ul>
-
-            <div id="correctAnswers_question1" style="display: none;">
-                <p><strong>Correct Answers:</strong></p>
-                <ul>
-                    <li>Add Cluster1 to WAC</li>
-                    <li>Enable CredSSP</li>
-                    <li>Add the Cluster-Aware Updating role</li>
-                </ul>
-            </div>
-
-            <p><strong>References:</strong></p>
-            <ul>
-                <li><a href="https://4sysops.com/archives/install-updates-for-server-clusters-using-windows-admin-center/" target="_blank">Install Updates for Server Clusters using Windows Admin Center</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure-stack/hci/manage/update-cluster" target="_blank">Update Cluster using Azure Stack HCI</a></li>
-            </ul>
-
-            <p><img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/Q1_1.png" alt="Connecting WAC to a cluster" style="width: 600px;"></p>
-            <p><img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q1_2.png" alt="Notorious issues with CredSSP" style="width: 600px;"></p>
-            <p><img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q1_3.png" alt="Configuration Overview" style="width: 600px;"></p>
-        </div>
+    <!-- Drop zones with labels outside -->
+    <div class="dropzone-container">
+        <p>Step 1</p>
+        <div class="dropzone" id="dropZone01-1" data-question="question01"></div>
     </div>
-    <script src="../Scripts/answer1.js"></script>
+    <div class="dropzone-container">
+        <p>Step 2</p>
+        <div class="dropzone" id="dropZone01-2" data-question="question01"></div>
+    </div>
+    <div class="dropzone-container">
+        <p>Step 3</p>
+        <div class="dropzone" id="dropZone01-3" data-question="question01"></div>
+    </div>
+
+    <!-- Solution button and info -->
+    <button class="solutionButton" data-answer-name="question01">Solution</button>
+    <div id="solutionInfo_question01" class="solutionInfo" style="display:none;">
+        <p id="correctAnswers_question01" style="display:none;">Correct Answers:</p>
+        <p>Add Cluster1 to WAC : Step 1</p>
+        <p>Enable CredSSP : Step 2</p>
+        <p>Add the Cluster-Aware Updating role : Step 3</p>
+    </div>
+
+    <!-- Explanation section -->
+    <h3>Explanation</h3>
+    <p>To configure Cluster-Aware Updating (CAU) on the cluster using Windows Admin Center (WAC), follow these steps:</p>
+    <ul>
+        <li>Add Cluster1 to WAC</li>
+        <li>Enable CredSSP</li>
+        <li>Add the Cluster-Aware Updating role</li>
+    </ul>
+    <div class="image-container">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/Q1_1.png" alt="Explanation Image 1">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q1_2.png" alt="Explanation Image 2">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q1_3.png" alt="Explanation Image 3">
+    </div>
+
+    <!-- Reference section -->
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/deploy-storage-spaces-direct" target="_blank">Deploy Storage Spaces Direct</a></li>
+        <li><a href="https://learn.microsoft.com/en-us/system-center/vmm/s2d-hyper-converged?view=sc-vmm-2022&tabs=HyperVhosts" target="_blank">Hyper-Converged Infrastructure with Storage Spaces Direct</a></li>
+    </ul>
 </body>
 </html>

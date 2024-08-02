@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 12</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Scripts/answer12.js" defer></script>
+</head>
+<body>
+    <h2>Question 12</h2>
+    <p>You have two physical servers named AppSrv1 and AppSrv2 and an unconfigured server named Server1. All the servers run Windows Server. Only Server1 can access the internet.</p>
+    <p>You plan to use Azure Site Recovery to replicate AppSrv1 and AppSrv2 to Azure.</p>
+    <p>You need to deploy the required components to AppSrv1, AppSrv2, and Server1.</p>
+    <p>Which components should you deploy? To answer, drag the appropriate components to the correct servers. Each component may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.</p>
+
+    <p>Components:</p>
+
+    <!-- List of draggable items -->
+    <div class="draggable" id="comp1" data-question="question12" data-action="The Azure Connected Machine agent" draggable="true">The Azure Connected Machine agent</div>
+    <div class="draggable" id="comp2" data-question="question12" data-action="An Azure Site Recovery configuration server" draggable="true">An Azure Site Recovery configuration server</div>
+    <div class="draggable" id="comp3" data-question="question12" data-action="The Azure Site Recovery Mobility Service" draggable="true">The Azure Site Recovery Mobility Service</div>
+    <div class="draggable" id="comp4" data-question="question12" data-action="The Microsoft Azure Recovery Services (MARS) agent" draggable="true">The Microsoft Azure Recovery Services (MARS) agent</div>
+
+    <!-- Drop zones with labels outside -->
+    <div class="dropzone-container">
+        <div class="dropzone-label">To AppSrv1 & AppSrv2:</div>
+        <div class="dropzone" id="dropZone12-1" data-question="question12"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">To Server1:</div>
+        <div class="dropzone" id="dropZone12-2" data-question="question12"></div>
+    </div>
+
+    <!-- Solution button and info -->
+    <button class="solutionButton" data-answer-name="question12">Solution</button>
+    <div id="solutionInfo_question12" class="solutionInfo" style="display:none;">
+        <p id="correctAnswers_question12" style="display:none;">
+            Correct Answers:<br>
+            The Azure Site Recovery Mobility Service <br> 
+            to AppSrv1 & AppSrv2 <br><br>
+            An Azure Site Recovery configuration server <br>
+            to Server1
+        </p>
+    </div>
+
+    <!-- Explanation section -->
+    <h3>Explanation</h3>
+    <p>The Mobility service must be installed on each server you want to replicate. The Azure Site Recovery configuration server is needed to manage the replication process and interact with Azure Site Recovery.</p>
+    <div class="image-container">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q12_1.png" alt="Explanation Image">
+    </div>
+
+    <!-- Reference section -->
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery" target="_blank">Azure Site Recovery for Physical Servers</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-architecture" target="_blank">Azure Site Recovery Architecture</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-set-up-source" target="_blank">Setting Up Source Server for Azure Site Recovery</a></li>
+    </ul>
+</body>
+</html>
