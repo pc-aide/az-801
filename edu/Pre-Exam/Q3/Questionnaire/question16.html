@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 16</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Scripts/answer16.js" defer></script>
+</head>
+<body>
+    <h2>Question 16</h2>
+    <p>You have an Azure subscription that contains an Azure Recovery Services vault. You have an on-premises physical server that runs Windows Server. You need to back up the server daily to Azure.</p>
+    <p>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+    <p>Actions:</p>
+
+    <!-- List of draggable items with unique IDs -->
+    <div class="draggable" id="comp16_1" data-question="question16" data-action="Download the Vault Credentials file" draggable="true">Download the Vault Credentials file</div>
+    <div class="draggable" id="comp16_2" data-question="question16" data-action="Install & register the Microsoft Azure Recovery Services (MARS) agent" draggable="true">Install & register the Microsoft Azure Recovery Services (MARS) agent</div>
+    <div class="draggable" id="comp16_3" data-question="question16" data-action="Schedule a backup" draggable="true">Schedule a backup</div>
+    <div class="draggable" id="comp16_4" data-question="question16" data-action="On Server1, install & register the Azure Connected Machine agent" draggable="true">On Server1, install & register the Azure Connected Machine agent</div>
+    <div class="draggable" id="comp16_5" data-question="question16" data-action="On Server1, install & register the Azure Site Recovery Mobility service agent" draggable="true">On Server1, install & register the Azure Site Recovery Mobility service agent</div>
+    <div class="draggable" id="comp16_6" data-question="question16" data-action="Create a recovery plan" draggable="true">Create a recovery plan</div>
+
+    <!-- Drop zones with labels outside -->
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 1:</div>
+        <div class="dropzone" id="dropZone16-1" data-question="question16"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 2:</div>
+        <div class="dropzone" id="dropZone16-2" data-question="question16"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 3:</div>
+        <div class="dropzone" id="dropZone16-3" data-question="question16"></div>
+    </div>
+
+    <!-- Solution button and info -->
+    <button class="solutionButton" data-answer-name="question16">Solution</button>
+    <div id="solutionInfo_question16" class="solutionInfo" style="display:none;">
+        <p id="correctAnswers_question16" style="display:none;">
+            Correct Answers:<br>
+            Download the Vault Credentials file : Step 1<br>
+            Install & register the Microsoft Azure Recovery Services (MARS) agent : Step 2<br>
+            Schedule a backup : Step 3
+        </p>
+    </div>
+
+    <!-- Explanation section -->
+    <div id="explanation_question16" style="display:none;">
+        <h3>Explanation</h3>
+        <p>The correct steps to back up a server daily to Azure include downloading the Vault Credentials file, installing and registering the Microsoft Azure Recovery Services (MARS) agent, and scheduling a backup.</p>
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q16_1.png" alt="Explanation Image 1">
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q16_2.png" alt="Explanation Image 2">
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q16_3.png" alt="Explanation Image 3">
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q16_4.png" alt="Explanation Image 4">
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q16_5.png" alt="Explanation Image 5">
+            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q16_6.png" alt="Explanation Image 6">
+        </div>
+    </div>
+
+    <!-- Reference section -->
+    <div id="references_question16" style="display:none;">
+        <h3>References</h3>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/azure/backup/tutorial-backup-windows-server-to-azure" target="_blank">Tutorial: Backup Windows Server to Azure</a></li>
+        </ul>
+    </div>
+</body>
+</html>

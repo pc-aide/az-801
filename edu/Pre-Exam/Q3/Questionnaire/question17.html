@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 17</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Scripts/answer17.js" defer></script>
+</head>
+<body>
+    <h2>Question 17</h2>
+    <p>Your network contains an Active Directory Domain Services (AD DS) domain that has the Active Directory Recycle Bin enabled. The domain contains two domain controllers named DC1 and DC2. The system state of the domain controllers is backed up daily at 23:00 by using Windows Server Backup.</p>
+    <p>You have an organizational unit (OU) named ParisUsers that contains 1,000 users.</p>
+    <p>At 08:00, DC1 shuts down for hardware maintenance. The maintenance completes, but DC1 remains shut down.</p>
+    <p>At 09:00, an administrative error causes the manager attribute of each user in ParisUsers to be deleted.</p>
+    <p>You need to recover the user account details as quickly as possible. The solution must minimize data loss.</p>
+    <p>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+    <p>Actions:</p>
+
+    <!-- List of draggable items with unique IDs -->
+    <div class="draggable" id="comp17_1" data-question="question17" data-action="Start DC1 normally" draggable="true">Start DC1 normally</div>
+    <div class="draggable" id="comp17_2" data-question="question17" data-action="Perform an authoritative restore on DC1" draggable="true">Perform an authoritative restore on DC1</div>
+    <div class="draggable" id="comp17_3" data-question="question17" data-action="Recover all the user objects in the AD Recycle Bin" draggable="true">Recover all the user objects in the AD Recycle Bin</div>
+    <div class="draggable" id="comp17_4" data-question="question17" data-action="Start DC1 by using the Last Known Good Configuration" draggable="true">Start DC1 by using the Last Known Good Configuration</div>
+    <div class="draggable" id="comp17_5" data-question="question17" data-action="Start DC1 in Directory Services Restore Mode" draggable="true">Start DC1 in Directory Services Restore Mode</div>
+    <div class="draggable" id="comp17_6" data-question="question17" data-action="Perform a system state restore on DC1" draggable="true">Perform a system state restore on DC1</div>
+
+    <!-- Drop zones with labels outside -->
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 1:</div>
+        <div class="dropzone" id="dropZone17-1" data-question="question17"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 2:</div>
+        <div class="dropzone" id="dropZone17-2" data-question="question17"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 3:</div>
+        <div class="dropzone" id="dropZone17-3" data-question="question17"></div>
+    </div>
+
+    <!-- Solution button and info -->
+    <button class="solutionButton" data-answer-name="question17">Solution</button>
+    <div id="solutionInfo_question17" class="solutionInfo" style="display:none;">
+        <p id="correctAnswers_question17" style="display:none;">
+            Correct Answers:<br>
+            Start DC1 in Directory Services Restore Mode : Step 1<br>
+            Perform an authoritative restore on DC1 : Step 2<br>
+            Start DC1 normally : Step 3
+        </p>
+    </div>
+
+    <!-- Explanation section -->
+    <div id="explanation_question17" style="display:none;">
+        <h3>Explanation</h3>
+        <p>From the Windows Advanced Options Menu, select Directory Services Restore Mode. Select the Restore option, then select the media where the backup is stored and ensure that the System State is selected. To access the authoritative restore mode, type `ntdsutil: authoritative restore`.</p>
+    </div>
+
+    <!-- Reference section -->
+    <div id="references_question17" style="display:none;">
+        <h3>References</h3>
+        <ul>
+            <li><a href="https://itingredients.com/perform-authoritative-restore-active-directory-objects-2012-r2/" target="_blank">Perform an Authoritative Restore of Active Directory Objects (2012 R2)</a></li>
+            <li><a href="https://www.itprotoday.com/active-directory/how-can-i-perform-an-authoritative-restoration-of-active-directory-ad-in-windows-server-2003-" target="_blank">Perform an Authoritative Restoration of Active Directory in Windows Server 2003</a></li>
+        </ul>
+    </div>
+</body>
+</html>

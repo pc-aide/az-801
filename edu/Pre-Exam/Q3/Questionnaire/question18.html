@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 18</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Scripts/answer18.js" defer></script>
+</head>
+<body>
+    <h2>Question 18</h2>
+    <p>You have an on-premises server named Server1 that runs Windows Server and has the Hyper-V server role installed.</p>
+    <p>You have an Azure subscription.</p>
+    <p>You plan to back up Server1 to Azure by using Azure Backup.</p>
+    <p>Which two Azure Backup options require you to deploy Microsoft Azure Backup Server (MABS)? Each correct answer presents a complete solution.</p>
+    <p><strong>NOTE:</strong> Each correct selection is worth one point.</p>
+
+    <div>
+        <label><input type="checkbox" name="q18" value="A"> A. Bare Metal Recovery</label><br>
+        <label><input type="checkbox" name="q18" value="B"> B. Files and folders</label><br>
+        <label><input type="checkbox" name="q18" value="C"> C. System State</label><br>
+        <label><input type="checkbox" name="q18" value="D"> D. Hyper-V Virtual Machines</label>
+    </div>
+
+    <button class="solutionButton" data-answer-name="question18">Solution</button>
+    <div id="solutionInfo_question18" class="solutionInfo" style="display:none;">
+        <p id="correctAnswers_question18" style="display:none;">
+            Correct Answers:<br>
+            A. Bare Metal Recovery<br>
+            D. Hyper-V Virtual Machines
+        </p>
+    </div>
+
+    <div id="explanation_question18" style="display:none;">
+        <h3>Explanation</h3>
+        <p>For Hyper-V virtual machines, you need MABS. To back up Server1 to Azure using Azure Backup, the options that require you to deploy Microsoft Azure Backup Server (MABS) involve more complex backup scenarios and require MABS to facilitate the backup process. MABS acts as a bridge between your on-premises servers and Azure Backup, enabling features such as bare-metal recovery and backup of Hyper-V virtual machines.</p>
+    </div>
+
+    <div id="references_question18" style="display:none;">
+        <h3>References</h3>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/azure/backup/backup-mabs-system-state-and-bmr" target="_blank">Azure Backup - System State and BMR</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/backup/backup-azure-system-state" target="_blank">Azure Backup - System State</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/backup/back-up-hyper-v-virtual-machines-mabs" target="_blank">Back up Hyper-V Virtual Machines with MABS</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/azure/backup/backup-mabs-protection-matrix" target="_blank">Azure Backup - MABS Protection Matrix</a></li>
+        </ul>
+    </div>
+</body>
+</html>
