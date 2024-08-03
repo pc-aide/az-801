@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 19</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Scripts/answer19.js" defer></script>
+</head>
+<body>
+    <h2>Question 19</h2>
+    <p>You need to perform the following steps to address the situation described:</p>
+    <p>Arrange the actions in the correct order:</p>
+
+    <p>Actions:</p>
+
+    <!-- List of draggable items with unique IDs -->
+    <div class="draggable" id="comp19_1" draggable="true">Mount AD to port 51389</div>
+    <div class="draggable" id="comp19_2" draggable="true">View the membership of the group</div>
+    <div class="draggable" id="comp19_3" draggable="true">Restore the system state to an alternate location</div>
+    <div class="draggable" id="comp19_4" draggable="true">From the Deleted Objects container in AD Administrative Center, run the Restore task</div>
+    <div class="draggable" id="comp19_5" draggable="true">From AD Users & Computers, change the domain controller to localhost:51389</div>
+    <div class="draggable" id="comp19_6" draggable="true">Restore the group from the AD Recycle Bin</div>
+
+    <!-- Drop zones with labels outside -->
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 1:</div>
+        <div class="dropzone" id="dropZone19-1"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 2:</div>
+        <div class="dropzone" id="dropZone19-2"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 3:</div>
+        <div class="dropzone" id="dropZone19-3"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 4:</div>
+        <div class="dropzone" id="dropZone19-4"></div>
+    </div>
+
+    <!-- Solution button and info -->
+    <button class="solutionButton" data-answer-name="question19">Solution</button>
+    <div id="solutionInfo_question19" class="solutionInfo" style="display:none;">
+        <p id="correctAnswers_question19" style="display:none;">
+            Correct Answers:<br>
+            Restore the system state to an alternate location : Step 1<br>
+            Mount AD to port 51389 : Step 2<br>
+            From AD Users & Computers, change the domain controller to localhost:51389 : Step 3<br>
+            View the membership of the group : Step 4
+        </p>
+    </div>
+
+    <!-- Explanation section -->
+    <div id="explanation_question19" style="display:none;">
+        <h3>Explanation</h3>
+        <p>Follow these steps to correctly handle the scenario described. This ensures that you address the alert and maintain security compliance efficiently.</p>
+        <!-- Images displayed directly -->
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q19_1.PNG" alt="Explanation Image 1">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q19_2.PNG" alt="Explanation Image 2">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q19_3.PNG" alt="Explanation Image 3">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q19_4.PNG" alt="Explanation Image 4">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q19_5.PNG" alt="Explanation Image 5">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q19_6.PNG" alt="Explanation Image 6">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q3/img/q19_7.PNG" alt="Explanation Image 7">
+    </div>
+
+    <!-- Reference section -->
+    <div id="references_question19" style="display:none;">
+        <h3>References</h3>
+        <ul>
+            <li><a href="http://sysadmindoc.blogspot.com/2018/10/mount-active-directory-database-from.html" target="_blank">Mount Active Directory Database</a></li>
+            <li><a href="https://devblogs.microsoft.com/scripting/weekend-scripter-use-powershell-to-go-back-in-time/" target="_blank">Use PowerShell to Go Back in Time</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc772168(v=ws.11)" target="_blank">Active Directory Domain Services Overview</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-" target="_blank">Advanced AD DS Management Using Active Directory Administrative Center</a></li>
+        </ul>
+    </div>
+</body>
+</html>

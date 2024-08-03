@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 20</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Scripts/answer20.js" defer></script>
+</head>
+<body>
+    <h2>Question 20</h2>
+    <p>You have a server that runs Windows Server.</p>
+    <p>You plan to back up the server to an Azure Recovery Services vault once per week starting on the next Saturday.</p>
+    <p>You need to schedule the weekly backup and perform the initial backup as soon as possible.</p>
+    <p>In which order should you perform the actions? To answer, move all actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+    <p>Actions:</p>
+
+    <!-- List of draggable items with unique IDs -->
+    <div class="draggable" id="comp20_1" draggable="true">Download the Microsoft Azure Recovery Services (MARS) agent & the Vault Credentials file</div>
+    <div class="draggable" id="comp20_2" draggable="true">Run the Microsoft Azure Recovery Services Agent Setup Wizard</div>
+    <div class="draggable" id="comp20_3" draggable="true">Run the Register Server Wizard</div>
+    <div class="draggable" id="comp20_4" draggable="true">From Microsoft Azure Backup, run the Schedule Backup Wizard</div>
+    <div class="draggable" id="comp20_5" draggable="true">From Microsoft Azure Backup, run the Backup Up Now Wizard</div>
+
+    <!-- Drop zones with labels outside -->
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 1:</div>
+        <div class="dropzone" id="dropZone20-1"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 2:</div>
+        <div class="dropzone" id="dropZone20-2"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 3:</div>
+        <div class="dropzone" id="dropZone20-3"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 4:</div>
+        <div class="dropzone" id="dropZone20-4"></div>
+    </div>
+
+    <div class="dropzone-container">
+        <div class="dropzone-label">Step 5:</div>
+        <div class="dropzone" id="dropZone20-5"></div>
+    </div>
+
+    <!-- Solution button and info -->
+    <button class="solutionButton" data-answer-name="question20">Solution</button>
+    <div id="solutionInfo_question20" class="solutionInfo" style="display:none;">
+        <p id="correctAnswers_question20" style="display:none;">
+            Correct Answers:<br>
+            Download the Microsoft Azure Recovery Services (MARS) agent & the Vault Credentials file : Step 1<br>
+            Run the Microsoft Azure Recovery Services Agent Setup Wizard : Step 2<br>
+            Run the Register Server Wizard : Step 3<br>
+            From Microsoft Azure Backup, run the Schedule Backup Wizard : Step 4<br>
+            From Microsoft Azure Backup, run the Backup Now Wizard : Step 5
+        </p>
+    </div>
+
+    <!-- Explanation section -->
+    <div id="explanation_question20" style="display:none;">
+        <h3>Explanation</h3>
+        <p>Follow these steps to correctly set up the backup for your server. This ensures that the initial backup is completed as soon as possible and the weekly backups are scheduled appropriately.</p>
+    </div>
+
+    <!-- Reference section -->
+    <div id="references_question20" style="display:none;">
+        <h3>References</h3>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/azure/backup/install-mars-agent#download-the-mars-agent" target="_blank">Download the MARS Agent</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/azure/backup/backup-windows-with-mars-agent" target="_blank">Backup Windows with MARS Agent</a></li>
+        </ul>
+    </div>
+</body>
+</html>
