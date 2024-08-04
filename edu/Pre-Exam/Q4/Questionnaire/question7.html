@@ -1,0 +1,47 @@
+<div>
+  <h2>Question 7</h2>
+  <p>You have an on-premises server named Server1 that runs Windows Server.</p>
+  <p>You have an Azure subscription.</p>
+  <p>You plan to back up the files and folders on Server1 by using the Microsoft Azure Recovery Services (MARS) agent.</p>
+  <p>You need to identify to which location the backups can be written and the maximum number of scheduled backups that can be performed per day.</p>
+  <p>What should you identify? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+      <label>Backup location:
+          <select name="question7_location">
+              <option value="An Azure Backup vault">An Azure Backup vault</option>
+              <option value="A Recovery Services vault in Azure">A Recovery Services vault in Azure</option>
+              <option value="The Cool access tier of an Azure Storage account">The Cool access tier of an Azure Storage account</option>
+              <option value="The Archive access tier of an Azure Storage account">The Archive access tier of an Azure Storage account</option>
+          </select>
+      </label><br>
+
+      <label>Maximum number of scheduled backups per day:
+          <select name="question7_frequency">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="24">24</option>
+              <option value="72">72</option>
+          </select>
+      </label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question7">Solution</button>
+
+  <div id="solutionInfo_question7" class="solutionInfo" style="display: none;">
+      <p><strong>Explanation:</strong></p>
+      <p>Azure Backup uses Recovery Services vaults to store backup data securely in Azure. The maximum number of scheduled backups that can be performed per day is three.</p>
+      <p><strong>References:</strong></p>
+      <ul id="references_question7" style="display: none;">
+          <li><a href="https://learn.microsoft.com/en-us/azure/backup/backup-support-matrix-mars-agent" target="_blank">Backup Support Matrix for MARS Agent</a></li>
+      </ul>
+      <p id="correctAnswers_question7" style="display: none;">
+          <strong>Correct Answers:</strong><br>
+          <strong>Backup location:</strong> A Recovery Services vault in Azure<br>
+          <strong>Maximum number of scheduled backups per day:</strong> 3
+      </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer7.js"></script>

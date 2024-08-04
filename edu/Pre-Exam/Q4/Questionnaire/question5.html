@@ -1,0 +1,49 @@
+<div>
+  <h2>Question 05</h2>
+  <p>You have an Azure subscription.</p>
+  <p>You plan to deploy a virtual machine named VM1 to the East US Azure region and use Azure Site Recovery between availability zones.</p>
+  <p>You need to configure the disks on VM1 and the virtual network. The solution must meet the following requirements:</p>
+  <ul>
+      <li>Maximize the availability of VM1.</li>
+      <li>Maintain the private IP address of VM1 during failover and failback operations.</li>
+  </ul>
+  <p>What should you configure? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+      <label for="diskConfig">Disk configuration:</label>
+      <select id="diskConfig" name="diskConfig">
+          <option value="LRS Premium SSD">LRS Premium SSD</option>
+          <option value="ZRS Premium SSD">ZRS Premium SSD</option>
+          <option value="ZRS SSD">ZRS SSD</option>
+      </select>
+      <br>
+      <label for="networkConfig">Virtual network configuration:</label>
+      <select id="networkConfig" name="networkConfig">
+          <option value="One virtual network & one subnet">One virtual network & one subnet</option>
+          <option value="One virtual network & two subnets">One virtual network & two subnets</option>
+          <option value="Two virtual networks & two subnets">Two virtual networks & two subnets</option>
+      </select>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question5">Solution</button>
+
+  <div id="solutionInfo_question5" class="solutionInfo" style="display: none;">
+      <p><strong>Explanation:</strong></p>
+      <p>Zone-to-zone disaster recovery isn't supported for VMs that have managed disks via zone-redundant storage (ZRS).</p>
+      <p>Virtual network: You can use the same virtual network as the source network for actual failovers. For test failovers, use a virtual network that's different from the source virtual network. Private IP address: If you're using static IP addresses, you can use the same IP addresses in the target zone if you choose to configure them that way.</p>
+      <div id="correctAnswers_question5" style="display: none;">
+          <p><strong>Correct Answers:</strong></p>
+          <ul>
+              <li>Disk configuration: LRS Premium SSD</li>
+              <li>Virtual network configuration: One virtual network & one subnet</li>
+          </ul>
+      </div>
+
+      <p><strong>References:</strong></p>
+      <ul id="references_question5" style="display: none;">
+          <li><a href="https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery#networking-for-zone-to-zone-disaster-recovery" target="_blank">Networking for Zone-to-Zone Disaster Recovery</a></li>
+      </ul>
+  </div>
+</div>
+
+<script src="../Scripts/answer5.js"></script>

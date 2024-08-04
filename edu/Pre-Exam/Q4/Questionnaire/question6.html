@@ -1,0 +1,38 @@
+<div>
+  <h2>Question 6</h2>
+  <p>Your network contains an on-premises Active Directory Domain Services (AD DS) domain. The domain contains two virtual machines named VM1 and VM2 that run Windows Server.</p>
+  <p>You plan to implement a failover cluster named Cluster1 that will use VM1 and VM2 as nodes.</p>
+  <p>You need to ensure that Cluster1 can use floating IP addresses.</p>
+  <p>Which two components should you deploy? Each correct answer presents part of the solution.</p>
+
+  <form>
+      <label><input type="checkbox" name="question6" value="A. Network Load Balancing (NLB)"> A. Network Load Balancing (NLB)</label><br>
+      <label><input type="checkbox" name="question6" value="B. the MultiPoint Services role"> B. the MultiPoint Services role</label><br>
+      <label><input type="checkbox" name="question6" value="C. the Network Controller role"> C. the Network Controller role</label><br>
+      <label><input type="checkbox" name="question6" value="D. the Host Guardian Service role"> D. the Host Guardian Service role</label><br>
+      <label><input type="checkbox" name="question6" value="E. Software Load Balancer (SLB)"> E. Software Load Balancer (SLB)</label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question6">Solution</button>
+
+  <div id="solutionInfo_question6" class="solutionInfo" style="display: none;">
+      <p><strong>Explanation:</strong></p>
+      <p>To ensure that Cluster1 can use floating IP addresses, you need to deploy the following components: Network Load Balancing (NLB): NLB is a Windows Server feature that provides high availability and scalability by distributing network traffic across multiple servers. It can be configured to use floating IP addresses, which are assigned to the cluster nodes as needed.</p>
+      <p>Software Load Balancer (SLB): SLB is a feature of Software Defined Networking (SDN) in Windows Server that provides load balancing for virtual network traffic. It can also be configured to use floating IP addresses for failover scenarios.</p>
+      <p>These components, NLB and SLB, enable the assignment and management of floating IP addresses for failover clusters like Cluster1.</p>
+      <div id="correctAnswers_question6" style="display: none;">
+          <p><strong>Correct Answers:</strong></p>
+          <ul>
+              <li>A. Network Load Balancing (NLB)</li>
+              <li>E. Software Load Balancer (SLB)</li>
+          </ul>
+      </div>
+
+      <p><strong>References:</strong></p>
+      <ul id="references_question6" style="display: none;">
+          <li><a href="https://learn.microsoft.com/en-us/windows-server/networking/sdn/manage/guest-clustering#example-load-balancer-configuration" target="_blank">Example Load Balancer Configuration</a></li>
+      </ul>
+  </div>
+</div>
+
+<script src="../Scripts/answer6.js"></script>

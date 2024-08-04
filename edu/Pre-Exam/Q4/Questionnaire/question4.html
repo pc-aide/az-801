@@ -1,0 +1,49 @@
+<div>
+  <h2>Question 04</h2>
+  <p>You have three Hyper-V hosts named Server1, Server2, and Server3 that run Windows Server. Server1 hosts a virtual machine named VM1.</p>
+  <p>You enable Hyper-V Replica to replicate VM1 to Server2 and set the replication frequency to 30 seconds.</p>
+  <p>You need to extend the replication and create a second replica of VM1.</p>
+  <p>On which Hyper-V hosts should you configure the replication, and what is the minimum replication frequency you can use? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+      <label for="hosts">Hyper-V hosts:</label>
+      <select id="hosts" name="hosts">
+          <option value="Server2 only">Server2 only</option>
+          <option value="Server1 only">Server1 only</option>
+          <option value="Server3 only">Server3 only</option>
+          <option value="Server1, Server2 only">Server1, Server2 only</option>
+          <option value="Server1, Server2, or Server3">Server1, Server2, or Server3</option>
+      </select>
+      <br>
+      <label for="frequency">Replication frequency:</label>
+      <select id="frequency" name="frequency">
+          <option value="30 seconds">30 seconds</option>
+          <option value="5 minutes">5 minutes</option>
+          <option value="15 minutes">15 minutes</option>
+      </select>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question4">Solution</button>
+
+  <div id="solutionInfo_question4" class="solutionInfo" style="display: none;">
+      <p><strong>Explanation:</strong></p>
+      <p>Extended replication frequency CANNOT be lower than the initial replication; if the initial replication frequency is 5 minutes, you cannot set the extended replication to 30 seconds frequency.</p>
+      <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q4_0.jpg" alt="Hyper-V Replica Step 1">
+      <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q4_1.png" alt="Hyper-V Replica Step 2">
+      <div id="correctAnswers_question4" style="display: none;">
+          <p><strong>Correct Answers:</strong></p>
+          <ul>
+              <li>Hyper-V hosts: Server2 only</li>
+              <li>Replication frequency: 5 minutes</li>
+          </ul>
+      </div>
+
+      <p><strong>References:</strong></p>
+      <ul id="references_question4" style="display: none;">
+          <li><a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica" target="_blank">Set up Hyper-V Replica</a></li>
+          <li><a href="http://www.msserverpro.com/configuring-hyper-v-replica-in-windows-server-2012-r2/" target="_blank">Configuring Hyper-V Replica in Windows Server 2012 R2</a></li>
+      </ul>
+  </div>
+</div>
+
+<script src="../Scripts/answer4.js"></script>

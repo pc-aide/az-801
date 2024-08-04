@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Question 01</h2>
+        <p>You have 200 Azure virtual machines.</p>
+        <p>You create a recovery plan in Azure Site Recovery to fail over all the virtual machines to an Azure region. The plan has three manual actions.</p>
+        <p>You need to replace one of the manual actions with an automated process.</p>
+        <p>What should you use?</p>
+
+        <form>
+            <input type="radio" id="optionA" name="solution" value="A">
+            <label for="optionA">A. an Azure Desired State Configuration (DSC) virtual machine extension</label><br>
+            <input type="radio" id="optionB" name="solution" value="B">
+            <label for="optionB">B. an Azure Automation runbook</label><br>
+            <input type="radio" id="optionC" name="solution" value="C">
+            <label for="optionC">C. an Azure PowerShell function</label><br>
+            <input type="radio" id="optionD" name="solution" value="D">
+            <label for="optionD">D. a Custom Script Extension on the virtual machines</label><br>
+        </form>
+
+        <button class="solutionButton" data-answer-name="question01">Solution</button>
+
+        <div id="solutionInfo_question01" class="solutionInfo" style="display: none;">
+            <p><strong>Explanation:</strong></p>
+            <p>Automate tasks in recovery plans. Recovering large applications can be a complex task. Manual steps make the process prone to error, and the person running the failover might not be aware of all app intricacies. You can use a recovery plan to impose order and automate the actions needed at each step, using Azure Automation runbooks for failover to Azure, or scripts. For tasks that can't be automated, you can insert pauses for manual actions into recovery plans. There are a couple of types of tasks you can configure:</p>
+            <div id="correctAnswers_question01" style="display: none;">
+                <p><strong>Correct Answers:</strong></p>
+                <ul>
+                    <li>B. an Azure Automation runbook</li>
+                </ul>
+            </div>
+
+            <p><strong>References:</strong></p>
+            <ul id="references_question01" style="display: none;">
+                <li><a href="https://learn.microsoft.com/en-us/azure/site-recovery/recovery-plan-overview#automate-tasks-in-recovery-plans" target="_blank">Automate tasks in recovery plans</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/answer2.js"></script>
+</body>
+</html>
