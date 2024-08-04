@@ -1,0 +1,49 @@
+<div>
+  <h2>Question 9</h2>
+  <p>You manage 200 physical servers that run Windows Server.</p>
+  <p>You plan to migrate the servers to Azure.</p>
+  <p>You need to prepare for the discovery of the servers by using Azure Migrate.</p>
+  <p>Which three actions should you perform in sequence on a physical server? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+  <form>
+      <label>Actions:</label>
+      <div id="actions">
+          <div id="9_1" draggable="true" class="draggable">Download & extract the Azure Migrate installer script ZIP file</div>
+          <div id="9_2" draggable="true" class="draggable">Download & extract the Azure Migrate Appliance VHD file</div>
+          <div id="9_3" draggable="true" class="draggable">Run AzureMigrateInstaller.ps1</div>
+          <div id="9_4" draggable="true" class="draggable">Import a virtual machine</div>
+          <div id="9_5" draggable="true" class="draggable">Configure the appliance & register the appliance with Azure Migrate</div>
+      </div>
+
+      <label>Steps:</label>
+      <div id="steps">
+          <div id="9_step1" class="dropzone" data-step="Step 1">Step 1</div>
+          <div id="9_step2" class="dropzone" data-step="Step 2">Step 2</div>
+          <div id="9_step3" class="dropzone" data-step="Step 3">Step 3</div>
+      </div>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question9">Solution</button>
+
+  <div id="solutionInfo_question9" class="solutionInfo" style="display: none;">
+      <p><strong>Explanation:</strong></p>
+      <p>To prepare for the discovery of servers using Azure Migrate, follow these steps:</p>
+      <ol>
+          <li>Download and extract the Azure Migrate installer script ZIP file.</li>
+          <li>Run <code>AzureMigrateInstaller.ps1</code> to configure the appliance.</li>
+          <li>Configure the appliance and register it with Azure Migrate.</li>
+      </ol>
+      <p><strong>References:</strong></p>
+      <ul>
+          <li><a href="https://learn.microsoft.com/en-us/azure/migrate/tutorial-discover-physical" target="_blank">Azure Migrate Discovery Tutorial</a></li>
+      </ul>
+      <p id="correctAnswers_question9" style="display: none;">
+          <strong>Correct Answers:</strong><br>
+          <strong>Step 1:</strong> Download & extract the Azure Migrate installer script ZIP file<br>
+          <strong>Step 2:</strong> Run AzureMigrateInstaller.ps1<br>
+          <strong>Step 3:</strong> Configure the appliance & register the appliance with Azure Migrate
+      </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer9.js"></script>

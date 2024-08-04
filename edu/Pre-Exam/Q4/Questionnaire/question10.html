@@ -1,0 +1,77 @@
+<div>
+  <h2>Question 10</h2>
+  <p>Your network contains an Active Directory Domain Services (AD DS) domain named contoso.com. The functional level of the forest and the domain is Windows Server 2012 R2. The domain contains the domain controllers shown in the following table.</p>
+  
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>OS</th>
+      <th>FSMO role</th>
+    </tr>
+    <tr>
+      <td>DC1</td>
+      <td>Windows Server 2012 R2</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <td>DC2</td>
+      <td>Windows Server 2022</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>DC3</td>
+      <td>Windows Server 2019</td>
+      <td>None</td>
+    </tr>
+  </table>
+
+  <p>You need to raise the forest functional level to Windows Server 2016. The solution must meet the following requirements:</p>
+  <ul>
+    <li>Ensure that there are three domain controllers after you raise the level.</li>
+    <li>Minimize how long the FSMO roles are unavailable.</li>
+  </ul>
+  
+  <p>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+  <form>
+    <label>Actions:</label>
+    <div id="actions">
+      <div id="10_1" draggable="true" class="draggable">Install the AD Migration Tool (ADMT)</div>
+      <div id="10_2" draggable="true" class="draggable">Deploy an additional DC</div>
+      <div id="10_3" draggable="true" class="draggable">Raise the domain & forest functional level</div>
+      <div id="10_4" draggable="true" class="draggable">Upgrade DC3</div>
+      <div id="10_5" draggable="true" class="draggable">Migrate computer accounts by using the AD Migration Tool (ADMT)</div>
+      <div id="10_6" draggable="true" class="draggable">Upgrade DC1</div>
+      <div id="10_7" draggable="true" class="draggable">Create a custom AD DS partition</div>
+      <div id="10_8" draggable="true" class="draggable">Move the FSMO role to DC2</div>
+    </div>
+
+    <label>Steps:</label>
+    <div id="steps">
+      <div id="10_step1" class="dropzone" data-step="Step 1">Step 1</div>
+      <div id="10_step2" class="dropzone" data-step="Step 2">Step 2</div>
+      <div id="10_step3" class="dropzone" data-step="Step 3">Step 3</div>
+    </div>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question10">Solution</button>
+
+  <div id="solutionInfo_question10" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Windows 2012 R2 is not compatible with the Windows Server 2016 functional levels and needs to be upgraded. The correct way is to move the FSMO roles, upgrade the DC1, and then raise the functional level.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels" target="_blank">Active Directory Functional Levels</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers" target="_blank">Upgrade Domain Controllers</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/windows-server/get-started/upgrade-migrate-roles-features" target="_blank">Upgrade and Migrate Roles and Features</a></li>
+    </ul>
+    <p id="correctAnswers_question10" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      <strong>Step 1:</strong> Move the FSMO role to DC2<br>
+      <strong>Step 2:</strong> Upgrade DC1<br>
+      <strong>Step 3:</strong> Raise the domain & forest functional level
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer10.js"></script>

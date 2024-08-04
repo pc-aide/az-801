@@ -1,0 +1,53 @@
+<div>
+  <h2>Question 8</h2>
+  <p>You have an Azure virtual machine named VM1 that runs Windows Server.</p>
+  <p>The operating system on VM1 fails to start due to a disk error.</p>
+  <p>You need to resolve the error.</p>
+  <p>Which four commands should you run in sequence in Azure Cloud Shell? To answer, move the appropriate commands from the list of commands to the answer area and arrange them in the correct order.</p>
+
+  <form>
+      <label>Actions:</label>
+      <div id="actions">
+          <div id="8_1" draggable="true" class="draggable">az vm disk</div>
+          <div id="8_2" draggable="true" class="draggable">az vm repair restore</div>
+          <div id="8_3" draggable="true" class="draggable">az vm repair create</div>
+          <div id="8_4" draggable="true" class="draggable">az extension add</div>
+          <div id="8_5" draggable="true" class="draggable">az vm repair run</div>
+      </div>
+
+      <label>Steps:</label>
+      <div id="steps">
+          <div id="8_step1" class="dropzone" data-step="Step 1">Step 1</div>
+          <div id="8_step2" class="dropzone" data-step="Step 2">Step 2</div>
+          <div id="8_step3" class="dropzone" data-step="Step 3">Step 3</div>
+          <div id="8_step4" class="dropzone" data-step="Step 4">Step 4</div>
+      </div>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question8">Solution</button>
+
+  <div id="solutionInfo_question8" class="solutionInfo" style="display: none;">
+      <p><strong>Explanation:</strong></p>
+      <p>Run the following commands in sequence:</p>
+      <ol>
+          <li>Run <code>az extension add</code> to add the required extension.</li>
+          <li>Run <code>az vm repair create</code> to create a repair configuration.</li>
+          <li>Run <code>az vm repair run</code> to perform the repair actions.</li>
+          <li>Run <code>az vm repair restore</code> to restore the VM.</li>
+      </ol>
+      <p><strong>References:</strong></p>
+      <ul>
+          <li><a href="https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-overview" target="_blank">Repair Process Overview</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/repair-windows-vm-using-azure-virtual-machine-repair-commands#code-try-2" target="_blank">Code Try 2</a></li>
+      </ul>
+      <p id="correctAnswers_question8" style="display: none;">
+          <strong>Correct Answers:</strong><br>
+          <strong>Step 1:</strong> az extension add<br>
+          <strong>Step 2:</strong> az vm repair create<br>
+          <strong>Step 3:</strong> az vm repair run<br>
+          <strong>Step 4:</strong> az vm repair restore
+      </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer8.js"></script>
