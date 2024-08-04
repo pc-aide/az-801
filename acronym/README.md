@@ -19,5 +19,6 @@
 |12|SAML|Security Assertion Markup Language|
 |13|SAS|Shared access signature|
 |14|SCOM|System Center Operations Manager|
-|15|SSPR|Self-Service Password Reset|
-|16|TGT|Ticket Granting Ticket<br/><br/> Ensures that the lifetime of Kerberos TGT for the members of the Domain Admins group is limited to one hour|
+|15|SLB|Software Load Balancer<br/><br/>In Azure, a Software Load Balancer (SLB) is a fully managed, scalable, and highly available load balancing service that distributes incoming traffic among multiple virtual machines (VMs) within a virtual network. SLB operates at the transport layer (Layer 4) and uses advanced algorithms to ensure efficient traffic distribution, improving application availability and responsiveness. It supports both TCP and UDP protocols and can handle both inbound and outbound scenarios. SLB is designed to provide fault tolerance, seamless scaling, and high performance for cloud-based applications, ensuring that no single VM is overwhelmed by traffic. It is often used for load balancing internal services and applications within an Azure Virtual Network.|
+|16|SSPR|Self-Service Password Reset|
+|17|TGT|Ticket Granting Ticket<br/><br/> Ensures that the lifetime of Kerberos TGT for the members of the Domain Admins group is limited to one hour|
