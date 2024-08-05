@@ -1,0 +1,38 @@
+<div>
+  <h2>Question 11</h2>
+  <p>You have an on-premises server that runs Windows Server and has the Web Server (IIS) server role installed. The server hosts a web app that connects to an on-premises Microsoft SQL Server database.</p>
+  <p>You plan to migrate the web app to an Azure App Services web app. The database will remain on-premises.</p>
+  <p>You need to ensure that the migrated web app can access the database. What should you configure in Azure?</p>
+  
+  <form>
+    <input type="radio" id="11_A" name="question11" value="A">
+    <label for="11_A">A. an Azure SQL managed instance</label><br>
+    <input type="radio" id="11_B" name="question11" value="B">
+    <label for="11_B">B. an on-premises data gateway</label><br>
+    <input type="radio" id="11_C" name="question11" value="C">
+    <label for="11_C">C. Azure Extended Network</label><br>
+    <input type="radio" id="11_D" name="question11" value="D">
+    <label for="11_D">D. a Hybrid Connection</label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question11">Solution</button>
+
+  <div id="solutionInfo_question11" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>When you move your web app to Azure but keep your database on your own server, you need a way for the app in Azure to talk to your database. A Hybrid Connection does just that. It's like a bridge that lets your app in Azure reach back to your database on your server without needing complex changes to your network.</p>
+    <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q11_1.png" alt="Hybrid Connection Diagram 1">
+    <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q11_2.png" alt="Hybrid Connection Diagram 2">
+    <p id="correctAnswer_question11" style="display: none;">
+      <strong>Correct Answer:</strong> D. a Hybrid Connection
+    </p>
+  </div>
+
+  <div id="references_question11" class="references" style="display: none;">
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-hybrid-connections" target="_blank">Azure App Service Hybrid Connections</a></li>
+    </ul>
+  </div>
+</div>
+
+<script src="../Scripts/answer11.js"></script>

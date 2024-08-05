@@ -1,0 +1,97 @@
+<div>
+  <h2>Question 13</h2>
+  <p>Your network contains an Active Directory Domain Services (AD DS) domain. The domain contains the servers shown in the following table.</p>
+  
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>OS</th>
+      <th>Server role</th>
+    </tr>
+    <tr>
+      <td>Server1</td>
+      <td>Windows Server 2019</td>
+      <td>DHCP Server</td>
+    </tr>
+    <tr>
+      <td>Server2</td>
+      <td>Windows Server 2022</td>
+      <td>DHCP Server</td>
+    </tr>
+    <tr>
+      <td>Server3</td>
+      <td>Windows Server 2019</td>
+      <td>File Server</td>
+    </tr>
+  </table>
+
+  <p>Server3 contains a share named Share1.<br>On Server1, DHCP has the following configurations:</p>
+  <ul>
+    <li>Conflict detection attempts: 3</li>
+    <li>An IPv4 scope named Scope1 that has the following settings:</li>
+    <ul>
+      <li>Address Pool: 172.16.10.100 - 172.16.10.130</li>
+      <li>Address Leases:</li>
+      <ul>
+        <li>172.16.10.100 computer1.contoso.com</li>
+        <li>172.16.10.101 computer2.contoso.com</li>
+      </ul>
+    </ul>
+    <li>Reservations: 172.16.10.101 computer2.contoso.com</li>
+    <li>Policies: Policy1</li>
+  </ul>
+  
+  <p>You perform the following actions:</p>
+  <ul>
+    <li>On Server1, you run <code>Export-DhcpServer -File \\Server3\Share1\File1.xml</code>.</li>
+    <li>On Server2, you run <code>Import-DhcpServer -File \\Server3\Share1\File1.xml -BackupPath \\Server3\Share1</code>.</li>
+  </ul>
+
+  <p>For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p>
+  
+  <form>
+    <p>On Server2, Conflict detection attempts is set to 3:</p>
+    <input type="radio" id="13_A_Yes" name="question13_A" value="Yes">
+    <label for="13_A_Yes">Yes</label><br>
+    <input type="radio" id="13_A_No" name="question13_A" value="No">
+    <label for="13_A_No">No</label><br>
+
+    <p>On Server2, there is a reservation for computer2.contoso.com:</p>
+    <input type="radio" id="13_B_Yes" name="question13_B" value="Yes">
+    <label for="13_B_Yes">Yes</label><br>
+    <input type="radio" id="13_B_No" name="question13_B" value="No">
+    <label for="13_B_No">No</label><br>
+
+    <p>On Server2, Policy1 is applied to Scope1:</p>
+    <input type="radio" id="13_C_Yes" name="question13_C" value="Yes">
+    <label for="13_C_Yes">Yes</label><br>
+    <input type="radio" id="13_C_No" name="question13_C" value="No">
+    <label for="13_C_No">No</label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question13">Solution</button>
+
+  <div id="solutionInfo_question13" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>because this setting gets copied over when you move DHCP settings from one server to another.</p>
+    <p>because the reservation is part of the DHCP settings that were moved.</p>
+    <p>because policies also get moved with the rest of the DHCP settings.</p>
+    <p>They are all yes - If you specify neither the ScopeId nor the Prefix parameter, all of the configurations that is contained in the file, and optionally any lease data, is imported.</p>
+    <p id="correctAnswer_question13" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      On Server2, Conflict detection attempts is set to 3: Yes<br>
+      On Server2, there is a reservation for computer2.contoso.com: Yes<br>
+      On Server2, Policy1 is applied to Scope1: Yes
+    </p>
+  </div>
+
+  <div id="references_question13" class="references" style="display: none;">
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/powershell/module/dhcpserver/export-dhcpserver?view=windowsserver2022-ps" target="_blank">Export-DhcpServer</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/powershell/module/dhcpserver/import-dhcpserver?view=windowsserver2022-ps" target="_blank">Import-DhcpServer</a></li>
+    </ul>
+  </div>
+</div>
+
+<script src="../Scripts/answer13.js"></script>

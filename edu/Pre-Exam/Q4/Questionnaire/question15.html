@@ -1,0 +1,64 @@
+<div>
+  <h2>Question 15</h2>
+  <p>You have two servers that have the Web Server (IIS) server role installed. The servers are configured as shown in the following table.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>OS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Server1</td>
+        <td>Windows Server 2016</td>
+      </tr>
+      <tr>
+        <td>Server2</td>
+        <td>Windows Server 2022</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Both servers are configured to enable website deployment by using the Web Deployment Tool. Server1 hosts a website named Site1 that has Web Deploy Publishing configured.</p>
+  <p>You plan to migrate Site1 to Server2. You need to perform a pull synchronization of Site1 by using the Web Deployment Agent Service.</p>
+  <p>How should you complete the command? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+      <label for="source">msdeploy -verb:sync -source :</label>
+      <select id="source" name="source">
+          <option value="apphostconfig=&quot;Site1&quot;">apphostconfig="Site1"</option>
+          <option value="apphostconfig=&quot;Site1&quot;, computername=Server1">apphostconfig="Site1", computername=Server1</option>
+          <option value="apphostconfig=&quot;Site1&quot;, computername=Server2">apphostconfig="Site1", computername=Server2</option>
+          <option value="package=c:\site1.zip">package=c:\site1.zip</option>
+      </select>
+      <br>
+      <label for="dest">-dest:</label>
+      <select id="dest" name="dest">
+          <option value="apphostconfig=&quot;Site1&quot;">apphostconfig="Site1"</option>
+          <option value="apphostconfig=&quot;Site1&quot;, computername=Server1">apphostconfig="Site1", computername=Server1</option>
+          <option value="apphostconfig=&quot;Site1&quot;, computername=Server2">apphostconfig="Site1", computername=Server2</option>
+          <option value="package=c:\site1.zip">package=c:\site1.zip</option>
+      </select>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question15">Solution</button>
+
+  <div id="solutionInfo_question15" class="solutionInfo" style="display: none;">
+      <p><strong>Explanation:</strong></p>
+      <p>'Pull sync' means you are syncing from a remote source to a local target. We are told to use a pull sync. The goal is to migrate the site FROM Server1 (remote source) TO Server2 (local target) so it is implied we are running the command at Server2. You use 'apphostconfig' on both ends, but you don’t need to specify computername for the -dest. Pulling from a remote source, running on destination machine (the computerName argument identifies the remote source computer).</p>
+      <div id="correctAnswers_question15" style="display: none;">
+          <p><strong>Correct Answers:</strong></p>
+          <ul>
+              <li>-source: apphostconfig="Site1", computername=Server1</li>
+              <li>-dest: apphostconfig="Site1"</li>
+          </ul>
+      </div>
+
+      <p><strong>References:</strong></p>
+      <ul id="references_question15" style="display: none;">
+          <li><a href="https://docs.microsoft.com/en-us/iis/publish/using-web-deploy/synchronize-iis" target="_blank">Synchronize IIS with Web Deploy</a></li>
+      </ul>
+  </div>
+</div>
+
+<script src="../Scripts/answer15.js"></script>

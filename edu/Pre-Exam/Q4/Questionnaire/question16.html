@@ -1,0 +1,49 @@
+<div>
+  <h2>Question 16</h2>
+  <p>You have a server that runs Windows Server and has the Web Server (IIS) server role installed. Server1 hosts a single website that has the following configurations:</p>
+  <ul>
+    <li>Is accessible by using a URL of <a href="https://www.contoso.com:8443" target="_blank">https://www.contoso.com:8443</a> and has an SSL certificate that was issued by a third-party certification authority (CA) in the Microsoft Trusted Root Program</li>
+    <li>Uses anonymous authentication</li>
+    <li>Was developed by using PHP</li>
+  </ul>
+  <p>You plan to use APP Service Migration Assistant to migrate the website to Azure App Service.</p>
+  <p>You need to migrate the website. The solution must minimize the number of changes made to the existing website. What should you do manually to ensure that the website migration is successful? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+      <label for="onServer1">On Server1:</label>
+      <select id="onServer1" name="onServer1">
+          <option value="Change the authentication method">Change the authentication method</option>
+          <option value="Change the listening port of the website">Change the listening port of the website</option>
+          <option value="Redevelop the website code by using ASP.NET">Redevelop the website code by using ASP.NET</option>
+      </select>
+      <br>
+      <label for="inAzure">In Azure:</label>
+      <select id="inAzure" name="inAzure">
+          <option value="Create an App Service plan">Create an App Service plan</option>
+          <option value="Copy the source files of the website">Copy the source files of the website</option>
+          <option value="Configure a certificate & a custom domain name">Configure a certificate & a custom domain name</option>
+      </select>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question16">Solution</button>
+
+  <div id="solutionInfo_question16" class="solutionInfo" style="display: none;">
+      <p><strong>Explanation:</strong></p>
+      <p>Yes, you need to change the port as Azure App Service wouldn’t accept anything other than 80/443, and also anonymous authentication is on by default. Additionally, without a custom domain and certificate, the migration would involve significant changes. Azure App Service can handle security certificates, but the Migration Assistant won’t migrate the certificate automatically for you. After migration, you need to add a custom domain and configure the certificate.</p>
+      <div id="correctAnswers_question16" style="display: none;">
+          <p><strong>Correct Answers:</strong></p>
+          <ul>
+              <li>On Server1: Change the listening port of the website</li>
+              <li>In Azure: Configure a certificate & a custom domain name</li>
+          </ul>
+      </div>
+
+      <p><strong>References:</strong></p>
+      <ul id="references_question16" style="display: none;">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/migrate-app-service-migration-assistant/3-understand-assessment" target="_blank">Understand assessment with App Service Migration Assistant</a></li>
+          <li><a href="https://docs.microsoft.com/en-us/learn/modules/migrate-app-service-migration-assistant/5-understand-migration" target="_blank">Understand migration with App Service Migration Assistant</a></li>
+      </ul>
+  </div>
+</div>
+
+<script src="../Scripts/answer16.js"></script>

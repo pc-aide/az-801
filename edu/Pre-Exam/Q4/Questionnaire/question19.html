@@ -1,0 +1,63 @@
+<div>
+  <h2>Question 19</h2>
+  <p>You have two servers that run Windows Server as shown in the following table.</p>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Domain/workgroup</th>
+    </tr>
+    <tr>
+      <td>Server1</td>
+      <td>On-premises</td>
+      <td>Domain</td>
+    </tr>
+    <tr>
+      <td>Server2</td>
+      <td>Azure virtual machine</td>
+      <td>Workgroup</td>
+    </tr>
+  </table>
+
+  <p>
+    You need to copy the contents of volume E from Server1 to Server2. The solution must meet the following requirements:
+    <br>✑ Ensure that files in-use are copied.
+    <br>✑ Minimize administrative effort.
+    <br>What should you use?
+  </p>
+
+  <form>
+    <label>
+      <input type="radio" name="question19" value="A"> A. Storage Migration Service
+    </label><br>
+    <label>
+      <input type="radio" name="question19" value="B"> B. Azure File Sync
+    </label><br>
+    <label>
+      <input type="radio" name="question19" value="C"> C. Azure Backup
+    </label><br>
+    <label>
+      <input type="radio" name="question19" value="D"> D. Storage Replica
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question19">Solution</button>
+
+  <div id="solutionInfo_question19" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>
+      How can the answer be Storage Migration Service when it does not satisfy the requirement of copying files in-use? "The Storage Migration Service doesn't migrate files that applications exclusively lock". Same reason NOT Azure File Sync - Files in-use are not copied, sync resumes when files are closed. Azure Backup is based on VSS and can copy open files, and so does Storage Replica - "it does replicate in-use or open files". Storage Replica has to be within the same AD Forest. I don´t think it's legit to say that you can just add Server2 to the domain when it goes against the given scenario, and the solution does not include that. Therefore Answer is Azure Backup. Backup files using MARS and then restore them to Server2.
+    </p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/backup/restore-all-files-volume-mars#volume-level-restore-to-an-alternate-machine" target="_blank">Volume-level restore to an alternate machine</a></li>
+    </ul>
+    <p id="correctAnswers_question19" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>C:</strong> Azure Backup
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer19.js"></script>

@@ -1,0 +1,32 @@
+<div>
+  <h2>Question 20</h2>
+  <p>Your network contains a single-domain Active Directory Domain Services (AD DS) forest named contoso.com. The functional level of the forest is Windows Server 2012 R2. All domain controllers run Windows Server 2012 R2. Sysvol replicates by using the File Replication Service (FRS). You plan to replace the existing domain controllers with new domain controllers that will run Windows Server 2022.<br/><br/> You need to ensure that you can add the first domain controller that runs Windows Server 2022.<br/><br/> Solution: You migrate sysvol from FRS to Distributed File System (DFS) Replication. Does this meet the goal?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question20" value="A"> A. Yes
+    </label><br>
+    <label>
+      <input type="radio" name="question20" value="B"> B. No
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question20">Solution</button>
+
+  <div id="solutionInfo_question20" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Migrating SYSVOL replication from FRS to DFS Replication is necessary to add a Windows Server 2022 domain controller to an environment currently using Windows Server 2012 R2. Since Windows Server 2022 doesn't support FRS, only DFS for SYSVOL replication, updating to DFS Replication ensures compatibility with the new server version. This migration step is crucial for integrating Windows Server 2022 domain controllers into your Active Directory setup. Domain controllers use a special shared folder named SYSVOL to replicate sign-in scripts and Group Policy object files to other domain controllers. Windows 2000 Server and Windows Server 2003 use the File Replication Service (FRS) to replicate SYSVOL. Windows Server 2008 uses the newer Distributed File System Replication (DFS Replication) service for domains that use the Windows Server 2008 domain functional level. Windows Server 2008 uses FRS for domains that run older domain functional levels.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://www.rebeladmin.com/2021/09/step-by-step-guide-active-directory-migration-from-windows-server-2008-r2-to-windows-server-2022/" target="_blank">Active Directory migration from Windows Server 2008 R2 to Windows Server 2022</a></li>
+      <li><a href="https://learn.microsoft.com/en-US/troubleshoot/windows-server/networking/windows-server-version-1709-no-longer-supports-frs" target="_blank">Windows Server version 1709 no longer supports FRS</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/windows-server/storage/dfs-replication/migrate-sysvol-to-dfsr" target="_blank">Migrate SYSVOL replication to DFS Replication</a></li>
+    </ul>
+    <p id="correctAnswers_question20" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>A:</strong> Yes
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer20.js"></script>

@@ -1,0 +1,45 @@
+<div>
+  <h2>Question 14</h2>
+  <p>You have a server named Server1 that runs Windows Server and has the Web Server (IIS) server role installed. Server1 hosts an ASP.NET Core web app named WebApp1 and the app's source files. You install Docker on Server1. You need to ensure that you can deploy WebApp1 to an Azure App Service web app from the Azure Container Registry. Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+  
+  <form>
+    <label>Actions:</label>
+    <div id="actions">
+      <div id="14_1" draggable="true" class="draggable">Run the docker push command</div>
+      <div id="14_2" draggable="true" class="draggable">Run the docker run command</div>
+      <div id="14_3" draggable="true" class="draggable">Run the docker build command</div>
+      <div id="14_4" draggable="true" class="draggable">Create a Dockerfile</div>
+      <div id="14_5" draggable="true" class="draggable">Create an ARM template</div>
+      <div id="14_6" draggable="true" class="draggable">Run the docker pull command</div>
+    </div>
+
+    <label>Steps:</label>
+    <div id="steps">
+      <div id="14_step1" class="dropzone" data-step="Step 1">Step 1</div>
+      <div id="14_step2" class="dropzone" data-step="Step 2">Step 2</div>
+      <div id="14_step3" class="dropzone" data-step="Step 3">Step 3</div>
+    </div>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question14">Solution</button>
+
+  <div id="solutionInfo_question14" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Step 1: Create a Dockerfile. This file contains instructions for the build process.<br>
+       Step 2: Run the docker build command to create a container image.<br>
+       Step 3: Run the docker push command to upload the image to Azure Container Registry.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/app-service/tutorial-custom-container?tabs=azure-cli&pivots=container-linux" target="_blank">Deploy a Custom Container to Azure App Service</a></li>
+      <li><a href="https://phoenixnap.com/kb/create-docker-images-with-dockerfile#:~:text=1%20As%20an%20example%2C%20we%20will%20create%20a,with%20a%20text%20editor%20of%20your%20choice.%20" target="_blank">Create Docker Images with Dockerfile</a></li>
+    </ul>
+    <p id="correctAnswers_question14" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      <strong>Step 1:</strong> Create a Dockerfile<br>
+      <strong>Step 2:</strong> Run the docker build command<br>
+      <strong>Step 3:</strong> Run the docker push command
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer14.js"></script>

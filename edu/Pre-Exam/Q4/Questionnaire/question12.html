@@ -1,0 +1,44 @@
+<div>
+  <h2>Question 12</h2>
+  <p>You have two file servers named Server1 and Server2 that run Windows Server. Server1 contains a shared folder named Data. Data contains 10 TB of data.</p>
+  <p>You plan to decommission Server1.</p>
+  <p>You need to migrate the files from Data to a new shared folder on Server2. The solution must meet the following requirements:</p>
+  <ul>
+    <li>Ensure that share, file, and folder permissions are copied.</li>
+    <li>After the initial copy occurs, ensure that changes in \\Server1\Data can be synced to the destination without initiating a full copy.</li>
+    <li>Minimize administrative effort.</li>
+  </ul>
+  <p>What should you use?</p>
+  
+  <form>
+    <input type="radio" id="12_A" name="question12" value="A">
+    <label for="12_A">A. xcopy</label><br>
+    <input type="radio" id="12_B" name="question12" value="B">
+    <label for="12_B">B. Storage Replica</label><br>
+    <input type="radio" id="12_C" name="question12" value="C">
+    <label for="12_C">C. Storage Migration Service</label><br>
+    <input type="radio" id="12_D" name="question12" value="D">
+    <label for="12_D">D. azcopy</label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question12">Solution</button>
+
+  <div id="solutionInfo_question12" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Fulfills all the requirements: It can copy files, including permissions, and perform ongoing synchronization to keep the destination folder (on Server2) up-to-date with changes in the source folder (\\Server1\Data).</p>
+    <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q12_1.png" alt="Storage Migration Service Diagram 1">
+    <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q12_2.png" alt="Storage Migration Service Diagram 2">
+    <p id="correctAnswer_question12" style="display: none;">
+      <strong>Correct Answer:</strong> C. Storage Migration Service
+    </p>
+  </div>
+
+  <div id="references_question12" class="references" style="display: none;">
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#why-use-storage-migration-service" target="_blank">Why use Storage Migration Service</a></li>
+    </ul>
+  </div>
+</div>
+
+<script src="../Scripts/answer12.js"></script>
