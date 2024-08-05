@@ -1,0 +1,30 @@
+<div>
+  <h2>Question 2</h2>
+  <p>Your network contains a single-domain Active Directory Domain Services (AD DS) forest named contoso.com. The functional level of the forest is Windows Server 2012 R2. All domain controllers run Windows Server 2012 R2. Sysvol replicates by using the File Replication Service (FRS). You plan to replace the existing domain controllers with new domain controllers that will run Windows Server 2022. You need to ensure that you can add the first domain controller that runs Windows Server 2022. Solution: You run the Active Directory Migration Tool (ADMT). Does this meet the goal?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question2" value="A"> A. Yes
+    </label><br>
+    <label>
+      <input type="radio" name="question2" value="B"> B. No
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question2">Solution</button>
+
+  <div id="solutionInfo_question2" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Solution is to migrate SYSVOL from FRS to Distributed File System (DFS) Replication.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://www.rebeladmin.com/2021/09/step-by-step-guide-active-directory-migration-from-windows-server-2008-r2-to-windows-server-2022/" target="_blank">Active Directory migration from Windows Server 2008 R2 to Windows Server 2022</a></li>
+    </ul>
+    <p id="correctAnswers_question2" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>B:</strong> No
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer2.js"></script>
