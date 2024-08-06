@@ -1,0 +1,69 @@
+<div>
+  <h2>Question 6</h2>
+  <p>You have the servers shown in the following table.</p>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>OS</th>
+      <th>Configuration</th>
+      <th>Install option</th>
+    </tr>
+    <tr>
+      <td>Server1</td>
+      <td>Windows Server 2012 R2</td>
+      <td>File server</td>
+      <td>Server Core</td>
+    </tr>
+    <tr>
+      <td>Server2</td>
+      <td>Windows Server 2022</td>
+      <td>File server</td>
+      <td>Server Core</td>
+    </tr>
+    <tr>
+      <td>Server3</td>
+      <td>Windows Server 2016</td>
+      <td>Domain controller</td>
+      <td>Server with Desktop Experience</td>
+    </tr>
+  </table>
+  <p>You plan to migrate file shares from Server1 to Server2.</p>
+  <p>You need to deploy the Storage Migration Service and the Storage Migration Service extension.</p>
+  <p>On which server should you install each component? To answer, select the appropriate options in the answer area.</p>
+  
+  <form>
+    <label for="storageMigrationService">Storage Migration Service:</label>
+    <select id="storageMigrationService">
+      <option value="Server1">Server1</option>
+      <option value="Server2">Server2</option>
+      <option value="Server3">Server3</option>
+    </select><br><br>
+
+    <label for="storageMigrationExtension">Storage Migration Service extension:</label>
+    <select id="storageMigrationExtension">
+      <option value="Server1">Server1</option>
+      <option value="Server2">Server2</option>
+      <option value="Server3">Server3</option>
+    </select>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question6">Solution</button>
+
+  <div id="solutionInfo_question6" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>An orchestrator server running Windows Server 2019 or Windows Server 2022 is required to manage the migration. If you're migrating only a few servers, and one of the servers is running Windows Server 2019 or Windows Server 2022, you can use that as the orchestrator. If you're migrating more servers, use a separate orchestrator server. A PC or server running the latest Windows Admin Center to run the Storage Migration Service user interface, along with the latest Storage Migration Service tool (extension) available from the feed. The Windows Admin Center must be at least version 2103.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/plan/installation-options" target="_blank">Windows Admin Center Installation Options</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#requirements" target="_blank">Storage Migration Service Requirements</a></li>
+      <li><a href="https://4sysops.com/archives/windows-server-2019-storage-migration-service/" target="_blank">Windows Server 2019 Storage Migration Service</a></li>
+    </ul>
+    <p id="correctAnswers_question6" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      <strong>Storage Migration Service:</strong> Server2<br>
+      <strong>Storage Migration Service extension:</strong> Server3
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer6.js"></script>

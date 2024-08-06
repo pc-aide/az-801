@@ -1,0 +1,43 @@
+<div>
+  <h2>Question 9</h2>
+  <p>You deploy Azure Migrate to an on-premises network.</p>
+  <p>You have an on-premises physical server named Server1 that runs Windows Server and has the following configurations:</p>
+  <ul>
+    <li>Operating system disk: 600 GB</li>
+    <li>Data disk: 3 TB</li>
+    <li>NIC Teaming: Enabled</li>
+    <li>Mobility service: Installed</li>
+    <li>Windows Defender Firewall: Enabled</li>
+    <li>Microsoft Defender Antivirus: Enabled</li>
+  </ul>
+  <p>You need to ensure that you can use Azure Migrate to migrate Server1.</p>
+  <p>Solution: You disable NIC Teaming on Server1.</p>
+  <p>Does this meet the goal?</p>
+  
+  <form>
+    <label>
+      <input type="radio" name="answer" value="A"> Yes
+    </label><br>
+    <label>
+      <input type="radio" name="answer" value="B"> No
+    </label><br><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question9">Solution</button>
+
+  <div id="solutionInfo_question9" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Disabling NIC Teaming on Server1 is a relevant step for Azure Migrate. Azure doesn't support NIC Teaming as it's implemented in on-premises environments. Disabling NIC Teaming aligns the server's network configuration with Azure's capabilities, facilitating a smoother migration process. Therefore, this action meets the goal of ensuring Server1 can be migrated using Azure Migrate.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/migrate/migrate-support-matrix-physical-migration" target="_blank">Azure Migrate Support Matrix</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/azure/migrate/migrate-support-matrix-physical-migration#physical-server-requirements" target="_blank">Physical Server Requirements</a></li>
+    </ul>
+    <p id="correctAnswers_question9" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>Yes</strong>
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer9.js"></script>

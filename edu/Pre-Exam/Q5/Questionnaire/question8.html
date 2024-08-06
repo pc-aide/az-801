@@ -1,0 +1,42 @@
+<div>
+  <h2>Question 8</h2>
+  <p>You deploy Azure Migrate to an on-premises network.</p>
+  <p>You have an on-premises physical server named Server1 that runs Windows Server and has the following configurations:</p>
+  <ul>
+    <li>Operating system disk: 600 GB</li>
+    <li>Data disk: 3 TB</li>
+    <li>NIC Teaming: Enabled</li>
+    <li>Mobility service: Installed</li>
+    <li>Windows Defender Firewall: Enabled</li>
+    <li>Microsoft Defender Antivirus: Enabled</li>
+  </ul>
+  <p>You need to ensure that you can use Azure Migrate to migrate Server1.</p>
+  <p>Solution: You shrink the data disk on Server1.</p>
+  <p>Does this meet the goal?</p>
+  
+  <form>
+    <label>
+      <input type="radio" name="answer" value="A"> Yes
+    </label><br>
+    <label>
+      <input type="radio" name="answer" value="B"> No
+    </label><br><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question8">Solution</button>
+
+  <div id="solutionInfo_question8" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Shrinking the data disk on Server1 is not a necessary step for Azure Migrate to function and does not address the requirements for migrating a server using Azure Migrate. One of the issues is that NIC Teaming is not supported for migration. Additionally, it is unsupported to install the Azure Migrate Appliance on a server that has the replication appliance or mobility service agent installed. Ensure that the appliance server has not been previously used to set up the replication appliance or has the mobility service agent installed on the server.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/migrate/migrate-support-matrix-hyper-v-migration#hyper-v-vms" target="_blank">Azure Migrate Support Matrix</a></li>
+    </ul>
+    <p id="correctAnswers_question8" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>No</strong>
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer8.js"></script>

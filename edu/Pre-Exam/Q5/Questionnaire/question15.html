@@ -1,0 +1,36 @@
+<div>
+  <h2>Question 15</h2>
+  <p>You have an Azure virtual machine named VM1 that has the Web Server (IIS) server role installed. VM1 hosts a critical line-of-business (LOB) application. After the security team at your company deploys a new security baseline to VM1, users begin reporting that the application is unresponsive. You suspect that the security baseline has caused networking issues. You need to perform a network trace on VM1. What should you do?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question15" value="A"> A. From VM1, run netstat.
+    </label><br>
+    <label>
+      <input type="radio" name="question15" value="B"> B. From Performance Monitor on VM1, create a Data Collector Set.
+    </label><br>
+    <label>
+      <input type="radio" name="question15" value="C"> C. From the Azure portal, configure the Diagnostics settings for VM1.
+    </label><br>
+    <label>
+      <input type="radio" name="question15" value="D"> D. From the Azure portal, configure the Performance diagnostics settings for VM1.
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question15">Solution</button>
+
+  <div id="solutionInfo_question15" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>The Azure Performance Diagnostics extension is a powerful tool for diagnosing and identifying performance issues with Azure VMs. It allows you to gather a wide range of performance data, including network traces, which can be invaluable in situations where you suspect networking issues. Configuring Performance Diagnostics on VM1 through the Azure portal will enable you to collect the necessary data to understand what's causing the application to become unresponsive.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/troubleshoot/azure/virtual-machines/performance-diagnostics" target="_blank">Performance Diagnostics for Azure VMs</a></li>
+    </ul>
+    <p id="correctAnswers_question15" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>D:</strong> From the Azure portal, configure the Performance diagnostics settings for VM1
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer15.js"></script>

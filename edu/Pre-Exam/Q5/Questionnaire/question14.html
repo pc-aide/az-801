@@ -1,0 +1,39 @@
+<div>
+  <h2>Question 14</h2>
+  <p>You have an on-premises network and an Azure virtual network.</p>
+  <p>You establish a Site-to-Site VPN connection from the on-premises network to the Azure virtual network, but the connection frequently disconnects.</p>
+  <p>You need to debug the IPsec tunnel from Azure.</p>
+  <p>Which Azure VPN Gateway diagnostic log should you review?</p>
+  
+  <form>
+    <input type="radio" id="optionA" name="diagnosticLog" value="GatewayDiagnosticLog">
+    <label for="optionA">A. GatewayDiagnosticLog</label><br>
+
+    <input type="radio" id="optionB" name="diagnosticLog" value="RouteDiagnosticLog">
+    <label for="optionB">B. RouteDiagnosticLog</label><br>
+
+    <input type="radio" id="optionC" name="diagnosticLog" value="IKEDiagnosticLog">
+    <label for="optionC">C. IKEDiagnosticLog</label><br>
+
+    <input type="radio" id="optionD" name="diagnosticLog" value="TunnelDiagnosticLog">
+    <label for="optionD">D. TunnelDiagnosticLog</label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question14">Solution</button>
+
+  <div id="solutionInfo_question14" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>The IKEDiagnosticLog table offers verbose debug logging for IKE/IPsec. This is very useful to review when troubleshooting disconnections or failure to connect VPN scenarios.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/vpn-gateway/troubleshoot-vpn-with-azure-diagnostics" target="_blank">Troubleshoot VPN with Azure Diagnostics</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-setup-alerts-virtual-network-gateway-log" target="_blank">Setup Alerts for VPN Gateway Logs</a></li>
+    </ul>
+    <p id="correctAnswers_question14" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      C. IKEDiagnosticLog
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer14.js"></script>

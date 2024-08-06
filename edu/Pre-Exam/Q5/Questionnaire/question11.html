@@ -1,0 +1,51 @@
+<div>
+  <h2>Question 11</h2>
+  <p>You have an on-premises IIS web server that hosts a web app named App1.</p>
+  <p>You plan to migrate App1 to a container and run the container in Azure.</p>
+  <p>You need to perform the following tasks:</p>
+  <ul>
+    <li>Export App1 to a ZIP file.</li>
+    <li>Create a container image based on App1.</li>
+  </ul>
+  <p>The solution must minimize administrative effort.</p>
+  <p>Which tool should you use for each task? To answer, drag the appropriate tools to the correct tasks. Each tool may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.</p>
+
+  <form>
+    <div>
+      <label for="11_task1">Export App1 to a ZIP file:</label>
+      <div id="11_task1" class="dropzone" data-task="Export App1 to a ZIP file"></div>
+    </div>
+    
+    <div>
+      <label for="11_task2">Create a container image based on App1:</label>
+      <div id="11_task2" class="dropzone" data-task="Create a container image based on App1"></div>
+    </div>
+  </form>
+
+  <div id="tools">
+    <div id="11_tool1" draggable="true" class="draggable">Azure Migrate</div>
+    <div id="11_tool2" draggable="true" class="draggable">The Azure portal</div>
+    <div id="11_tool3" draggable="true" class="draggable">Web Deploy</div>
+    <div id="11_tool4" draggable="true" class="draggable">Windows Admin Center</div>
+    <div id="11_tool5" draggable="true" class="draggable">Windows Server Migration Tools</div>
+  </div>
+
+  <button class="solutionButton" data-answer-name="question11">Solution</button>
+
+  <div id="solutionInfo_question11" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>IIS web application/Web Deploy (exported Zip file): Use Web Deploy to export the application into a Zip file and then use Windows Admin Center to create a new container image based on the exported Zip file. The ASP.NET container image is used as the base image.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://techcommunity.microsoft.com/t5/iis-support-blog/how-to-migrate-a-website-using-web-deploy/ba-p/852244" target="_blank">How to Migrate a Website Using Web Deploy</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/virtualization/windowscontainers/wac-tooling/wac-images" target="_blank">Windows Admin Center Tooling</a></li>
+    </ul>
+    <p id="correctAnswers_question11" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      <strong>Export App1 to ZIP file:</strong> Web Deploy<br>
+      <strong>Create a container image with App1:</strong> Windows Admin Center
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer11.js"></script>

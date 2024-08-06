@@ -1,0 +1,59 @@
+<div>
+  <h2>Question 12</h2>
+  <p>You have a failover cluster named Cluster1 that contains four Windows Server nodes named Node1, Node2, Node3, and Node4.</p>
+  <p>You need to deploy a Storage Spaces Direct virtual disk to Cluster1.</p>
+  <p>You add the following disks to each node:</p>
+  <ul>
+    <li>Three 512-GB NVMe disks</li>
+    <li>Three 3-TB HDD disks</li>
+    <li>Three 1-TB SSD disks</li>
+  </ul>
+  <p>On Cluster1, you enable Storage Spaces Direct and add the new disks.</p>
+  <p>What is the total amount of disk space available for the Storage Spaces Direct virtual disk, and which operations are cached for the SSD and HDD disks? To answer, select the appropriate options in the answer area.</p>
+  
+  <form>
+    <label for="diskSpace">Disk space available for the Storage Spaces Direct virtual disk:</label>
+    <select id="diskSpace">
+      <option value="16 TB">16 TB</option>
+      <option value="36 TB">36 TB</option>
+      <option value="40.5 TB">40.5 TB</option>
+      <option value="48 TB">48 TB</option>
+      <option value="53.5 TB">53.5 TB</option>
+    </select><br><br>
+
+    <label for="ssdCache">Cache behavior of the SSD disks:</label>
+    <select id="ssdCache">
+      <option value="Neither read nor write operations are cached">Neither read nor write operations are cached</option>
+      <option value="Only read operations are cached">Only read operations are cached</option>
+      <option value="Only write operations are cached">Only write operations are cached</option>
+      <option value="Read & write operations are cached">Read & write operations are cached</option>
+    </select><br><br>
+
+    <label for="hddCache">Cache behavior of the HDD disks:</label>
+    <select id="hddCache">
+      <option value="Neither read nor write operations are cached">Neither read nor write operations are cached</option>
+      <option value="Only read operations are cached">Only read operations are cached</option>
+      <option value="Only write operations are cached">Only write operations are cached</option>
+      <option value="Read & write operations are cached">Read & write operations are cached</option>
+    </select>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question12">Solution</button>
+
+  <div id="solutionInfo_question12" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>The setup includes NVMe disks as cache, SSDs as capacity, and HDDs as additional capacity. According to the configuration, the total disk space available for the Storage Spaces Direct virtual disk is 48 TB. SSDs cache read and write operations, while HDDs cache read and write operations as well.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure-stack/hci/concepts/cache" target="_blank">Understanding Storage Spaces Direct Cache</a></li>
+    </ul>
+    <p id="correctAnswers_question12" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      <strong>Disk space available for the Storage Spaces Direct virtual disk:</strong> 48 TB<br>
+      <strong>Cache behavior of the SSD disks:</strong> Only write operations are cached<br>
+      <strong>Cache behavior of the HDD disks:</strong> Read & write operations are cached
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer12.js"></script>
