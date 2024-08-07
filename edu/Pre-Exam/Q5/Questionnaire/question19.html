@@ -1,0 +1,56 @@
+<div>
+  <h2>Question 19</h2>
+  <p>Your on-premises network contains two subnets. The subnets contain servers that run Windows Server as shown in the following table:</p>
+  <table>
+    <tr><th>Name</th><th>IP address</th></tr>
+    <tr><td>Server1</td><td>192.168.1.10</td></tr>
+    <tr><td>Server2</td><td>192.168.2.50</td></tr>
+    <tr><td>Server3</td><td>192.168.0.240</td></tr>
+    <tr><td>Server4</td><td>192.168.0.10</td></tr>
+  </table>
+  <p>Server4 has the following IP configurations:</p>
+  <p>Ethernet adapter Ethernet:<br>
+     Connection-specific DNS Suffix . . :<br>
+     IPv4 Address . . . . . . . . . . . : 192.168.0.10<br>
+     Subnet Mask . . . . . . . . . . . : 255.255.255.0<br>
+     Default Gateway . . . . . . . . . : 192.168.0.1
+  </p>
+  <p>From Server4, you can ping Server1 and Server2 successfully. When you ping Server3, you get a Request timed out response.<br>
+  From Server2, you can ping Server1 and Server3 successfully.</p>
+  <p>The misconfiguration of which component on Server3 can cause the Request timed out response?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question19" value="A"> A. default gateway
+    </label><br>
+    <label>
+      <input type="radio" name="question19" value="B"> B. IP address
+    </label><br>
+    <label>
+      <input type="radio" name="question19" value="C"> C. subnet mask
+    </label><br>
+    <label>
+      <input type="radio" name="question19" value="D"> D. DNS server
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question19">Solution</button>
+
+  <div id="solutionInfo_question19" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>The key here is we're told what works and what doesn’t:<br>
+    S2 can ping to S1<br>
+    S2 can ping to S3 implies S2 and S3 are indeed on the same subnet<br>
+    S4 can ping to S1<br>
+    S4 can ping to S2<br>
+    but S4 CANNOT ping S3 even though they should be on the same subnet<br>
+    Question implies a /24 mask is (or should be) in use for all since we're told there are "two subnets". 192.168.1.0/24 would cover S1 address, and 192.168.0.0/24 would cover S2/S3/S4.<br>
+    But if S3 had a /26 mask.. 255.255.255.192, it would cause ONLY S2 and S3 to be on the same network. Since S4's fourth octet is so far away, it would be on a different subnet IF the /26 mask was in use.</p>
+    <p id="correctAnswers_question19" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>C:</strong> Subnet mask
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer19.js"></script>

@@ -1,0 +1,42 @@
+<div>
+  <h2>Question 20</h2>
+  <p>You have five Azure virtual machines.<br>
+  You need to collect performance data and Windows Event logs from the virtual machines. The data collected must be sent to an Azure Storage account.<br>
+  What should you install on the virtual machines?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question20" value="A"> A. the Azure Connected Machine agent
+    </label><br>
+    <label>
+      <input type="radio" name="question20" value="B"> B. the Azure Monitor agent
+    </label><br>
+    <label>
+      <input type="radio" name="question20" value="C"> C. the Dependency agent
+    </label><br>
+    <label>
+      <input type="radio" name="question20" value="D"> D. the Telegraf agent
+    </label><br>
+    <label>
+      <input type="radio" name="question20" value="E"> E. the Azure Diagnostics extension
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question20">Solution</button>
+
+  <div id="solutionInfo_question20" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Use Azure Diagnostics extension if you need to:<br>
+    Send data to Azure Storage for archiving or to analyze it with tools such as Azure Storage Explorer. Diagnostics extension: Sends data to Azure Monitor Metrics (Windows only), Azure Event Hubs, and Azure Storage. This is not consolidated yet. So, Diagnostics extension is a legacy extension that will be replaced completely by Azure Monitor agent in the near future but right now is the right answer. Moreover, the emphasis is on the "Send data to Azure Storage" and the Diagnostics extension does exactly that.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/agents/diagnostics-extension-overview" target="_blank">Azure Diagnostics extension overview</a></li>
+    </ul>
+    <p id="correctAnswers_question20" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>E:</strong> The Azure Diagnostics extension
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer20.js"></script>

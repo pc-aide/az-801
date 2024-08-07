@@ -1,0 +1,37 @@
+<div>
+  <h2>Question 16</h2>
+  <p>You have an Azure virtual machine named VM1. Crash dumps for a process named Process1 are enabled for VM1. When process1.exe on VM1 crashes, a technician must access the memory dump files on the virtual machine. The technician must be prevented from accessing the virtual machine. To what should you provide the technician access?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question16" value="A"> A. an Azure file share
+    </label><br>
+    <label>
+      <input type="radio" name="question16" value="B"> B. an Azure Log Analytics workspace
+    </label><br>
+    <label>
+      <input type="radio" name="question16" value="C"> C. an Azure Blob Storage container
+    </label><br>
+    <label>
+      <input type="radio" name="question16" value="D"> D. a managed disk
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question16">Solution</button>
+
+  <div id="solutionInfo_question16" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>The Azure Diagnostics extension (Agent) is used to send data to Azure Storage for archiving or to analyze it with tools such as Azure Storage Explorer. By providing the technician access to an Azure Blob Storage container, you can ensure they can retrieve the memory dump files without having direct access to the virtual machine itself.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/agents/diagnostics-extension-overview" target="_blank">Azure Diagnostics Extension Overview</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/agents/diagnostics-extension-logs#supported-data-types" target="_blank">Supported Data Types for Diagnostics Extension</a></li>
+    </ul>
+    <p id="correctAnswers_question16" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>C:</strong> an Azure Blob Storage container
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer16.js"></script>

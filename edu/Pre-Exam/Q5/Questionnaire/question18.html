@@ -1,0 +1,40 @@
+<div>
+  <h2>Question 18</h2>
+  <p>You plan to deploy the Azure Monitor agent to 100 on-premises servers that run Windows Server. Which parameters should you provide when you install the agent?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question18" value="A"> A. the client ID and the secret of an Azure service principal
+    </label><br>
+    <label>
+      <input type="radio" name="question18" value="B"> B. the name and the access key of an Azure Storage account
+    </label><br>
+    <label>
+      <input type="radio" name="question18" value="C"> C. a connection string for an Azure SQL database
+    </label><br>
+    <label>
+      <input type="radio" name="question18" value="D"> D. the ID and the key of an Azure Log Analytics workspace
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question18">Solution</button>
+
+  <div id="solutionInfo_question18" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Before installing the Microsoft Monitoring Agent for Windows, you need the workspace ID and key for your Log Analytics workspace. This information is required by the setup wizard to properly configure the agent.</p>
+    <p><img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q5/img/q18_1.png" alt="Workspace ID and Key" style="max-width: 100%; height: auto;"></p>
+    <p><img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q5/img/q18_2.png" alt="Workspace ID and Key" style="max-width: 100%; height: auto;"></p>
+    <p><img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q5/img/q18_3.gif" alt="Workspace ID and Key" style="max-width: 100%; height: auto;"></p>
+    <p><img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q5/img/q18_4.gif" alt="Workspace ID and Key" style="max-width: 100%; height: auto;"></p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/configure-azure-monitor#obtain-workspace-id-and-key" target="_blank">Obtain Workspace ID and Key</a></li>
+    </ul>
+    <p id="correctAnswers_question18" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>D:</strong> the ID and the key of an Azure Log Analytics workspace
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer18.js"></script>
