@@ -1,0 +1,48 @@
+<div>
+  <h2>Question 01</h2>
+  <p>You have a server named Server1 that runs Windows Server. On Server1, you create a Data Collector Set named CollectorSet1 based on the Basic template. You need to configure CollectorSet1 to meet the following requirements:</p>
+  <ul>
+    <li>Older performance counter logs must be overwritten by new ones.</li>
+    <li>Performance counter logging must stop if there is less than 500 MB of free disk space.</li>
+  </ul>
+  <p>What should you configure for each requirement? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+    <label>
+      Older performance counter logs must be overwritten by new ones:
+      <select name="question1_overwrite">
+        <option value="The Configuration properties">The Configuration properties</option>
+        <option value="The Data Manager properties">The Data Manager properties</option>
+        <option value="The Performance Counter properties">The Performance Counter properties</option>
+      </select>
+    </label><br>
+
+    <label>
+      Performance counter logging must stop if there is less than 500 MB of free disk space:
+      <select name="question1_disk_space">
+        <option value="The Configuration properties">The Configuration properties</option>
+        <option value="The Data Manager properties">The Data Manager properties</option>
+        <option value="The Performance Counter properties">The Performance Counter properties</option>
+      </select>
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question1">Solution</button>
+
+  <div id="solutionInfo_question1" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>To overwrite older performance counter logs by new ones, select the "Overwrite" option for the "File name" setting in the data collector set properties. You can access the properties by right-clicking on the data collector set in Performance Monitor and selecting "Properties". In the "Data Collector Set Properties" dialog box, click the "Log Files" tab, and then select "Overwrite" for the "File name" setting.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc765998(v=ws.11)" target="_blank">Windows Server 2008 R2 and 2008 Data Collector Set Properties</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/performance/log-files-are-deleted" target="_blank">Troubleshoot Log Files Deletion</a></li>
+    </ul>
+    <p id="correctAnswers_question1" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      Older performance counter logs must be overwritten by new ones: <strong>The Performance Counter properties</strong><br>
+      Performance counter logging must stop if there is less than 500 MB of free disk space: <strong>The Data Manager properties</strong>
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer1.js"></script>

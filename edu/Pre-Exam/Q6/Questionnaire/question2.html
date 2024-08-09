@@ -1,0 +1,36 @@
+<div>
+  <h2>Question 2</h2>
+  <p>You have an Azure virtual machine named VM1. You install an application on VM1, and then restart the virtual machine. After the restart, you get the following error message: Boot failure. Reboot and Select proper Boot Device or Insert Boot Media in selected Boot Device.<br/><br/> You need to mount the operating system disk offline from VM1 to a temporary virtual machine to troubleshoot the issue. Which command should you run in Azure CLI?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question2" value="A"> A. az vm repair create
+    </label><br>
+    <label>
+      <input type="radio" name="question2" value="B"> B. az vm boot-diagnostics enable
+    </label><br>
+    <label>
+      <input type="radio" name="question2" value="C"> C. az vm capture
+    </label><br>
+    <label>
+      <input type="radio" name="question2" value="D"> D. az vm disk attach
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question2">Solution</button>
+
+  <div id="solutionInfo_question2" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>VM repair command will enable Azure users to self-repair non-bootable VMs by copying the source VM's OS disk and attaching it to a newly created repair VM.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/cli/azure/vm/repair?view=azure-cli-latest" target="_blank">VM Repair Command Documentation</a></li>
+    </ul>
+    <p id="correctAnswers_question2" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>A:</strong> az vm repair create
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer2.js"></script>

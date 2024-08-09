@@ -1,0 +1,58 @@
+<div>
+  <h2>Question 4</h2>
+  <p>You have an Azure virtual machine named VM1 that runs Windows Server. VM1 has boot diagnostics configured to use a managed storage account.
+    You are troubleshooting connectivity issues on VM1.
+    You need to run a PowerShell cmdlet on VM1 by using the Azure Serial Console.
+    Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+  </p>
+
+  <form>
+    <label>Actions:</label>
+    <div id="actions">
+      <div id="4_1" draggable="true" class="draggable">From the Azure portal, configure the Boot diagnostics settings for VM1 to use a custom storage account</div>
+      <div id="4_2" draggable="true" class="draggable">From the Azure portal, open the Run command blade</div>
+      <div id="4_3" draggable="true" class="draggable">From the Azure portal, open the Serial console blade of VM1</div>
+      <div id="4_4" draggable="true" class="draggable">From the Azure portal, enable just in time (JIT) VM access to VM1</div>
+      <div id="4_5" draggable="true" class="draggable">From the Serial console, run ch -si & sign in by using a local account</div>
+      <div id="4_6" draggable="true" class="draggable">From the Serial console, run cmd</div>
+    </div>
+
+    <label>Steps:</label>
+    <div id="steps">
+      <div class="stepLabel">Step 1:</div>
+      <div id="4_step1" class="dropzone"></div>
+      
+      <div class="stepLabel">Step 2:</div>
+      <div id="4_step2" class="dropzone"></div>
+      
+      <div class="stepLabel">Step 3:</div>
+      <div id="4_step3" class="dropzone"></div>
+      
+      <div class="stepLabel">Step 4:</div>
+      <div id="4_step4" class="dropzone"></div>
+    </div>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question4">Solution</button>
+
+  <div id="solutionInfo_question4" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>
+      <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q6/img/q4_1.gif" alt="Explanation Image">
+    </p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/troubleshoot/azure/virtual-machines/serial-console-overview" target="_blank">Serial Console Overview</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/serial-console-windows" target="_blank">Serial Console for Windows</a></li>
+    </ul>
+    <p id="correctAnswers_question4" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      <strong>Step 1:</strong> From the Azure portal, configure the Boot diagnostics settings for VM1 to use a custom storage account<br>
+      <strong>Step 2:</strong> From the Azure portal, open the Serial console blade of VM1<br>
+      <strong>Step 3:</strong> From the Serial console, run cmd<br>
+      <strong>Step 4:</strong> From the Serial console, run ch -si & sign in by using a local account
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer4.js"></script>

@@ -1,0 +1,36 @@
+<div>
+  <h2>Question 3</h2>
+  <p>You have a Site-to-Site VPN between an on-premises network and an Azure VPN gateway. BGP is disabled for the Site-to-Site VPN.<br/><br/>You have an Azure virtual network named Vnet1 that contains a subnet named Subnet1. Subnet1 contains a virtual machine named Server1. You can connect to Server1 from the on-premises network.<br/><br/>You extend the address space of Vnet1. You add a subnet named Subnet2 to Vnet1. Subnet2 uses the extended address space. You deploy an Azure virtual machine named Server2 to Subnet2.<br/><br/>You cannot connect to Server2 from the on-premises network. Server1 can connect to Server2.<br/><br/>You need to ensure that you can connect to Subnet2 from the on-premises network. What should you do?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question3" value="A"> A. Add an additional Site-to-Site VPN between the on-premises network and Vnet1.
+    </label><br>
+    <label>
+      <input type="radio" name="question3" value="B"> B. Add a private endpoint to Subnet2.
+    </label><br>
+    <label>
+      <input type="radio" name="question3" value="C"> C. To Subnet2, add a route table that contains a user-defined route.
+    </label><br>
+    <label>
+      <input type="radio" name="question3" value="D"> D. Update the routing information on the on-premises routers.
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question3">Solution</button>
+
+  <div id="solutionInfo_question3" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>By default, Azure VPN gateway advertises the virtual network address space to the on-premises VPN device using the Border Gateway Protocol (BGP). However, in this scenario, BGP is disabled for the Site-to-Site VPN. Therefore, you need to manually update the on-premises VPN device with the new extended address space of Vnet1 and create a new route for it.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/vpn-gateway/" target="_blank">Azure VPN Gateway Documentation</a></li>
+    </ul>
+    <p id="correctAnswers_question3" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>D:</strong> Update the routing information on the on-premises routers
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer3.js"></script>
