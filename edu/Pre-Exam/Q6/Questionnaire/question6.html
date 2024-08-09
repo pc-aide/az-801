@@ -1,0 +1,45 @@
+<div>
+  <h2>Question 6</h2>
+  <p>Your network contains an Active Directory Domain Services (AD DS) domain named contoso.com. The domain contains three domain controllers named DC1, DC2, and DC3.</p>
+  <p>You connect a Microsoft Defender for Identity instance to the domain.</p>
+  <p>You need to onboard all the domain controllers to Defender for Identity. What should you run on the domain controllers?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question6" value="A">
+      A. Azure ATP Sensor Setup.exe
+    </label><br>
+    <label>
+      <input type="radio" name="question6" value="B">
+      B. AzureConnectedMachineAgent.msi
+    </label><br>
+    <label>
+      <input type="radio" name="question6" value="C">
+      C. MARSAgentInstaller.exe
+    </label><br>
+    <label>
+      <input type="radio" name="question6" value="D">
+      D. MMASetup-AMD64.exe
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question6">Solution</button>
+
+  <div id="solutionInfo_question6" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Azure ATP uses data from sensors, known as Azure ATP Sensors, that are installed on your domain controllers. The ATP sensors monitor the domain controller network traffic for signs of malicious activity, as well as other security risks such as connections made with weak or insecure protocols.</p>
+    <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q6/img/q6_1.png" alt="Azure ATP Sensor Setup">
+  </div>
+
+  <div id="ref_question6" class="references" style="display: none;">
+    <p><strong>Reference:</strong></p>
+    <a href="https://learn.microsoft.com/en-us/defender-for-identity/install-sensor" target="_blank">Install Microsoft Defender for Identity sensor</a>
+  </div>
+
+  <p id="correctAnswers_question6" style="display: none;">
+    <strong>Correct Answer:</strong><br>
+    A. Azure ATP Sensor Setup.exe
+  </p>
+</div>
+
+<script src="../Scripts/answer6.js"></script>

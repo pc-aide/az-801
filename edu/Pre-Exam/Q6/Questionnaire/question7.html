@@ -1,0 +1,53 @@
+<div>
+<h2>Question 7</h2>
+  <p>You have an Azure Active Directory Domain Services (Azure AD DS) domain named aadds.contoso.com.</p>
+  <p>You have an Azure virtual network named Vnet1. Vnet1 contains two virtual machines named VM1 and VM2 that run Windows Server. VM1 and VM2 are joined to aadds.contoso.com.</p>
+  <p>You create a new Azure virtual network named Vnet2. You add a new server named VM3 to Vnet2.</p>
+  <p>When you attempt to join VM3 to aadds.contoso.com, you get an error message that the domain cannot be found.</p>
+  <p>You need to ensure that you can join VM3 to aadds.contoso.com. What should you do? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+    <p><strong>Network configuration:</strong></p>
+    <select id="networkConfiguration">
+      <option value="">-- Select an option --</option>
+      <option value="Add a subnet to Vnet1">Add a subnet to Vnet1</option>
+      <option value="Add a subnet to Vnet2">Add a subnet to Vnet2</option>
+      <option value="Add a private endpoint to Vnet2">Add a private endpoint to Vnet2</option>
+      <option value="Configure virtual network peering between Vnet1 & Vnet2">Configure virtual network peering between Vnet1 & Vnet2</option>
+    </select>
+
+    <p><strong>DNS configuration:</strong></p>
+    <select id="dnsConfiguration">
+      <option value="">-- Select an option --</option>
+      <option value="Add a custom DNS server to Vnet1">Add a custom DNS server to Vnet1</option>
+      <option value="Add a custom DNS server to Vnet2">Add a custom DNS server to Vnet2</option>
+      <option value="Create an Azure private DNS zone named aadds.contoso.com">Create an Azure private DNS zone named aadds.contoso.com</option>
+      <option value="Add a virtual network link to an existing Azure private DNS zone">Add a virtual network link to an existing Azure private DNS zone</option>
+    </select>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question7">Solution</button>
+
+  <div id="solutionInfo_question7" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>For the second part, I prefer adding a custom DNS to Vnet2. All you need to do is add the Azure AD DS instance's IP address to Vnet2. The question did not say anything about already having a private DNS zone in place.</p>
+  </div>
+
+  <div id="ref_question7" class="references" style="display: none;">
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-domain-services/troubleshoot-domain-join" target="_blank">Troubleshoot domain join</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/dns/private-dns-virtual-network-links" target="_blank">Private DNS virtual network links</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/entra/identity/domain-services/tutorial-configure-networking" target="_blank">Configure networking for Azure AD DS</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/azure/active-directory-domain-services/manage-dns" target="_blank">Manage DNS for Azure AD DS</a></li>
+    </ul>
+  </div>
+
+  <p id="correctAnswers_question7" style="display: none;">
+    <strong>Correct Answer:</strong><br>
+    Network configuration: Configure virtual network peering between Vnet1 & Vnet2<br>
+    DNS configuration: Add a custom DNS server to Vnet2
+  </p>
+</div>
+
+<script src="../Scripts/answer7.js"></script>

@@ -1,0 +1,65 @@
+<div>
+  <h2>Question 5</h2>
+  <p>You have an on-premises server named Server1 and a Microsoft Sentinel instance.</p>
+  <p>You plan to collect Windows Defender Firewall events from Server1 and analyze the event data using Microsoft Sentinel.</p>
+  <p>What should you install on Server1, and which information should you provide during the installation? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+    <label>
+      Install:
+      <select name="question5_install">
+        <option value="The Azure Log Analytics gateway">The Azure Log Analytics gateway</option>
+        <option value="The Azure Monitor agent">The Azure Monitor agent</option>
+        <option value="The Microsoft Azure Recovery Services (MARS) agent">The Microsoft Azure Recovery Services (MARS) agent</option>
+      </select>
+    </label><br>
+
+    <label>
+      Provide:
+      <select name="question5_provide">
+        <option value="The Azure subscription ID & the Microsoft Sentinel name">The Azure subscription ID & the Microsoft Sentinel name</option>
+        <option value="The Azure Storage account & the storage account access key">The Azure Storage account & the storage account access key</option>
+        <option value="The Azure Log Analytics workspace ID & the workspace key">The Azure Log Analytics workspace ID & the workspace key</option>
+        <option value="The Microsoft Sentinel instance name & Azure AD credentials">The Microsoft Sentinel instance name & Azure AD credentials</option>
+      </select>
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question5">Solution</button>
+
+  <div id="solutionInfo_question5" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>The Azure Monitor agent supports Log Analytics, Metrics explorer, and Microsoft Sentinel.</p>
+    <p>Note: The Azure Monitor agent is meant to replace the Log Analytics agent, Azure Diagnostic extension, and Telegraf agent for both Windows and Linux machines. It can send data to both Azure Monitor Logs and Azure Monitor Metrics and uses Data Collection Rules (DCR), which provide a more scalable method of configuring data collection and destinations for each agent.</p>
+    <p>Use the Azure Monitor agent if you need to:</p>
+    <ul>
+      <li>Collect guest logs and metrics from any machine in Azure, in other clouds, or on-premises. (Azure Arc-enabled servers required for machines outside of Azure.)</li>
+      <li>Manage data collection configuration centrally, using data collection rules and use Azure Resource Manager (ARM) templates or policies for management overall.</li>
+      <li>Send data to Azure Monitor Logs and Azure Monitor Metrics (preview) for analysis with Azure Monitor.</li>
+      <li>Use Windows event filtering or multi-homing for logs on Windows and Linux.</li>
+    </ul>
+    <p><strong>Box 2: The Azure Log Analytics workspace ID and workspace key</strong></p>
+    <p>The Azure Monitor agent sends data to Azure Monitor Metrics (preview) or a Log Analytics workspace supporting Azure Monitor Logs.</p>
+    <p>Enable Microsoft Defender for Cloud monitoring of on-premises Windows computers:</p>
+    <ol>
+      <li>In the Azure portal on the Defender for Cloud - Overview blade, select the Get Started tab.</li>
+      <li>Select Configure under Add new non-Azure computers. A list of your Log Analytics workspaces displays, and should include the Defender for Cloud-SentinelWorkspace.</li>
+      <li>Select this workspace. The Direct Agent blade opens with a link for downloading a Windows agent and keys for your workspace identification (ID) to use when you configure the agent.</li>
+      <li>Select the Download Windows Agent link applicable to your computer processor type to download the setup file.</li>
+      <li>To the right of Workspace ID, select Copy, and then paste the ID into Notepad.</li>
+      <li>To the right of Primary Key, select Copy, and then paste the key into Notepad.</li>
+    </ol>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agent-windows?tabs=setup-wizard" target="_blank">Azure Monitor Agent - Setup Wizard</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-security-monitoring" target="_blank">Hybrid Security Monitoring</a></li>
+    </ul>
+    <p id="correctAnswers_question5" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      Install: <strong>The Azure Monitor agent</strong><br>
+      Provide: <strong>The Azure Log Analytics workspace ID & the workspace key</strong>
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer5.js"></script>

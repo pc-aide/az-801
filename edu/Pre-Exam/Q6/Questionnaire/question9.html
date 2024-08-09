@@ -1,0 +1,38 @@
+<div>
+  <h2>Question 9</h2>
+  <p>You have an Azure virtual machine named VM1 that runs Windows Server.<br/><br/>When you attempt to install the Azure Performance Diagnostics extension on VM1, the installation fails.<br/><br/>You need to identify the cause of the installation failure.<br/><br/>What are two possible ways to achieve the goal? Each correct answer presents a complete solution.</p>
+
+  <form>
+    <label>
+      <input type="checkbox" name="question9" value="A"> A. Sign in to VM1 and verify the MonitoringAgent.log file.
+    </label><br>
+    <label>
+      <input type="checkbox" name="question9" value="B"> B. Sign in to VM1 and verify the WaAppAgent.log file.
+    </label><br>
+    <label>
+      <input type="checkbox" name="question9" value="C"> C. From the Azure portal, view the alerts for VM1.
+    </label><br>
+    <label>
+      <input type="checkbox" name="question9" value="D"> D. From the Azure portal, view the activity log for VM1.
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question9">Solution</button>
+
+  <div id="solutionInfo_question9" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>The `MonitoringAgent.log` file is related to the Azure Monitoring Agent, which is not referenced in this scenario, so option A is not a suitable answer. Instead, verifying the `WaAppAgent.log` file and viewing the activity log from the Azure portal are appropriate methods for troubleshooting the installation failure.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/troubleshoot/azure/virtual-machines/performance-diagnostics-vm-extension" target="_blank">Troubleshoot Azure Performance Diagnostics Extension Installation</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/vm/monitor-virtual-machine-analyze" target="_blank">Monitor and Analyze Virtual Machines</a></li>
+    </ul>
+    <p id="correctAnswers_question9" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      <strong>B:</strong> Sign in to VM1 and verify the WaAppAgent.log file.<br>
+      <strong>D:</strong> From the Azure portal, view the activity log for VM1.
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer9.js"></script>

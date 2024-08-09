@@ -1,0 +1,41 @@
+<div>
+  <h2>Question 8</h2>
+  <p>You have five Azure virtual machines. You have a dedicated Azure Storage account to collect performance data.<br/><br/>You need to send the collected data directly to the Azure Storage account.<br/><br/>What should you install on the virtual machines?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question8" value="A"> A. the Azure Connected Machine agent
+    </label><br>
+    <label>
+      <input type="radio" name="question8" value="B"> B. the Telegraf agent
+    </label><br>
+    <label>
+      <input type="radio" name="question8" value="C"> C. the Dependency agent
+    </label><br>
+    <label>
+      <input type="radio" name="question8" value="D"> D. the Azure Monitor agent
+    </label><br>
+    <label>
+      <input type="radio" name="question8" value="E"> E. the Azure Diagnostics extension
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question8">Solution</button>
+
+  <div id="solutionInfo_question8" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>At the time of writing, the Monitoring agent does not support Azure Storage, which is a requirement in the question. Therefore, the answer should be the Diagnostics Extension, even though the Monitoring agent will replace the Diagnostics Extension. This is supported by the "Compare to legacy agents" overview in the following sources.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/agents/diagnostics-extension-overview" target="_blank">Azure Diagnostics Extension Overview</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-services-and-features" target="_blank">Supported Services and Features</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#consolidating-legacy-agents" target="_blank">Consolidating Legacy Agents</a></li>
+    </ul>
+    <p id="correctAnswers_question8" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>E:</strong> the Azure Diagnostics extension
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer8.js"></script>
