@@ -1,0 +1,36 @@
+<div>
+  <h2>Question 19</h2>
+  <p>You have an Azure virtual machine named VM1 that runs Windows Server.</p>
+  <p>The operating system on VM1 fails to fully initialize its network stack, and you cannot establish a network connection.</p>
+  <p>You need to establish an interactive shell session.</p>
+  <p>What should you use?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question19" value="A"> A. Azure Bastion
+    </label><br>
+    <label>
+      <input type="radio" name="question19" value="B"> B. Serial console
+    </label><br>
+    <label>
+      <input type="radio" name="question19" value="C"> C. Just-in-time (JIT) VM access
+    </label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question19">Solution</button>
+
+  <div id="solutionInfo_question19" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>The Serial Console provides direct access to the VM's console without relying on a functional network stack, which is essential in this scenario where the network stack fails to initialize.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/serial-console-overview" target="_blank">Serial Console Overview</a></li>
+    </ul>
+    <p id="correctAnswers_question19" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>B:</strong> Serial console
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer19.js"></script>

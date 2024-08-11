@@ -1,0 +1,35 @@
+<div>
+  <h2>Question 16</h2>
+  <p>You have an on-premises server named Server1 that runs Windows Server.</p>
+  <p>You have a Microsoft Sentinel instance.</p>
+  <p>You add the Windows Firewall data connector in Microsoft Sentinel.</p>
+  <p>You need to ensure that Microsoft Sentinel can collect Windows Firewall logs from Server1.</p>
+  <p>Solution: You install the Log Analytics agent on Server1.</p>
+  <p>Does this meet the goal?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question16" value="A"> A. Yes
+    </label><br>
+    <label>
+      <input type="radio" name="question16" value="B"> B. No
+    </label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question16">Solution</button>
+
+  <div id="solutionInfo_question16" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Azure Monitor Agent (AMA) collects monitoring data from the guest operating system of Azure and hybrid virtual machines and delivers it to Azure Monitor for use by features, insights, and other services, such as Microsoft Sentinel and Microsoft Defender for Cloud. Azure Monitor Agent replaces Azure Monitor's legacy monitoring agents (MMA/OMS).</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview" target="_blank">Azure Monitor Agents Overview</a></li>
+    </ul>
+    <p id="correctAnswers_question16" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>A:</strong> Yes
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer16.js"></script>

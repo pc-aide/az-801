@@ -1,0 +1,46 @@
+<div>
+  <h2>Question 13</h2>
+  <p>You have three servers named Server1, Server2, and Server3 that run Windows Server. The servers have the Hyper-V server role installed and are configured in a Storage Spaces Direct cluster named Cluster1.<br/><br/>
+  Cluster1 hosts a virtual machine named VM1 that has Windows Admin Center installed.<br/><br/>
+  You manage all servers and clusters by using Windows Admin Center.<br/><br/>
+  You purchase an Azure subscription.<br/><br/>
+  You need to configure email alerts in Azure Monitor for the following:<br/><br/>
+  ✑ Disk Capacity Utilization Over 80 % for 10 Minutes<br/>
+  ✑ Any critical alert in the cluster system event log<br/>
+  ✑ Memory Utilization over 95 % for 10 Minutes<br/>
+  ✑ Heartbeat fewer than 5 beats for 5 Minutes<br/>
+  ✑ CPU Utilization over 85 % for 10 Minutes<br/>
+  ✑ Any health service faults for the cluster<br/><br/>
+  The solution must use the minimum amount of administrative effort.<br/><br/>
+  What should you do?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question13" value="A"> A. From the Azure portal, configure Azure Monitor and onboard Cluster1 by using Azure Arc.
+    </label><br>
+    <label>
+      <input type="radio" name="question13" value="B"> B. From Windows Admin Center, configure Azure Monitor and onboard Cluster1.
+    </label><br>
+    <label>
+      <input type="radio" name="question13" value="C"> C. Configure Azure Monitor and manually install the Microsoft Monitoring Agent on Server1, Server2, and Server3.
+    </label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question13">Solution</button>
+
+  <div id="solutionInfo_question13" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>A question which won't age well. MMA via WAC's Azure Monitor for VMs (Insights) does support all the requirements and doesn't need Arc & AMA separately deploying, so is a valid option at the time the question was written (noting least administrative overhead), but given MMA has a finite life (Aug 2024), the only recommended method will soon fall back to 'A'</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://www.virtualizationhowto.com/2019/06/manage-storage-spaces-direct-with-windows-admin-center/" target="_blank">Manage Storage Spaces Direct with Windows Admin Center</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/azure-monitor" target="_blank">Azure Monitor with Windows Admin Center</a></li>
+    </ul>
+    <p id="correctAnswers_question13" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>B:</strong> From Windows Admin Center, configure Azure Monitor and onboard Cluster1.
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer13.js"></script>

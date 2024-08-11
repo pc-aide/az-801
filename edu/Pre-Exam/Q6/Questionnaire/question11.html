@@ -1,0 +1,41 @@
+<div>
+  <h2>Question 11</h2>
+  <p>You have an Azure virtual machine named VM1 that runs Windows Server.<br/><br/>
+  You plan to deploy a new line-of-business (LOB) application to VM1.<br/><br/>
+  You need to prevent the application from creating child processes.<br/><br/>
+  What should you configure on VM1?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question11" value="A"> A. Microsoft Defender Credential Guard
+    </label><br>
+    <label>
+      <input type="radio" name="question11" value="B"> B. Microsoft Defender Application Control
+    </label><br>
+    <label>
+      <input type="radio" name="question11" value="C"> C. Microsoft Defender SmartScreen
+    </label><br>
+    <label>
+      <input type="radio" name="question11" value="D"> D. Exploit protection
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question11">Solution</button>
+
+  <div id="solutionInfo_question11" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>To prevent an application from creating child processes, you can use Exploit Protection within Microsoft Defender. This setting is part of the Attack Surface Reduction (ASR) rules which help minimize the security risk by controlling certain behaviors of applications, such as preventing child process creation.</p>
+    <p>In the Group Policy Editor, the path to configure this setting is:</p>
+    <p><code>Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\Exclude files and paths from Attack Surface Reduction Rules</code></p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/customize-exploit-protection?view=o365-worldwide#powershell-reference-table" target="_blank">Customize Exploit Protection in Microsoft Defender</a></li>
+    </ul>
+    <p id="correctAnswers_question11" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>D:</strong> Exploit protection
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer11.js"></script>

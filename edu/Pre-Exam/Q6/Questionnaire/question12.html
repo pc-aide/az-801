@@ -1,0 +1,36 @@
+<div>
+  <h2>Question 12</h2>
+  <p>Your network contains an Active Directory Domain Services (AD DS) domain. All domain members have Microsoft Defender Credential Guard with UEFI lock configured.<br/><br/>
+  In the domain, you deploy a server named Server1 that runs Windows Server. You disable Credential Guard on Server1.<br/><br/>
+  You need to ensure that Server1 is NOT subject to Credential Guard restrictions.<br/><br/>
+  What should you do next?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question12" value="A"> A. Disable the Turn on Virtualization Based Security group policy setting.
+    </label><br>
+    <label>
+      <input type="radio" name="question12" value="B"> B. Run dism and specify the /Disable-Feature and /FeatureName:IsolatedUserMode parameters.
+    </label><br>
+    <label>
+      <input type="radio" name="question12" value="C"> C. Run the Device Guard and Credential Guard hardware readiness tool.
+    </label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question12">Solution</button>
+
+  <div id="solutionInfo_question12" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>If Windows Defender Credential Guard was enabled via Group Policy without UEFI Lock, Windows Defender Credential Guard should be disabled via Group Policy.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/credential-guard-manage#disabling-windows-defender-credential-guard-using-group-policy" target="_blank">Disabling Windows Defender Credential Guard Using Group Policy</a></li>
+    </ul>
+    <p id="correctAnswers_question12" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>A:</strong> Disable the Turn on Virtualization Based Security group policy setting.
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer12.js"></script>

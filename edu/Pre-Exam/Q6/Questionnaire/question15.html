@@ -1,0 +1,77 @@
+<div>
+  <h2>Question 15</h2>
+  <p>You have an Azure subscription. The subscription contains a virtual machine named VM1 that runs Windows Server. The subscription contains the storage accounts shown in the following table.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Performance</th>
+        <th>Premium account type</th>
+        <th>Redundancy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>storage1</td>
+        <td>Standard</td>
+        <td>N/A</td>
+        <td>GRS</td>
+      </tr>
+      <tr>
+        <td>storage2</td>
+        <td>Standard</td>
+        <td>N/A</td>
+        <td>ZRS</td>
+      </tr>
+      <tr>
+        <td>storage3</td>
+        <td>Premium</td>
+        <td>Block blobs</td>
+        <td>LRS</td>
+      </tr>
+      <tr>
+        <td>storage4</td>
+        <td>Premium</td>
+        <td>File shares</td>
+        <td>LRS</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>You plan to enable boot diagnostics for VM1.<br/><br/>
+  You need to configure storage for the boot diagnostics logs and snapshots.<br/><br/>
+  Which storage account should you use?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question15" value="A"> A. storage1
+    </label><br>
+    <label>
+      <input type="radio" name="question15" value="B"> B. storage2
+    </label><br>
+    <label>
+      <input type="radio" name="question15" value="C"> C. storage3
+    </label><br>
+    <label>
+      <input type="radio" name="question15" value="D"> D. storage4
+    </label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question15">Solution</button>
+
+  <div id="solutionInfo_question15" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Boot diagnostics doesn't support premium storage accounts or zone redundant storage accounts. If either of these are used for boot diagnostics users will receive a StorageAccountTypeNotSupported error when starting the VM. The Boot diagnostics feature does not support premium storage account or Zone Redundant Storage Account Types.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/boot-diagnostics" target="_blank">Boot diagnostics feature</a></li>
+    </ul>
+    <p id="correctAnswers_question15" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>A:</strong> storage1
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer15.js"></script>

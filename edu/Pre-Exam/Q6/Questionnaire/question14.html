@@ -1,0 +1,40 @@
+<div>
+  <h2>Question 14</h2>
+  <p>You have three servers named Server1, Server2, and Server3 that run Windows Server and have the Hyper-V server role installed. Server1 hosts an Azure
+  Migrate appliance named Migrate1.<br/><br/>
+  You plan to migrate virtual machines to Azure.<br/><br/>
+  You need to ensure that any new virtual machines created on Server1, Server2, and Server3 are available in Azure Migrate.<br/><br/>
+  What should you do?</p>
+
+  <form>
+    <label>
+      <input type="radio" name="question14" value="A"> A. On the network that has Migrate1 deployed, deploy a WINS server.
+    </label><br>
+    <label>
+      <input type="radio" name="question14" value="B"> B. On Migrate1, set the Startup Type of the Computer Browser service to Automatic.
+    </label><br>
+    <label>
+      <input type="radio" name="question14" value="C"> C. On the DNS server used by Migrate1, create a GlobalName zone.
+    </label><br>
+    <label>
+      <input type="radio" name="question14" value="D"> D. On Migrate1, add a discovery source.
+    </label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question14">Solution</button>
+
+  <div id="solutionInfo_question14" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>A discovery source specifies the Hyper-V hosts that Azure Migrate will discover and assess for migration. When you add a discovery source, Azure Migrate automatically detects and adds any new virtual machines that are created on the specified Hyper-V hosts.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/migrate/tutorial-discover-hyper-v" target="_blank">Azure Migrate: Discover Hyper-V VMs</a></li>
+    </ul>
+    <p id="correctAnswers_question14" style="display: none;">
+      <strong>Correct Answer:</strong><br>
+      <strong>D:</strong> On Migrate1, add a discovery source.
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer14.js"></script>
