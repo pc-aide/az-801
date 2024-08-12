@@ -1,0 +1,322 @@
+<div>
+  <h2>Question 15</h2>
+  <p>Contoso, Ltd. is a manufacturing company that has a main office in Seattle and branch offices in Los Angeles and Montreal.</p>
+  <p><strong>Existing Environment -</strong></p>
+  <p><strong>Active Directory Environment -</strong> Contoso has an on-premises Active Directory Domain Services (AD DS) domain named contoso.com that syncs with an Azure Active Directory (Azure AD) tenant. The AD DS domain contains the domain controllers shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>OS</th>
+              <th>Operation master role</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>DC1</td>
+              <td>Windows Server 2012</td>
+              <td>RID master, schema master</td>
+          </tr>
+          <tr>
+              <td>DC2</td>
+              <td>Windows Server 2016</td>
+              <td>PDC emulator, infrastructure master</td>
+          </tr>
+          <tr>
+              <td>DC3</td>
+              <td>Windows Server 2016</td>
+              <td>Domain naming master</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>Contoso recently purchased an Azure subscription. The functional level of the forest is Windows Server 2012 R2. The functional level of the domain is Windows Server 2012. The forest has the Active Directory Recycle Bin enabled. The contoso.com domain contains the users shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>OU/Container</th>
+              <th>Member of</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>User1</td>
+              <td>OU1</td>
+              <td>Group2, Group4</td>
+          </tr>
+          <tr>
+              <td>User2</td>
+              <td>Users</td>
+              <td>Group2</td>
+          </tr>
+          <tr>
+              <td>User3</td>
+              <td>OU1</td>
+              <td>Group3, Group4</td>
+          </tr>
+          <tr>
+              <td>Admin1</td>
+              <td>OU1</td>
+              <td>Domain Admins</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>The contoso.com domain has the Group Policy Objects (GPOs) shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Minimum password length</th>
+              <th>Linked to</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Default Domain Policy</td>
+              <td>8</td>
+              <td>contoso.com</td>
+          </tr>
+          <tr>
+              <td>GPO1</td>
+              <td>10</td>
+              <td>OU1</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>The contoso.com domain has the Password Settings Objects (PSOs) shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Precedence</th>
+              <th>Minimum password length</th>
+              <th>Directly applies to</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>PSO1</td>
+              <td>10</td>
+              <td>9</td>
+              <td>Group2</td>
+          </tr>
+          <tr>
+              <td>PSO2</td>
+              <td>20</td>
+              <td>11</td>
+              <td>Group4</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p><strong>Server Infrastructure -</strong> The contoso.com domain contains servers that run Windows Server 2022 as shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Server1</td>
+              <td>Contains a shared named Share1</td>
+          </tr>
+          <tr>
+              <td>Server2</td>
+              <td>None</td>
+          </tr>
+          <tr>
+              <td>Server3</td>
+              <td>None</td>
+          </tr>
+          <tr>
+              <td>Server4</td>
+              <td>Has Remote Desktop enabled</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>By using Windows Firewall with Advanced Security, the servers have isolation connection security rules configured as shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Endpoint1</th>
+              <th>Endpoint2</th>
+              <th>Auth mode</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Server1</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Request inbound & outbound</td>
+          </tr>
+          <tr>
+              <td>Server2</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Require inbound & request outbound</td>
+          </tr>
+          <tr>
+              <td>Server3</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Require inbound & outbound</td>
+          </tr>
+          <tr>
+              <td>DC1</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Request inbound & outbound</td>
+          </tr>
+          <tr>
+              <td>DC2</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Request inbound & outbound</td>
+          </tr>
+          <tr>
+              <td>DC3</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Request inbound & outbound</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>Server4 has no connection security rules</p>
+
+  <p>Server4 Configurations - Server4 has the effective Group Policy settings for user rights as shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Policy</th>
+              <th>Security Setting</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Access this computer from the network</td>
+              <td>Group1, Administrators, Backup Operators, Everyone, Users</td>
+          </tr>
+          <tr>
+              <td>Deny access to this computer from the network</td>
+              <td>Group4</td>
+          </tr>
+          <tr>
+              <td>Allow log on through Remote Desktop Services</td>
+              <td>Group2, Administrators, Remote Desktop Users</td>
+          </tr>
+          <tr>
+              <td>Deny log on through Remote Desktop Services</td>
+              <td>Group3</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>Server4 has the disk configurations shown in the following exhibit:</p>
+  <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q7/img/q7_1.png" alt="Answer options" style="width:100%;max-width:600px;margin-bottom:20px;">
+
+  <p><strong>Virtualization Infrastructure -</strong> The contoso.com domain has the Hyper-V failover clusters shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Number of nodes</th>
+              <th>Number of virtual machines</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Cluster1</td>
+              <td>6</td>
+              <td>18</td>
+          </tr>
+          <tr>
+              <td>Cluster2</td>
+              <td>4</td>
+              <td>12</td>
+          </tr>
+          <tr>
+              <td>Cluster3</td>
+              <td>2</td>
+              <td>6</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p><strong>Technical Requirements -</strong> Contoso identifies the following technical requirements:</p>
+  <ul>
+      <li>Promote a new server named DC4 that runs to Windows Server 2022 to a domain controller.</li>
+      <li>Replicate the virtual machines from Cluster2 to an Azure Recovery Services vault.</li>
+      <li>Centrally manage performance alerts in Azure for all the domain controllers.</li>
+      <li>Ensure that User1 can recover objects from the Active Directory Recycle Bin.</li>
+      <li>Migrate Share1 to Server2, including all the share and folder permissions.</li>
+      <li>Back up Server4 and all data to an Azure Recovery Services vault.</li>
+      <li>Use Hyper-V Replica to protect the virtual machines in Cluster3.</li>
+      <li>Implement BitLocker Drive Encryption (BitLocker) on Server4.</li>
+      <li>Whenever possible, use the principle of least privilege.</li>
+  </ul>
+  <p><strong>Question</strong></p>
+  <p>You need to meet the technical requirements for Cluster2. Which four actions should you perform in sequence before you can enable replication? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.</p>
+
+  <form>
+    <label>Actions:</label>
+    <div id="actions">
+      <div id="15_1" draggable="true" class="draggable">Create an Azure Recovery Services Vault</div>
+      <div id="15_2" draggable="true" class="draggable">Install Azure Connected Machine agents</div>
+      <div id="15_3" draggable="true" class="draggable">Install & register Azure Site Recovery Providers</div>
+      <div id="15_4" draggable="true" class="draggable">Create & associate replication policies</div>
+      <div id="15_5" draggable="true" class="draggable">Create a Hyper-V site</div>
+    </div>
+
+    <label>Steps:</label>
+    <div id="steps">
+      <div class="stepLabel">Step 1:</div>
+      <div id="15_step1" class="dropzone"></div>
+      
+      <div class="stepLabel">Step 2:</div>
+      <div id="15_step2" class="dropzone"></div>
+      
+      <div class="stepLabel">Step 3:</div>
+      <div id="15_step3" class="dropzone"></div>
+      
+      <div class="stepLabel">Step 4:</div>
+      <div id="15_step4" class="dropzone"></div>
+    </div>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question15">Solution</button>
+
+  <div id="solutionInfo_question15" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>In the Azure portal, go to Recovery Services vaults and select your vault. To set up the source environment, you first create a Hyper-V site, then download and install the Azure Site Recovery provider, and finally, create and associate replication policies.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-tutorial" target="_blank">Hyper-V to Azure Tutorial</a></li>
+    </ul>
+    <p id="correctAnswers_question15" style="display: none;">
+      <strong>Correct Order:</strong><br>
+      <strong>Step 1:</strong> Create an Azure Recovery Services Vault<br>
+      <strong>Step 2:</strong> Create a Hyper-V site<br>
+      <strong>Step 3:</strong> Install & register Azure Site Recovery Providers<br>
+      <strong>Step 4:</strong> Create & associate replication policies
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer15.js"></script>

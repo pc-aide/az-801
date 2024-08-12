@@ -1,0 +1,46 @@
+<div>
+  <h2>Question 01</h2>
+  <p>Your on-premises network contains an Active Directory Domain Services (AD DS) domain. The domain contains 10 servers that run Windows Server.</p>
+  <p>You have an Azure subscription. The subscription contains 10 virtual machines that run Windows Server.</p>
+  <p>You need to install the Azure Monitor Agent on the Azure virtual machines and the on-premises servers.</p>
+  <p>What should you use? To answer, select the appropriate options in the answer area.</p>
+
+  <form>
+    <label>
+      For the Azure virtual machines:
+      <select name="question1_azure_vm">
+        <option value="The Azure Connected Machine agent">The Azure Connected Machine agent</option>
+        <option value="The Windows installer (MSI) package">The Windows installer (MSI) package</option>
+        <option value="Virtual machine extensions">Virtual machine extensions</option>
+      </select>
+    </label><br>
+
+    <label>
+      For the on-premises servers:
+      <select name="question1_on_premises">
+        <option value="Group Policy Software installation">Group Policy Software installation</option>
+        <option value="The Azure Connected Machine agent">The Azure Connected Machine agent</option>
+        <option value="The Windows installer (MSI) package">The Windows installer (MSI) package</option>
+      </select>
+    </label>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question1">Solution</button>
+
+  <div id="solutionInfo_question1" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Virtual Machine Extensions are designed for Azure VMs and provide a way to install and manage agents like the Azure Monitor Agent. For on-premises servers, use the Windows Installer (MSI) package.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/overview" target="_blank">Virtual Machine Extensions Overview</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/windows/win32/msi/windows-installer-portal" target="_blank">Windows Installer Portal</a></li>
+    </ul>
+    <p id="correctAnswers_question1" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      For the Azure virtual machines: <strong>Virtual machine extensions</strong><br>
+      For the on-premises servers: <strong>The Windows installer (MSI) package</strong>
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer1.js"></script>

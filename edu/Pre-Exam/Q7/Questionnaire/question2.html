@@ -1,0 +1,83 @@
+<div>
+  <h2>Question 2</h2>
+  <p>You have an Azure virtual machine named VM1 that runs Windows Server.</p>
+  <p>You need to perform the following tasks on VM1:</p>
+  <ul>
+    <li>Configure Windows Defender Firewall to allow Remote Desktop connections,</li>
+    <li>Configure where to store the logs of the virtual machine console.</li>
+  </ul>
+  <p>Which two settings should you use? To answer, select the settings in the answer area.</p>
+
+  <!-- Inclusion de l'image -->
+  <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q7/img/q2_1.png" alt="Answer options" style="width:100%;max-width:600px;margin-bottom:20px;">
+
+  <form id="question2_form">
+    <label>
+      <input type="checkbox" name="question2_option" value="Metrics"> Metrics
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Diagnostic settings"> Diagnostic settings
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Logs"> Logs
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Connection monitor (classic)"> Connection monitor (classic)
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Workbooks"> Workbooks
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Tasks (preview)"> Tasks (preview)
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Expert template"> Expert template
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Resource health"> Resource health
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Boot diagnostics"> Boot diagnostics
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Performance diagnostics"> Performance diagnostics
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="VM Inspector (Preview)"> VM Inspector (Preview)
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Reset password"> Reset password
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Redeploy + reapply"> Redeploy + reapply
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Serial console"> Serial console
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="Connection troubleshoot"> Connection troubleshoot
+    </label><br>
+    <label>
+      <input type="checkbox" name="question2_option" value="New Support Request"> New Support Request
+    </label><br>
+  </form>
+
+  <button class="solutionButton" data-answer-name="question2">Solution</button>
+
+  <div id="solutionInfo_question2" class="solutionInfo" style="display: none;">
+    <p><strong>Explanation:</strong></p>
+    <p>Certainly an odd question - Serial console is not going to be anyone's go-to solution for making changes to the local firewall on an Azure VM. It is, however, the only option in the list where this task could be accomplished. I agree with the answer provided.</p>
+    <p><strong>References:</strong></p>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/serial-console-overview" target="_blank">Serial Console Overview</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/azure/data-factory/monitor-configure-diagnostics" target="_blank">Monitor and Configure Diagnostics</a></li>
+    </ul>
+    <p id="correctAnswers_question2" style="display: none;">
+      <strong>Correct Answers:</strong><br>
+      Diagnostic settings<br>
+      Serial console
+    </p>
+  </div>
+</div>
+
+<script src="../Scripts/answer2.js"></script>
