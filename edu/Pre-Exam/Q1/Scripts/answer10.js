@@ -1,12 +1,12 @@
 function attachSolutionButtonListeners_question10(button) {
     button.addEventListener('click', function() {
-        // Reset styles for radio buttons
-        document.querySelectorAll('.radio-group input').forEach(input => {
+        // Reset styles for radio buttons specific to question 10
+        document.querySelectorAll('.radio-group input[name="answer10"]').forEach(input => {
             input.parentElement.style.color = '';
         });
 
-        // Check the answer
-        const selectedOption = document.querySelector('.radio-group input:checked');
+        // Check the answer for question 10
+        const selectedOption = document.querySelector('.radio-group input[name="answer10"]:checked');
         const correctAnswer = 'B';
         let allCorrect = false;
 
@@ -15,8 +15,9 @@ function attachSolutionButtonListeners_question10(button) {
             allCorrect = true;
         } else {
             // Highlight the correct answer in red
-            if (document.querySelector(`#answer10${correctAnswer}`)) {
-                document.querySelector(`#answer10${correctAnswer}`).parentElement.style.color = 'red';
+            const correctOption = document.querySelector(`#answer10${correctAnswer}`);
+            if (correctOption) {
+                correctOption.parentElement.style.color = 'red';
             }
             if (selectedOption) {
                 selectedOption.parentElement.style.color = 'red';
