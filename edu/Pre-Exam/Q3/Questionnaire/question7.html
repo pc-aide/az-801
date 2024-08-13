@@ -9,13 +9,128 @@
 <body>
     <div>
         <h2>Question 7</h2>
-        <p>Your network contains an Active Directory Domain Services (AD DS) domain named contoso.com. The domain contains two sites named Site1 and Site2. You perform the following actions:</p>
-        <ul>
-            <li>At 09:00 AM, in Site1, User1 adds User2 to Group1.</li>
-            <li>At 09:30 AM, in Site2, an administrator removes User2 from Group1.</li>
-            <li>At 10:00 AM, in Site1, User3's phone number is set to 333-333.</li>
-            <li>At 10:30 AM, in Site2, User3 is deleted.</li>
-        </ul>
+        <p>You have an on-premises Active Directory Domain Services (AD DS) domain that contains the resources shown in the following table.</p>
+        <style>
+            table th {
+                background-color: #f0f0f0; /* Gris pâle */
+            }
+        </style>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>User1</td>
+                    <td>User</td>
+                    <td>Is a member of Group1</td>
+                </tr>
+                <tr>
+                    <td>User2</td>
+                    <td>User</td>
+                    <td>Has a phone number of 111-111</td>
+                </tr>
+                <tr>
+                    <td>User3</td>
+                    <td>User</td>
+                    <td>Is in the Users container</td>
+                </tr>
+                <tr>
+                    <td>Group1</td>
+                    <td>Group</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>OU1</td>
+                    <td>OU</td>
+                    <td>Is empty</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The domain contains the domain controllers shown in the following table.</p>
+        <style>
+            table th {
+                background-color: #f0f0f0; /* Gris pâle */
+            }
+        </style>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Site</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DC1</td>
+                    <td>Site1</td>
+                </tr>
+                <tr>
+                    <td>DC2</td>
+                    <td>Site2</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You configure a site link between Site1 and Site2 and set the replication interval to 20 minutes.<br/><br/>At 10:00 AM, connectivity between Site1 and Site2 fails.<br/><br/>Administrators perform the actions shown in the following table.</p>
+        <style>
+            table th {
+                background-color: #f0f0f0; /* Gris pâle */
+            }
+        </style>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Performed on</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10:05 AM</td>
+                    <td>DC1</td>
+                    <td>Move User3 to OU1</td>
+                </tr>
+                <tr>
+                    <td>10:07 AM</td>
+                    <td>DC2</td>
+                    <td>Remove User1 from Group1</td>
+                </tr>
+                <tr>
+                    <td>10:10 AM</td>
+                    <td>DC1</td>
+                    <td>Change the phone number of User2 to 222-222</td>
+                </tr>
+                <tr>
+                    <td>10:11 AM</td>
+                    <td>DC1</td>
+                    <td>Change the phone number of User2 to 333-333</td>
+                </tr>
+                <tr>
+                    <td>10:12 AM</td>
+                    <td>DC1</td>
+                    <td>Add User2 to Group1</td>
+                </tr>
+                <tr>
+                    <td>10:20 AM</td>
+                    <td>DC2</td>
+                    <td>Delete OU1</td>
+                </tr>
+                <tr>
+                    <td>10:25 AM</td>
+                    <td>DC2</td>
+                    <td>Change the phone number of User2 to 444-444</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>At 10:30 AM, connectivity between Site1 and Site2 is restored.</p>        
         <p>For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p>
         <div class="radio-group">
             <p>At 11:30 AM, User1 & User2 are members of Group1:</p>
