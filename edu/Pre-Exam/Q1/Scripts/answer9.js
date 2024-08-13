@@ -1,22 +1,29 @@
 function attachSolutionButtonListeners_question9(button) {
     button.addEventListener('click', function() {
-        // Reset styles for radio buttons
-        document.querySelectorAll('.radio-group input').forEach(input => {
+        // Reset styles for radio buttons specific to question 9
+        document.querySelectorAll('.radio-group input[name="answer9"]').forEach(input => {
             input.parentElement.style.color = '';
         });
 
-        // Check the answer
-        const selectedOption = document.querySelector('.radio-group input:checked');
+        // Check the answer for question 9
+        const selectedOption = document.querySelector('.radio-group input[name="answer9"]:checked');
         const correctAnswer = 'A';
         let allCorrect = false;
+
+        // Debug: Store user's answer
+        const yourAnswerElement = document.getElementById('yourAnswer_question9');
+        if (selectedOption && yourAnswerElement) {
+            yourAnswerElement.textContent = selectedOption.nextElementSibling.textContent; // Display selected answer text
+        }
 
         // Check if the selected answer is correct
         if (selectedOption && selectedOption.value === correctAnswer) {
             allCorrect = true;
         } else {
             // Highlight the correct answer in red
-            if (document.querySelector(`#answer9${correctAnswer}`)) {
-                document.querySelector(`#answer9${correctAnswer}`).parentElement.style.color = 'red';
+            const correctOption = document.querySelector(`#answer9${correctAnswer}`);
+            if (correctOption) {
+                correctOption.parentElement.style.color = 'red';
             }
             if (selectedOption) {
                 selectedOption.parentElement.style.color = 'red';
@@ -38,6 +45,13 @@ function attachSolutionButtonListeners_question9(button) {
                     correctAnswersElement.style.display = 'block';
                 }
             }
+
+            // Display debug info (Your Answer)
+            const debugInfoElement = document.getElementById('debugInfo_question9');
+            if (debugInfoElement) {
+                debugInfoElement.style.display = 'block';
+            }
+
             solutionInfoElement.style.display = 'block';
         }
 
