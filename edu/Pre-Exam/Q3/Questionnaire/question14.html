@@ -1,65 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 14</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="../Scripts/answer14.js" defer></script>
-</head>
-<body>
-    <h2>Question 14</h2>
-    <p>You have three servers named Host1, Host2, and VM1 that run Windows Server. Host1 and Host2 have the Hyper-V server role installed. VM1 is a virtual machine hosted on Host1. You configure VM1 to replicate to Host2 by using Hyper-V Replica.</p>
-    <p>Which types of failovers can you perform on VM1 on each host? To answer, select the appropriate options in the answer area.</p>
+<h2>Question 14</h2>
+<p>You have three servers named Host1, Host2, and VM1 that run Windows Server. Host1 and Host2 have the Hyper-V server role installed. VM1 is a virtual machine hosted on Host1. You configure VM1 to replicate to Host2 by using Hyper-V Replica.</p>
+<p>Which types of failovers can you perform on VM1 on each host? To answer, select the appropriate options in the answer area.</p>
 
-    <div class="question">
-        <label for="host1">VM1 on Host1:</label>
-        <select id="host1">
-            <option value="">Select an option</option>
-            <option value="Failover only">Failover only</option>
-            <option value="Test Failover only">Test Failover only</option>
-            <option value="Planned Failover only">Planned Failover only</option>
-            <option value="Failover & Planned Failover only">Failover & Planned Failover only</option>
-            <option value="Test Failover & Failover only">Test Failover & Failover only</option>
-        </select>
-    </div>
+<div class="question">
+    <label for="host1">VM1 on Host1:</label>
+    <select id="host1">
+        <option value="">Select an option</option>
+        <option value="Failover only">Failover only</option>
+        <option value="Test Failover only">Test Failover only</option>
+        <option value="Planned Failover only">Planned Failover only</option>
+        <option value="Failover & Planned Failover only">Failover & Planned Failover only</option>
+        <option value="Test Failover & Failover only">Test Failover & Failover only</option>
+    </select>
+</div>
 
-    <div class="question">
-        <label for="host2">VM1 on Host2:</label>
-        <select id="host2">
-            <option value="">Select an option</option>
-            <option value="Failover only">Failover only</option>
-            <option value="Test Failover only">Test Failover only</option>
-            <option value="Planned Failover only">Planned Failover only</option>
-            <option value="Failover & Planned Failover only">Failover & Planned Failover only</option>
-            <option value="Test Failover & Failover only">Test Failover & Failover only</option>
-        </select>
-    </div>
+<div class="question">
+    <label for="host2">VM1 on Host2:</label>
+    <select id="host2">
+        <option value="">Select an option</option>
+        <option value="Failover only">Failover only</option>
+        <option value="Test Failover only">Test Failover only</option>
+        <option value="Planned Failover only">Planned Failover only</option>
+        <option value="Failover & Planned Failover only">Failover & Planned Failover only</option>
+        <option value="Test Failover & Failover only">Test Failover & Failover only</option>
+    </select>
+</div>
 
-    <!-- Solution button and info -->
-    <button class="solutionButton" data-answer-name="question14">Solution</button>
-    <div id="solutionInfo_question14" class="solutionInfo" style="display:none;">
-        <p id="correctAnswers_question14" style="display:none;">
-            Correct Answers:<br>
-            VM1 on Host1: Planned Failover only<br>
-            VM1 on Host2: Test Failover & Failover only
-        </p>
+<!-- Solution button and info -->
+<button class="solutionButton" data-answer-name="question14">Solution</button>
+<div id="solutionInfo_question14" class="solutionInfo" style="display:none;">
+    <p id="correctAnswers_question14" style="display:none;">
+        Correct Answers:<br>
+        VM1 on Host1: Planned Failover only<br>
+        VM1 on Host2: Test Failover & Failover only
+    </p>
 
-        <!-- Explanation section -->
-        <h3>Explanation</h3>
-        <p>Where is Failover initiated?</p>
-        <ul>
-            <li>Test - On the replica virtual machine</li>
-            <li>Planned - Initiated on primary and completed on secondary</li>
-            <li>Unplanned - On the replica virtual machine</li>
-        </ul>
+    <!-- Explanation section -->
+    <h3>Explanation</h3>
+    <p>Where is Failover initiated?</p>
+    <ul>
+        <li>Test - On the replica virtual machine</li>
+        <li>Planned - Initiated on primary and completed on secondary</li>
+        <li>Unplanned - On the replica virtual machine</li>
+    </ul>
 
-        <!-- Reference section -->
-        <h3>References</h3>
-        <ul>
-            <li><a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica" target="_blank">Set up Hyper-V Replica</a></li>
-            <li><a href="https://techcommunity.microsoft.com/t5/virtualization/types-of-failover-operations-in-hyper-v-replica-8211-part-iii/ba-p/381908#:~:text=Unplanned%20failover%20is%20performed%20on,previous%20point%2Din%2Dtime." target="_blank">Types of failover operations in Hyper-V Replica</a></li>
-        </ul>
-    </div>
-</body>
-</html>
+    <!-- Reference section -->
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica" target="_blank">Set up Hyper-V Replica</a></li>
+        <li><a href="https://techcommunity.microsoft.com/t5/virtualization/types-of-failover-operations-in-hyper-v-replica-8211-part-iii/ba-p/381908#:~:text=Unplanned%20failover%20is%20performed%20on,previous%20point%2Din%2Dtime." target="_blank">Types of failover operations in Hyper-V Replica</a></li>
+    </ul>
+</div>
+
+<script src="../Scripts/answer14.js" defer></script>
