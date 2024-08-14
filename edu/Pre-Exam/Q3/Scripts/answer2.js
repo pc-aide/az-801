@@ -1,40 +1,36 @@
-// Attach event listeners to solution buttons
+// Function to attach event listeners to solution buttons for question 2
 function attachSolutionButtonListeners_question2(button) {
     button.addEventListener('click', function() {
-        // Reset styles for radio buttons
-        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        // Reset styles for radio buttons specific to question 2
+        document.querySelectorAll('#question2-form input[type="radio"]').forEach(radio => {
             radio.parentElement.style.color = '';
         });
 
         // Initialize local score counter for this question
         let correctCount = 0;
 
-        // Define correct answers
-        const correctAnswers = {
-            'solution': 'B'
-        };
+        // Define correct answer specific to question 2
+        const correctAnswer_question2 = 'B';
 
-        // Check and highlight answers
-        Object.keys(correctAnswers).forEach(key => {
-            const selectedOption = document.querySelector(`input[name="${key}"]:checked`);
-            if (selectedOption) {
-                if (selectedOption.value === correctAnswers[key]) {
-                    correctCount++;
-                } else {
-                    selectedOption.parentElement.style.color = 'red';
-                }
+        // Check and highlight answer
+        const selectedOption = document.querySelector('input[name="solution_question2"]:checked');
+        if (selectedOption) {
+            if (selectedOption.value === correctAnswer_question2) {
+                correctCount++;
+            } else {
+                selectedOption.parentElement.style.color = 'red'; // Highlight incorrect answers
             }
-        });
+        }
 
         // Update global score
-        if (correctCount === Object.keys(correctAnswers).length) {
-            score++; // Increment score if all answers are correct
+        if (correctCount > 0) {
+            score++; // Increment score if the answer is correct
         }
 
         // Display solution info
         const solutionInfoElement = document.getElementById('solutionInfo_question2');
         if (solutionInfoElement) {
-            if (correctCount === Object.keys(correctAnswers).length) {
+            if (correctCount > 0) {
                 solutionInfoElement.classList.add('highlight'); // Apply yellow background to explanation, correct answer, and references
                 solutionInfoElement.classList.remove('incorrect');
             } else {
