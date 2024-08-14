@@ -1,44 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 15</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="../Scripts/answer15.js" defer></script>
-</head>
-<body>
-    <h2>Question 15</h2>
-    <p>You have three Azure virtual machines named VM1, VM2, and VM3 that host a multitier application. You plan to implement Azure Site Recovery. You need to ensure that VM1, VM2, and VM3 fail over as a group. What should you configure?</p>
+<h2>Question 15</h2>
+<p>You have three Azure virtual machines named VM1, VM2, and VM3 that host a multitier application. You plan to implement Azure Site Recovery. You need to ensure that VM1, VM2, and VM3 fail over as a group. What should you configure?</p>
 
-    <div class="question">
-        <input type="radio" id="optionA" name="failoverOption" value="an availability zone">
-        <label for="optionA">A. an availability zone</label><br>
+<div class="question">
+    <input type="radio" id="q15a" name="failoverOption" value="an availability zone">
+    <label for="q15a">A. an availability zone</label><br>
 
-        <input type="radio" id="optionB" name="failoverOption" value="a recovery plan">
-        <label for="optionB">B. a recovery plan</label><br>
+    <input type="radio" id="q15b" name="failoverOption" value="a recovery plan">
+    <label for="q15b">B. a recovery plan</label><br>
 
-        <input type="radio" id="optionC" name="failoverOption" value="an availability set">
-        <label for="optionC">C. an availability set</label><br>
-    </div>
+    <input type="radio" id="q15c" name="failoverOption" value="an availability set">
+    <label for="q15c">C. an availability set</label><br>
 
     <!-- Solution button and info -->
     <button class="solutionButton" data-answer-name="question15">Solution</button>
-    <div id="solutionInfo_question15" class="solutionInfo" style="display:none;">
-        <p id="correctAnswers_question15" style="display:none;">
-            Correct Answer: B. a recovery plan
-        </p>
+</div>
 
-        <!-- Explanation section -->
-        <h3>Explanation</h3>
-        <p>Using recovery plans, you can customize and sequence the failover and recovery of multi-tier applications running on multiple VMs. You group machines together in a recovery plan, and optionally add scripts and manual actions. Recovery plans can be integrated with Azure Automation runbooks.</p>
-        <p>Note: This functionality is currently supported for Region-to-Region replication and will be available on Azure Public MEC soon.</p>
+<div id="solutionInfo_question15" class="solutionInfo" style="display:none;">
+    <p id="correctAnswers_question15" style="display:none;">
+        Correct Answer: B. a recovery plan
+    </p>
 
-        <!-- Reference section -->
-        <h3>References</h3>
-        <ul>
-            <li><a href="https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview" target="_blank">Azure Site Recovery Overview</a></li>
-        </ul>
-    </div>
-</body>
-</html>
+    <!-- Explanation section -->
+    <h3>Explanation</h3>
+    <p>Using recovery plans, you can customize and sequence the failover and recovery of multi-tier applications running on multiple VMs. You group machines together in a recovery plan, and optionally add scripts and manual actions. Recovery plans can be integrated with Azure Automation runbooks.</p>
+    <p>Note: This functionality is currently supported for Region-to-Region replication and will be available on Azure Public MEC soon.</p>
+
+    <!-- Reference section -->
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview" target="_blank">Azure Site Recovery Overview</a></li>
+    </ul>
+</div>
+
+<script src="../Scripts/answer15.js"></script>
