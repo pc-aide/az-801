@@ -1,8 +1,8 @@
 // Function to attach event listeners to solution buttons for question 6
 function attachSolutionButtonListeners_question6(button) {
     button.addEventListener('click', function() {
-        // Reset styles for radio buttons
-        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        // Reset styles for radio buttons of question 6 only
+        document.querySelectorAll('input[name="solution6"]').forEach(radio => {
             radio.parentElement.style.color = '';
         });
 
@@ -12,8 +12,8 @@ function attachSolutionButtonListeners_question6(button) {
         // Define correct answer
         const correctAnswer = 'C';
 
-        // Check and highlight answer
-        const selectedOption = document.querySelector('input[name="solution"]:checked');
+        // Check and highlight answer for question 6
+        const selectedOption = document.querySelector('input[name="solution6"]:checked');
         if (selectedOption) {
             if (selectedOption.value === correctAnswer) {
                 correctCount++;
@@ -55,19 +55,9 @@ function attachSolutionButtonListeners_question6(button) {
     });
 }
 
-// Initialize event listeners for all solution buttons
+// Initialize event listeners for solution button for question 6
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.solutionButton').forEach(button => {
+    document.querySelectorAll('.solutionButton[data-answer-name="question6"]').forEach(button => {
         attachSolutionButtonListeners_question6(button);
     });
 });
-
-// Function to display final score
-function showFinalScore() {
-    const finalScoreElement = document.getElementById('finalScore');
-    if (finalScoreElement) {
-        // Using constants from constants.js
-        const percentage = (score / totalQuestions) * 100;
-        finalScoreElement.textContent = `Final Score: ${score}/${totalQuestions} (${percentage.toFixed(2)}%)`;
-    }
-}
