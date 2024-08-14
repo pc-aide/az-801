@@ -1,21 +1,31 @@
 // Function to attach event listeners to solution buttons for question 5
 function attachSolutionButtonListeners_question5(button) {
     button.addEventListener('click', function() {
-        // Reset styles for radio buttons
-        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        // Reset styles for radio buttons specific to question 5
+        document.querySelectorAll('#question5-group input[type="radio"]').forEach(radio => {
             radio.parentElement.style.color = '';
         });
 
         // Initialize local score counter for this question
         let correctCount = 0;
 
-        // Define correct answer
-        const correctAnswer = 'D';
+        // Define correct answer specific to question 5
+        const correctAnswer_question5 = 'D';
 
         // Check and highlight answer
-        const selectedOption = document.querySelector('input[name="solution"]:checked');
+        const selectedOption = document.querySelector('input[name="solution_question5"]:checked');
         if (selectedOption) {
-            if (selectedOption.value === correctAnswer) {
+            const userAnswerText = document.getElementById('userAnswerText_question5');
+            if (userAnswerText) {
+                userAnswerText.textContent = selectedOption.nextElementSibling.textContent;
+            }
+            
+            const yourAnswerElement = document.getElementById('yourAnswer_question5');
+            if (yourAnswerElement) {
+                yourAnswerElement.style.display = 'block';
+            }
+
+            if (selectedOption.value === correctAnswer_question5) {
                 correctCount++;
             } else {
                 selectedOption.parentElement.style.color = 'red'; // Highlight incorrect answers
