@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 2</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div>
-        <h2>Question 2</h2>
-        <p>You have a three-node failover cluster.</p>
-        <p>You need to run pre-scripts and post-scripts when Cluster-Aware Updating (CAU) runs. The solution must minimize administrative effort.</p>
-        <p>What should you use?</p>
+<div>
+    <h2>Question 2</h2>
+    <p>You have a three-node failover cluster.</p>
+    <p>You need to run pre-scripts and post-scripts when Cluster-Aware Updating (CAU) runs. The solution must minimize administrative effort.</p>
+    <p>What should you use?</p>
 
-        <form>
-            <input type="radio" id="optionA" name="solution" value="A">
-            <label for="optionA">A. Azure Functions</label><br>
-            <input type="radio" id="optionB" name="solution" value="B">
-            <label for="optionB">B. Run profiles</label><br>
-            <input type="radio" id="optionC" name="solution" value="C">
-            <label for="optionC">C. Windows Server Update Services (WSUS)</label><br>
-            <input type="radio" id="optionD" name="solution" value="D">
-            <label for="optionD">D. Scheduled tasks</label><br>
-        </form>
+    <form id="question2-form">
+        <input type="radio" id="q2a" name="solution_question2" value="A">
+        <label for="q2a">A. Azure Functions</label><br>
+        <input type="radio" id="q2b" name="solution_question2" value="B">
+        <label for="q2b">B. Run profiles</label><br>
+        <input type="radio" id="q2c" name="solution_question2" value="C">
+        <label for="q2c">C. Windows Server Update Services (WSUS)</label><br>
+        <input type="radio" id="q2d" name="solution_question2" value="D">
+        <label for="q2d">D. Scheduled tasks</label><br>
+    </form>
 
-        <button class="solutionButton" data-answer-name="question2">Solution</button>
+    <button class="solutionButton" data-answer-name="question2">Solution</button>
 
-        <div id="solutionInfo_question2" class="solutionInfo" style="display: none;">
-            <p><strong>Explanation:</strong></p>
-            <p>Cluster-Aware Updating advanced options and updating run profiles.
-                You can set the PreUpdateScript or PostUpdateScript option.</p>
-            <div id="correctAnswers_question2" style="display: none;">
-                <p><strong>Correct Answers:</strong></p>
-                <ul>
-                    <li>B. Run profiles</li>
-                </ul>
-            </div>
-
-            <p><strong>References:</strong></p>
-            <ul id="references_question2" style="display: none;">
-                <li><a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/cluster-aware-updating-options" target="_blank">Cluster-Aware Updating Options</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/windows-server/failover-clustering/cluster-aware-updating#BKMK_OVER" target="_blank">Cluster-Aware Updating</a></li>
-            </ul>
+    <div id="solutionInfo_question2" class="solutionInfo" style="display: none;">
+        <p><strong>Explanation:</strong></p>
+        <p>Cluster-Aware Updating advanced options and updating run profiles.
+            You can set the PreUpdateScript or PostUpdateScript option.</p>
+        <div id="correctAnswers_question2" style="display: none;">
+            <p><strong>Correct Answer:</strong> B. Run profiles</p>
         </div>
+
+        <p><strong>References:</strong></p>
+        <ul id="references_question2" style="display: none;">
+            <li><a href="https://docs.microsoft.com/en-us/windows-server/failover-clustering/cluster-aware-updating-options" target="_blank">Cluster-Aware Updating Options</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/windows-server/failover-clustering/cluster-aware-updating#BKMK_OVER" target="_blank">Cluster-Aware Updating</a></li>
+        </ul>
     </div>
-    <script src="../Scripts/answer2.js"></script>
-</body>
-</html>
+</div>
+
+<script src="../Scripts/answer2.js"></script>
