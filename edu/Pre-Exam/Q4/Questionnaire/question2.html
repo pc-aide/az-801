@@ -1,47 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 2</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div>
-        <h2>Question 02</h2>
-        <p>You have a server named Server1 that runs Windows Server and has the Hyper-V server role installed. You have a Hyper-V failover cluster named Cluster1. All servers are members of the same domain.</p>
-        <p>You need to ensure that you use Hyper-V Replica with Kerberos authentication on the default port to replicate virtual machines from Cluster1 to Server1.</p>
-        <p>What should you do on Server1?</p>
+<div>
+    <h2>Question 2</h2>
+    <p>You have a server named Server1 that runs Windows Server and has the Hyper-V server role installed. You have a Hyper-V failover cluster named Cluster1. All servers are members of the same domain.</p>
+    <p>You need to ensure that you use Hyper-V Replica with Kerberos authentication on the default port to replicate virtual machines from Cluster1 to Server1.</p>
+    <p>What should you do on Server1?</p>
 
-        <form>
-            <input type="radio" id="optionA" name="solution" value="A">
-            <label for="optionA">A. Add primary servers to the Hyper-V Replica Broker configuration.</label><br>
-            <input type="radio" id="optionB" name="solution" value="B">
-            <label for="optionB">B. From Hyper-V Settings, select Enable incoming and outgoing live migrations.</label><br>
-            <input type="radio" id="optionC" name="solution" value="C">
-            <label for="optionC">C. From Windows Defender Firewall with Advanced Security, enable the Hyper-V Replica HTTPS Listener (TCP-In) rule.</label><br>
-            <input type="radio" id="optionD" name="solution" value="D">
-            <label for="optionD">D. From Windows Defender Firewall with Advanced Security, enable the Hyper-V Replica HTTP Listener (TCP-In) rule.</label><br>
-        </form>
+    <form id="form_2a">
+        <input type="radio" id="optionA_2a" name="solution_2a" value="A">
+        <label for="optionA_2a">A. Add primary servers to the Hyper-V Replica Broker configuration.</label><br>
+        <input type="radio" id="optionB_2a" name="solution_2a" value="B">
+        <label for="optionB_2a">B. From Hyper-V Settings, select Enable incoming and outgoing live migrations.</label><br>
+        <input type="radio" id="optionC_2a" name="solution_2a" value="C">
+        <label for="optionC_2a">C. From Windows Defender Firewall with Advanced Security, enable the Hyper-V Replica HTTPS Listener (TCP-In) rule.</label><br>
+        <input type="radio" id="optionD_2a" name="solution_2a" value="D">
+        <label for="optionD_2a">D. From Windows Defender Firewall with Advanced Security, enable the Hyper-V Replica HTTP Listener (TCP-In) rule.</label><br>
+    </form>
 
-        <button class="solutionButton" data-answer-name="question2">Solution</button>
+    <button class="solutionButton" data-answer-name="question2">Solution</button>
 
-        <div id="solutionInfo_question2" class="solutionInfo" style="display: none;">
-            <p><strong>Explanation:</strong></p>
-            <p>You can replicate over HTTP or encrypted HTTPS. Select Use Kerberos (HTTP) or Use certificate-based Authentication (HTTPS). By default HTTP 80 and HTTPS 443 are enabled as firewall exceptions on the replica Hyper-V server. If you change the default port settings you'll need to also change the firewall exception. If you're replicating over HTTPS, you'll need to select a certificate and you should have certificate authentication set up. Kerberos use its own encryption when transmitting through HTTP.</p>
-            <div id="correctAnswers_question2" style="display: none;">
-                <p><strong>Correct Answers:</strong></p>
-                <ul>
-                    <li>D. From Windows Defender Firewall with Advanced Security, enable the Hyper-V Replica HTTP Listener (TCP-In) rule.</li>
-                </ul>
-            </div>
-
-            <p><strong>References:</strong></p>
-            <ul id="references_question2" style="display: none;">
-                <li><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica" target="_blank">Set up Hyper-V Replica</a></li>
+    <div id="solutionInfo_2a" class="solutionInfo" style="display: none;">
+        <p><strong>Explanation:</strong></p>
+        <p>You can replicate over HTTP or encrypted HTTPS. Select Use Kerberos (HTTP) or Use certificate-based Authentication (HTTPS). By default HTTP 80 and HTTPS 443 are enabled as firewall exceptions on the replica Hyper-V server. If you change the default port settings you'll need to also change the firewall exception. If you're replicating over HTTPS, you'll need to select a certificate and you should have certificate authentication set up. Kerberos uses its own encryption when transmitting through HTTP.</p>
+        <div id="correctAnswers_2a" style="display: none;">
+            <p><strong>Correct Answer:</strong></p>
+            <ul>
+                <li>D. From Windows Defender Firewall with Advanced Security, enable the Hyper-V Replica HTTP Listener (TCP-In) rule.</li>
             </ul>
         </div>
+
+        <p><strong>References:</strong></p>
+        <ul id="references_2a" style="display: none;">
+            <li><a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica" target="_blank">Set up Hyper-V Replica</a></li>
+        </ul>
     </div>
-    <script src="../Scripts/answer2.js"></script>
-</body>
-</html>
+</div>
+<script src="../Scripts/answer2.js"></script>
