@@ -5,7 +5,7 @@ function attachSolutionButtonListeners_question9(button) {
     const correctAnswer = 'A';
 
     // Get selected answer
-    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    const selectedAnswer = document.querySelector('input[name="answer_question9"]:checked');
 
     // Check if an answer is selected
     if (selectedAnswer) {
