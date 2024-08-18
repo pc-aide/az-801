@@ -1,5 +1,102 @@
 <div>
   <h2>Question 6</h2>
+  <p><strong>Overview -</strong> Fabrikam, Inc. is a manufacturing company that has a main office in Chicago and a branch office in Paris.</p>
+
+  <p><strong>Existing Environment -</strong></p>
+  <p><strong>Identity Infrastructure -</strong> Fabrikam has an Active Directory Domain Services (AD DS) forest that syncs with an Azure Active Directory (Azure AD) tenant. The AD DS forest contains two domains named corp.fabrikam.com and europe.fabrikam.com.</p>
+
+  <p><strong>Chicago Office On-Premises Servers</strong></p>
+  <table>
+      <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Configuration</th>
+      </tr>
+      <tr>
+          <td>HV1</td>
+          <td>Physical</td>
+          <td>Hyper-V host</td>
+      </tr>
+      <tr>
+          <td>HV2</td>
+          <td>Physical</td>
+          <td>Hyper-V host</td>
+      </tr>
+      <tr>
+          <td>App1</td>
+          <td>Virtual machine</td>
+          <td>Application server</td>
+      </tr>
+      <tr>
+          <td>App2</td>
+          <td>Virtual machine</td>
+          <td>Application server</td>
+      </tr>
+      <tr>
+          <td>App3</td>
+          <td>Virtual machine</td>
+          <td>Application server</td>
+      </tr>
+      <tr>
+          <td>App4</td>
+          <td>Virtual machine</td>
+          <td>Application server</td>
+      </tr>
+      <tr>
+          <td>DC1</td>
+          <td>Virtual machine</td>
+          <td>Domain controller</td>
+      </tr>
+      <tr>
+          <td>Archive1</td>
+          <td>Physical</td>
+          <td>File server</td>
+      </tr>
+      <tr>
+          <td>DHCP1</td>
+          <td>Virtual machine</td>
+          <td>DHCP server</td>
+      </tr>
+      <tr>
+          <td>Fileserver1</td>
+          <td>Virtual machine</td>
+          <td>File server</td>
+      </tr>
+      <tr>
+          <td>WEB1</td>
+          <td>Virtual machine</td>
+          <td>Web server</td>
+      </tr>
+      <tr>
+          <td>WEB2</td>
+          <td>Virtual machine</td>
+          <td>Web server</td>
+      </tr>
+      <tr>
+          <td>AADC1</td>
+          <td>Virtual machine</td>
+          <td>AAD Connect</td>
+      </tr>
+  </table>
+
+  <p>All the servers in the Chicago office are in the corp.fabrikam.com domain. All the virtual machines in the Chicago office are hosted on HV1 and HV2. HV1 and HV2 are nodes in a failover cluster named Cluster1. WEB1 and WEB2 run an Internet Information Services (IIS) website. Internet users connect to the website by using a URL of https://www.fabrikam.com. All the users in the Chicago office run an application that connects to a UNC path of \\Fileserver1\Data.</p>
+
+  <p><strong>Paris On-Premises Servers -</strong> The office in Paris contains a physical server named dc2.europe.fabrikam.com that runs Windows Server 2016 and is a domain controller for the europe.fabrikam.com domain.</p>
+
+  <p><strong>Network Infrastructure -</strong> The networks in both the Chicago and Paris offices have local internet connections. The Chicago and Paris offices are connected by using VPN connections. The client computers in the Chicago office get IP addresses from DHCP1.</p>
+
+  <p><strong>Security Risks -</strong> Fabrikam identifies the following security risks: Some accounts connect to AD DS resources by using insecure protocols such as NTLMv1, SMB1, and unsigned LDAP. Servers have Windows Defender Firewall enabled. Server administrators sometimes modify firewall rules and allow risky connections.</p>
+
+  <p><strong>Requirements -</strong></p>
+  <p><strong>Security Requirements -</strong> Fabrikam identifies the following security requirements: Prevent server administrators from configuring Windows Defender Firewalls rules. Encrypt all the data disks on the servers by using BitLocker Drive Encryption (BitLocker). Ensure that only authorized applications can be installed or run on the servers in the forest. Implement Microsoft Sentinel as a reporting solution to identify all connections to the domain controllers that use insecure protocols.</p>
+
+  <p><strong>On-Premises Migration Plan -</strong> Fabrikam plans to migrate all the existing servers and identifies the following migration requirements: Move the APP1 and APP2 virtual machines in the Chicago office to a new Hyper-V failover cluster named Cluster2 that will run Windows Server 2022. Cluster2 will contain two new nodes named HV3 and HV4. All virtual machine files will be stored on a Cluster Shared Volume (CSV). Migrate Archive1 to a new failover cluster named Cluster3 that will run Windows Server 2022. Cluster3 will contain two physical nodes named Node1 and Node2. The file shares on Cluster3 will be a failover cluster role in active-passive mode. Migrate all users, groups, and client computers from europe.fabrikam.com to corp.fabrikam.com. The migration will be performed by using the Active Directory Migration Tool (ADMT). A computer named ADMTcomputer will be deployed to the corp.fabrikam.com domain to run ADMT migration procedures. User accounts will retain their existing password. Migrate the data share from Fileserver1 to a new server named Fileserver2 that will run Windows Server 2022. After the migration, the data share must be accessible by using the existing UNC path.</p>
+
+  <p><strong>Azure Migration Plan -</strong> Fabrikam plans to migrate some resources to Azure and identifies the following migration requirements: Create an Azure subscription named Sub1. Create an Azure virtual network named Vnet1. Use ExpressRoute to connect the Paris and Chicago offices to Vnet1. License all servers for Microsoft Defender for servers. Migrate APP3 and APP4 to Azure. Migrate the www.fabrikam.com website to an Azure App Service web app named WebApp1. Decommission WEB1 and WEB2.</p>
+
+  <p><strong>DHCP Migration Plan -</strong> Fabrikam plans to replace DHCP1 with a new server named DHCP2 and identifies the following migration requirements: Ensure that DHCP2 provides the same IP addresses that are currently available from DHCP1. Prevent DHCP1 from servicing clients once services are enabled on DHCP2. Ensure that the existing leases and reservations are migrated.</p>
+
+  <h2>Question</h2>
   <p>You are planning the deployment of Microsoft Sentinel. Which type of Microsoft Sentinel data connector should you use to meet the security requirements?</p>
 
   <form>
