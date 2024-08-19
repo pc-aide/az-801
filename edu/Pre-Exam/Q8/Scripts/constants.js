@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(() => {
         // Charger toutes les questions après que tous les scripts de réponse sont chargés
         loadQuestions([
-            'question1.html', 'question2.html', 'question3.html', 'question4.html'
+            'question1.html', 'question2.html', 'question3.html'
         ]);
     })
     .catch(error => console.error('Error loading scripts:', error));
