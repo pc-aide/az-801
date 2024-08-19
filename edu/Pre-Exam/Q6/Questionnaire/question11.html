@@ -1,22 +1,289 @@
 <div>
   <h2>Question 11</h2>
-  <p>You have an Azure virtual machine named VM1 that runs Windows Server.<br/><br/>
-  You plan to deploy a new line-of-business (LOB) application to VM1.<br/><br/>
-  You need to prevent the application from creating child processes.<br/><br/>
-  What should you configure on VM1?</p>
+  <p>Contoso, Ltd. is a manufacturing company that has a main office in Seattle and branch offices in Los Angeles and Montreal.</p>
+  <p><strong>Existing Environment -</strong></p>
+  <p><strong>Active Directory Environment -</strong> Contoso has an on-premises Active Directory Domain Services (AD DS) domain named contoso.com that syncs with an Azure Active Directory (Azure AD) tenant. The AD DS domain contains the domain controllers shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>OS</th>
+              <th>Operation master role</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>DC1</td>
+              <td>Windows Server 2012</td>
+              <td>RID master, schema master</td>
+          </tr>
+          <tr>
+              <td>DC2</td>
+              <td>Windows Server 2016</td>
+              <td>PDC emulator, infrastructure master</td>
+          </tr>
+          <tr>
+              <td>DC3</td>
+              <td>Windows Server 2016</td>
+              <td>Domain naming master</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>Contoso recently purchased an Azure subscription. The functional level of the forest is Windows Server 2012 R2. The functional level of the domain is Windows Server 2012. The forest has the Active Directory Recycle Bin enabled. The contoso.com domain contains the users shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>OU/Container</th>
+              <th>Member of</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>User1</td>
+              <td>OU1</td>
+              <td>Group2, Group4</td>
+          </tr>
+          <tr>
+              <td>User2</td>
+              <td>Users</td>
+              <td>Group2</td>
+          </tr>
+          <tr>
+              <td>User3</td>
+              <td>OU1</td>
+              <td>Group3, Group4</td>
+          </tr>
+          <tr>
+              <td>Admin1</td>
+              <td>OU1</td>
+              <td>Domain Admins</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>The contoso.com domain has the Group Policy Objects (GPOs) shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Minimum password length</th>
+              <th>Linked to</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Default Domain Policy</td>
+              <td>8</td>
+              <td>contoso.com</td>
+          </tr>
+          <tr>
+              <td>GPO1</td>
+              <td>10</td>
+              <td>OU1</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>The contoso.com domain has the Password Settings Objects (PSOs) shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Precedence</th>
+              <th>Minimum password length</th>
+              <th>Directly applies to</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>PSO1</td>
+              <td>10</td>
+              <td>9</td>
+              <td>Group2</td>
+          </tr>
+          <tr>
+              <td>PSO2</td>
+              <td>20</td>
+              <td>11</td>
+              <td>Group4</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p><strong>Server Infrastructure -</strong> The contoso.com domain contains servers that run Windows Server 2022 as shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Server1</td>
+              <td>Contains a shared named Share1</td>
+          </tr>
+          <tr>
+              <td>Server2</td>
+              <td>None</td>
+          </tr>
+          <tr>
+              <td>Server3</td>
+              <td>None</td>
+          </tr>
+          <tr>
+              <td>Server4</td>
+              <td>Has Remote Desktop enabled</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>By using Windows Firewall with Advanced Security, the servers have isolation connection security rules configured as shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Endpoint1</th>
+              <th>Endpoint2</th>
+              <th>Auth mode</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Server1</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Request inbound & outbound</td>
+          </tr>
+          <tr>
+              <td>Server2</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Require inbound & request outbound</td>
+          </tr>
+          <tr>
+              <td>Server3</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Require inbound & outbound</td>
+          </tr>
+          <tr>
+              <td>DC1</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Request inbound & outbound</td>
+          </tr>
+          <tr>
+              <td>DC2</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Request inbound & outbound</td>
+          </tr>
+          <tr>
+              <td>DC3</td>
+              <td>Any</td>
+              <td>Any</td>
+              <td>Request inbound & outbound</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>Server4 has no connection security rules</p>
+
+  <p>Server4 Configurations - Server4 has the effective Group Policy settings for user rights as shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Policy</th>
+              <th>Security Setting</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Access this computer from the network</td>
+              <td>Group1, Administrators, Backup Operators, Everyone, Users</td>
+          </tr>
+          <tr>
+              <td>Deny access to this computer from the network</td>
+              <td>Group4</td>
+          </tr>
+          <tr>
+              <td>Allow log on through Remote Desktop Services</td>
+              <td>Group2, Administrators, Remote Desktop Users</td>
+          </tr>
+          <tr>
+              <td>Deny log on through Remote Desktop Services</td>
+              <td>Group3</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p>Server4 has the disk configurations shown in the following exhibit:</p>
+  <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q7/img/q7_1.png" alt="Answer options" style="width:100%;max-width:600px;margin-bottom:20px;">
+
+  <p><strong>Virtualization Infrastructure -</strong> The contoso.com domain has the Hyper-V failover clusters shown in the following table:</p>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Number of nodes</th>
+              <th>Number of virtual machines</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Cluster1</td>
+              <td>6</td>
+              <td>18</td>
+          </tr>
+          <tr>
+              <td>Cluster2</td>
+              <td>4</td>
+              <td>12</td>
+          </tr>
+          <tr>
+              <td>Cluster3</td>
+              <td>2</td>
+              <td>6</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <p><strong>Technical Requirements -</strong> Contoso identifies the following technical requirements:</p>
+  <ul>
+      <li>Promote a new server named DC4 that runs to Windows Server 2022 to a domain controller.</li>
+      <li>Replicate the virtual machines from Cluster2 to an Azure Recovery Services vault.</li>
+      <li>Centrally manage performance alerts in Azure for all the domain controllers.</li>
+      <li>Ensure that User1 can recover objects from the Active Directory Recycle Bin.</li>
+      <li>Migrate Share1 to Server2, including all the share and folder permissions.</li>
+      <li>Back up Server4 and all data to an Azure Recovery Services vault.</li>
+      <li>Use Hyper-V Replica to protect the virtual machines in Cluster3.</li>
+      <li>Implement BitLocker Drive Encryption (BitLocker) on Server4.</li>
+      <li>Whenever possible, use the principle of least privilege.</li>
+  </ul>
+
+  <p><strong>Question</strong></p>
+  <p>Which domain controller should be online to meet the technical requirements for DC4?</p>
 
   <form>
-    <label>
-      <input type="radio" name="question11" value="A"> A. Microsoft Defender Credential Guard
+    <label for="11optiona">
+      <input type="radio" id="11optiona" name="question11" value="A"> A. DC1
     </label><br>
-    <label>
-      <input type="radio" name="question11" value="B"> B. Microsoft Defender Application Control
+    <label for="11optionb">
+      <input type="radio" id="11optionb" name="question11" value="B"> B. DC2
     </label><br>
-    <label>
-      <input type="radio" name="question11" value="C"> C. Microsoft Defender SmartScreen
-    </label><br>
-    <label>
-      <input type="radio" name="question11" value="D"> D. Exploit protection
+    <label for="11optionc">
+      <input type="radio" id="11optionc" name="question11" value="C"> C. DC3
     </label>
   </form>
 
@@ -24,16 +291,21 @@
 
   <div id="solutionInfo_question11" class="solutionInfo" style="display: none;">
     <p><strong>Explanation:</strong></p>
-    <p>To prevent an application from creating child processes, you can use Exploit Protection within Microsoft Defender. This setting is part of the Attack Surface Reduction (ASR) rules which help minimize the security risk by controlling certain behaviors of applications, such as preventing child process creation.</p>
-    <p>In the Group Policy Editor, the path to configure this setting is:</p>
-    <p><code>Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction\Exclude files and paths from Attack Surface Reduction Rules</code></p>
+    <p>The RID Master holds the global RID pool for the domain. The size is limited to 30-bits by default, so the maximum RID size is 2 to the power of 30, or about one billion. The RID Master assigns each Domain Controller a pool of RIDs to use for SID creation. By default, DCs are assigned 500 contiguous RIDs at a time and request a standby pool containing another 500 RIDs when they have used 50% of their original allocation. If a RID master is not online, the DC promotion cannot complete.</p>
+    <p>RID Domain - Allocates active and standby RID pools to replica domain controllers in the same domain. - Must be online in the following situations:</p>
+    <ul>
+      <li>When newly promoted domain controllers must obtain a local RID pool that's required to advertise.</li>
+      <li>When existing domain controllers must update their current or standby RID pool allocation.</li>
+    </ul>
+    <p>RID Master for sure. Checked in my LAB we can promote a server to a DC while the Domain Naming Master is offline.</p>
     <p><strong>References:</strong></p>
     <ul>
-      <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/customize-exploit-protection?view=o365-worldwide#powershell-reference-table" target="_blank">Customize Exploit Protection in Microsoft Defender</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers" target="_blank">Upgrade Domain Controllers</a></li>
+      <li><a href="https://thefrozengeek.blogspot.com/2015/05/can-you-promote-dc-with-rid-master.html" target="_blank">Can You Promote DC with RID Master?</a></li>
     </ul>
     <p id="correctAnswers_question11" style="display: none;">
       <strong>Correct Answer:</strong><br>
-      <strong>D:</strong> Exploit protection
+      <strong>A:</strong> DC1
     </p>
   </div>
 </div>
