@@ -90,7 +90,7 @@ function loadScripts(scripts) {
 document.addEventListener('DOMContentLoaded', function() {
     // Charger tous les scripts de réponse
     loadScripts([
-        'answer1.js', 'answer2.js', 'answer3.js', 'answer4.js'
+        'answer1.js', 'answer2.js', 'answer3.js'
     ])
     .then(() => {
         // Charger toutes les questions après que tous les scripts de réponse sont chargés
