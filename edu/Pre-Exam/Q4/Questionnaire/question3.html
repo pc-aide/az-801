@@ -1,50 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 3</title>
-</head>
-<body>
-    <div>
-        <h2>Question 03</h2>
-        <p>You have an on-premises server named Server1 that runs Windows Server. You have an Azure subscription.</p>
-        <p>You plan to back up the files and folders on Server1 to Azure by using Azure Backup.</p>
-        <p>You need to define how long the backups will be retained.</p>
-        <p>What should you use to configure the retention?</p>
+<div>
+    <h2>Question 3</h2>
+    <p>You have an on-premises server named Server1 that runs Windows Server. You have an Azure subscription.</p>
+    <p>You plan to back up the files and folders on Server1 to Azure by using Azure Backup.</p>
+    <p>You need to define how long the backups will be retained.</p>
+    <p>What should you use to configure the retention?</p>
 
-        <form>
-            <input type="radio" id="optionA" name="solution" value="A">
-            <label for="optionA">A. Windows Server Backup</label><br>
-            <input type="radio" id="optionB" name="solution" value="B">
-            <label for="optionB">B. a Recovery Services vault</label><br>
-            <input type="radio" id="optionC" name="solution" value="C">
-            <label for="optionC">C. the Microsoft Azure Recovery Services (MARS) agent</label><br>
-            <input type="radio" id="optionD" name="solution" value="D">
-            <label for="optionD">D. Backup center</label><br>
-        </form>
+    <form>
+        <input type="radio" id="3optionA" name="solution" value="A">
+        <label for="3optionA">A. Windows Server Backup</label><br>
+        <input type="radio" id="3optionB" name="solution" value="B">
+        <label for="3optionB">B. a Recovery Services vault</label><br>
+        <input type="radio" id="3optionC" name="solution" value="C">
+        <label for="3optionC">C. the Microsoft Azure Recovery Services (MARS) agent</label><br>
+        <input type="radio" id="3optionD" name="solution" value="D">
+        <label for="3optionD">D. Backup center</label><br>
+    </form>
 
-        <button class="solutionButton" data-answer-name="question3">Solution</button>
+    <button class="solutionButton" data-answer-name="question3">Solution</button>
 
-        <div id="solutionInfo_question3" class="solutionInfo" style="display: none;">
-            <p><strong>Explanation:</strong></p>
-            <p>To configure the retention, use the MARS agent and open the agent console:</p>
-            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q3_1.png" alt="MARS Agent Step 1">
-            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q3_2.png" alt="MARS Agent Step 2">
-            <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q3_3.png" alt="MARS Agent Step 3">
-            <div id="correctAnswers_question3" style="display: none;">
-                <p><strong>Correct Answers:</strong></p>
-                <ul>
-                    <li>C. the Microsoft Azure Recovery Services (MARS) agent</li>
-                </ul>
-            </div>
-
-            <p><strong>References:</strong></p>
-            <ul id="references_question3" style="display: none;">
-                <li><a href="https://learn.microsoft.com/en-us/azure/backup/backup-windows-with-mars-agent#create-a-backup-policy" target="_blank">Create a backup policy using MARS agent</a></li>
+    <div id="solutionInfo_question3" class="solutionInfo" style="display: none;">
+        <p><strong>Explanation:</strong></p>
+        <p>To configure the retention, use the MARS agent and open the agent console:</p>
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q3_1.png" alt="MARS Agent Step 1">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q3_2.png" alt="MARS Agent Step 2">
+        <img src="https://raw.githubusercontent.com/pc-aide/az-801/main/edu/Pre-Exam/Q4/img/q3_3.png" alt="MARS Agent Step 3">
+        <div id="correctAnswers_question3" style="display: none;">
+            <p><strong>Correct Answers:</strong></p>
+            <ul>
+                <li>C. the Microsoft Azure Recovery Services (MARS) agent</li>
             </ul>
         </div>
+
+        <p><strong>References:</strong></p>
+        <ul id="references_question3" style="display: none;">
+            <li><a href="https://learn.microsoft.com/en-us/azure/backup/backup-windows-with-mars-agent#create-a-backup-policy" target="_blank">Create a backup policy using MARS agent</a></li>
+        </ul>
     </div>
-    <script src="../Scripts/answer3.js"></script>
-</body>
-</html>
+</div>
+<script src="../Scripts/answer3.js"></script>
